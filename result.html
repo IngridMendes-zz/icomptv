@@ -1,0 +1,164 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript">		
+	</script>
+	<script language="javascript">
+		function getBusca() {
+			document.getElementById("busca").style.display= "block";
+			document.getElementById("login").style.display= "none";
+		}
+		function getLogin() {
+			document.getElementById("login").style.display= "block";
+			document.getElementById("busca").style.display= "none";
+		}
+		function getFiltros() {
+			//window.alert("Botão Pressionado");
+			document.getElementById("options").style.display= "block";
+			document.getElementById("delimitador").style.display= "block";
+			document.getElementById("delimitador2").style.display= "block";
+		}
+		
+		function getTipos(){
+			document.getElementById("tipos").style.display="block";
+		}
+
+		function getCanais(){
+			document.getElementById("videos").style.display="none";
+			document.getElementById("canais").style.display="block";
+		}
+
+		function getVideos(){
+			document.getElementById("videos").style.display="block";
+			document.getElementById("canais").style.display="none";
+		}
+	</script>
+      
+</head>
+<body class="result">
+	<nav class="cabecalho">
+    	<div class="nav-wrapper">
+      		<a class="brand-logo">
+      			<img src="dev/img/logo.png" alt="logo" class="logo"> 
+      		</a>
+      		<ul class="right hide-on-med-and-down menu">
+        		<li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+        		<li><a href="#!"class="icon icon-account" onClick="getLogin()"></a></li>
+      		</ul>
+    	</div>
+  	</nav>
+
+  	<div class="busca" id="busca" >
+  		<form class="formulario">
+
+
+  			<div class="texto">
+  				<input type="text" class="campo">
+  				<input type="submit" class="botao" value="Pesquisar">
+  				<a href="#!" class="filtros" onClick="getFiltros()"> Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></a>
+  			</div>
+  			<hr class="delimitador" id="delimitador">
+  			<div class="options" id="options">
+  				<ul>
+  					<li>
+  						<a href="#!" class="filtros" onClick="getTipos()">Tipo <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
+  					</li>
+  					<div class="details" id="tipos">
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Todos</a>						
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Vídeos</a>
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Canais</a>
+  						</li>
+  					</div>
+  				</ul>
+  			</div>
+  			<hr class="delimitador" id="delimitador2">
+  		</form>
+    </div>
+
+    <div class="resultado row">
+      <div class="lista col l12 s12">
+          <a class="section">Resultados</a>
+          <a class="quantidade">3 resultados no total</a>
+          <hr class="hr">
+          <div class="item row">
+          <div class=" col l2">
+              <img src="dev/img/icone2.png" class="icon-canal">
+          </div>
+          <div class="info col l10">
+              <a class="titulo">Nome do Canal</a>
+              <a class="detalhes">100 inscritos</a>
+              <p class="detalhes">Descrição curta</p>
+              <a class="inscrever" href="#!"><i class="tiny material-icons">check_box</i>Inscrever-se</a>
+          </div>
+        </div>
+          <div class="row">
+        <div class="col l4 s6">
+          <div class="video-container">
+        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+        </div>
+        <div class=" info col l8 s6">
+          <p class="titulo">Título do Vídeo</p>
+          <p class="detalhes">Nome do Canal</p>
+          <p class="detalhes">100 visualizações | há dois dias</p>
+        </div>
+      </div>
+
+          <div class="row">
+        <div class="col l4 s6">
+          <div class="video-container">
+        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+        </div>
+        <div class=" info col l8 s6">
+          <p class="titulo">Título do Vídeo</p>
+          <p class="detalhes">Nome do Canal</p>
+          <p class="detalhes">100 visualizações | há dois dias</p>
+        </div>
+      </div>          
+      </div>
+    </div>
+
+    
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">VOD</h5>
+                <p class="grey-text text-lighten-4">VOD - Portal de Gerência e Distribuição de Vídeo</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contate-nos</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Entre em contato com o Instituto de Computação da UFAM:</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons">phone</i> (92) 3305-1193/2808/2809</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons">email</i> secretaria@icomp.ufam.edu.br</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
+            <a class="grey-text text-lighten-4 right" href="http://icomp.ufam.edu.br/">http://icomp.ufam.edu.br/</a>
+            </div>
+          </div>
+        </footer>  
+</body>
+</html>
