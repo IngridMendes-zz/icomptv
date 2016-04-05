@@ -1,0 +1,310 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript">		
+	</script>
+
+  <!-- jQuery library (served from Google) -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <!-- bxSlider Javascript file -->
+  <script src="jquery.bxslider.min.js"></script>
+  <!-- bxSlider CSS file -->
+  <link href="jquery.bxslider.css" rel="stylesheet" />
+  
+  <script>
+    $(document).ready(function(){
+      $('.bxslider').bxSlider({
+      minSlides: 2,
+      maxSlides: 5,
+      slideWidth: 207,
+      slideMargin: 15,
+    });
+  });
+  </script>
+	<script language="javascript">
+
+		function getBusca() {
+			document.getElementById("busca").style.display= "block";
+			document.getElementById("login").style.display= "none";
+		}
+
+    function getInfo() {
+      document.getElementById("info").style.display= "none";
+      document.getElementById("recentes").style.display= "none";
+      document.getElementById("informacoes").style.display= "block";
+      informa.classList.add("selecionado");
+      vide.classList.remove("selecionado");
+    }
+
+    function getVid() {
+      document.getElementById("info").style.display= "block";
+      document.getElementById("recentes").style.display= "block";
+      document.getElementById("informacoes").style.display = "none";
+      informa.classList.remove("selecionado");
+      vide.classList.add("selecionado");
+    }
+		function getLogin() {
+			document.getElementById("login").style.display= "block";
+			document.getElementById("busca").style.display= "none";
+		}
+		function getFiltros() {
+			//window.alert("Botão Pressionado");
+			document.getElementById("options").style.display= "block";
+			document.getElementById("delimitador").style.display= "block";
+			document.getElementById("delimitador2").style.display= "block";
+		}
+		
+		function getTipos(){
+			document.getElementById("tipos").style.display="block";
+		}
+
+		function getCanais(){
+			document.getElementById("videos").style.display="none";
+			document.getElementById("canais").style.display="block";
+			document.getElementById("botcanal").style.borderBottom="12px solid #E95316";
+			document.getElementById("botvideo").style.borderBottom="0px";
+		}
+
+		function getVideos(){
+			document.getElementById("videos").style.display="block";
+			document.getElementById("canais").style.display="none";
+			document.getElementById("botcanal").style.borderBottom="0px";
+			document.getElementById("botvideo").style.borderBottom="12px solid #E95316";
+		}
+
+    function getDescricao(){
+      document.getElementById("descricaocanal").style.display="block";      
+    }
+
+    function hello() { document.write(a); }
+	</script>
+      
+</head>
+<body class="canalpagina">
+	<nav class="cabecalho">
+    	<div class="nav-wrapper">
+      		<a class="brand-logo">
+      			<img src="dev/img/logo.png" alt="logo" class="logo"> 
+      		</a>
+      		<ul class="right hide-on-med-and-down menu">
+        		<li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+        		<li><a href="#!"class="icon icon-account" onClick="getLogin()"></a></li>
+      		</ul>
+    	</div>
+  	</nav>
+
+  	<div class="busca" id="busca">
+  		<form class="formulario">
+
+
+  			<div class="texto">
+  				<input type="text" class="campo">
+  				<input href="result.html" type="submit" class="botao" value="Pesquisar">
+  				<a href="#!" class="filtros" onClick="getFiltros()"> Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></a>
+  			</div>
+  			<hr class="delimitador" id="delimitador">
+  			<div class="options" id="options">
+  				<ul>
+  					<li>
+  						<a href="#!" class="filtros" onClick="getTipos()">Tipo <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
+  					</li>
+  					<div class="details" id="tipos">
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Todos</a>						
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Vídeos</a>
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Canais</a>
+  						</li>
+  					</div>
+  				</ul>
+  			</div>
+  			<hr class="delimitador" id="delimitador2">
+  		</form>
+    </div>
+
+    <div class="login" id="login">
+    	<form class="formulario">
+    		<ul> 
+    			<li><a class="label">Email</a></li>
+    			<li><input type="email" class="input"></li>
+    			<li><a class="label">Senha</a></li>
+    			<li>
+    				<input type="password" class="input">
+    				<input type="submit" class="entrar" value="Entrar">
+    			</li>
+    			<li>
+    				<a href="" class="label2">Esqueceu a senha?</a>
+    			</li>
+    		</ul>
+    	</form>
+    </div>
+
+    <div class="pag row">
+      <div class="inicio col l12 s12">
+        <div class="row">
+          <div class="col l1">
+            <img src="dev/img/icone2.png" class="icon-canal">
+          </div>
+          <div class="col l8">
+            <p class="titulo">Nome do Canal</p>
+            <p class="inscritos">72 inscritos</p>
+          </div>
+          <div class="col l3 s12">
+            <p class="inscrever" href="#!"><i class="tiny material-icons">check_box</i>Inscrever-se</p>
+            <p class="detalhes">200 vídeos | 1000 visualizações</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="principal col l12 s12">
+        <div class="opcoes">
+          <input type="submit" class="area vide selecionado" id="vide" onClick="getVid()" value="Vídeos">
+          <input type="submit" class="area informa" id="informa" onClick="getInfo()" value="Informações">
+        </div>
+        
+        <hr class="hr">
+        <div class="info row" id="info">
+          <div class="media col l6 s12">
+            <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+          </div>
+          <div class="col l6 s12">
+            <p class="title">Título do Vídeo</p>
+            <p class="detalhe">há 1 semana</p>
+            <p class="descricao">Descrição longa</p>
+          </div>
+        </div>
+
+        <div class="recentes row" id="recentes">
+
+        <div class="col l12 s12">
+          <p class="ultima">Últimas postagens</p>
+        </div>
+
+        <ul class="bxslider">
+              <li>
+                <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="nome-video">Nome do Vídeo</p>
+                <p class="inscritos">100 visualizações | há 3 dias</p>
+              </li>
+              <li>
+                <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="nome-video">Nome do Vídeo</p>
+                <p class="inscritos">100 visualizações | há 3 dias</p>
+              </li>
+              <li>
+                <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="nome-video">Nome do Vídeo</p>
+                <p class="inscritos">100 visualizações | há 3 dias</p>
+              </li>
+              <li>
+                <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="nome-video">Nome do Vídeo</p>
+                <p class="inscritos">100 visualizações | há 3 dias</p>
+              </li>
+              <li>
+                <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="nome-video">Nome do Vídeo</p>
+                <p class="inscritos">100 visualizações | há 3 dias</p>
+              </li>
+              <li>
+                <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="nome-video">Nome do Vídeo</p>
+                <p class="inscritos">100 visualizações | há 3 dias</p>
+              </li>
+              <li>
+                <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="nome-video">Nome do Vídeo</p>
+                <p class="inscritos">100 visualizações | há 3 dias</p>
+              </li>
+              <li>
+                <div class="video-container">
+                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="nome-video">Nome do Vídeo</p>
+                <p class="inscritos">100 visualizações | há 3 dias</p>
+              </li>
+            </ul>
+        
+        
+
+        </div>
+
+        <div class="informacoes" id="informacoes">
+
+
+          <p class="top">Canal ativo desde: 11/12/2016</p>
+          <p class="top">Descrição</p>
+          <p class="sub">Um canal variado, contendo de tudo um pouco, coisas sérias, coisas nem tão sérias, e coisa
+          que não são sérias... Educação, Humor e Entretenimento, estarei sempre tentando disponibilizar
+          essas paradas por aqui... Curtam nossos vídeos e inscreva-se no nosso canal</p>
+
+          <hr class="hr">
+
+          <p class="top">Contatos</p>
+          <p class="sub">facebook/123</p>
+          <p class="sub">http://www.minhasduvidas.com/</p>
+          <p class="sub">Twitter/temduvida</p>
+
+          <hr class="hr">
+
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">VOD</h5>
+                <p class="grey-text text-lighten-4">VOD - Portal de Gerência e Distribuição de Vídeo</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contate-nos</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Entre em contato com o Instituto de Computação da UFAM:</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons">phone</i> (92) 3305-1193/2808/2809</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons">email</i> secretaria@icomp.ufam.edu.br</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
+            <a class="grey-text text-lighten-4 right" href="http://icomp.ufam.edu.br/">http://icomp.ufam.edu.br/</a>
+            </div>
+          </div>
+        </footer>  
+</body>
+</html>
