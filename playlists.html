@@ -11,8 +11,6 @@
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript">		
 	</script>
-  <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
-
   <!-- jQuery library (served from Google) -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <!-- bxSlider Javascript file -->
@@ -53,13 +51,13 @@
       document.getElementById("duracoes").style.display="block";
     }
 
-    function getCanais(){
+		function getCanais(){
       window.location.href = "http://localhost/icomptv/canais.html";
-    }
+		}
 
-    function getPlaylists(){
-      window.location.href = "http://localhost/icomptv/playlists.html";
-    }
+		function getVideos(){
+			window.location.href = "http://localhost/icomptv/index.html";
+		}
 
     function inscrever(){
       Materialize.toast('I am a toast!', 4000);
@@ -69,16 +67,16 @@
 </head>
 <body class="index">
 	<nav class="cabecalho">
-      <div class="nav-wrapper">
-          <a href="http://icomp.tv/" class="brand-logo">
-            <img src="dev/img/logo.png" alt="logo" class="logo"> 
-          </a>
-          <ul class="right hide-on-med-and-down menu">
-            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
-            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
-          </ul>
-      </div>
-    </nav>
+    	<div class="nav-wrapper">
+      		<a href="http://icomp.tv/" class="brand-logo">
+      			<img src="dev/img/logo.png" alt="logo" class="logo"> 
+      		</a>
+      		<ul class="right hide-on-med-and-down menu">
+        		<li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+        		<li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+      		</ul>
+    	</div>
+  	</nav>
 
   	<div class="busca" id="busca">
   		<form >
@@ -140,169 +138,120 @@
     
       <div class="row">
         <div class="categorias col s12">
-          <input type="submit" class="categoria selecionado" value="Vídeos">
+          <input type="submit" class="categoria" value="Vídeos" onClick="getVideos()">
           <input type="submit" class="categoria" value="Canais" onClick="getCanais()">
-          <input type="submit" class="categoria" value="Playlists" onClick="getPlaylists()">
+          <input type="submit" class="categoria selecionado" value="Playlists">
           <hr class="hr2">
         </div>
       </div>
 
-      <div class="videos" id="videos">
+      <div class="playlists" id="playlists">
         <div class="lista">
-            <p class="titulo">Mais Vistos</p>
+            <p class="titulo">Playlists Populares</p>
             <ul class="bxslider">
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações | há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações | há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações | há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações | há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações | há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações | há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações | há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações | há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
             </ul>
             <hr class="hr">
-            <p class="titulo">Recomendados</p>
+            <p class="titulo">Playlists Para Estudar</p>
             <ul class="bxslider">
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
               <li>
                 <div class="video-container">
                   <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
                 </div>
-                <p class="destaque">Título do Vídeo</p>
-                <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <p class="destaque">Nome da Playlist</p>
               </li>
             </ul>
         </div>
       </div>
-
    <footer class="page-footer" >
           
           <div class="footer-copyright">
@@ -310,7 +259,6 @@
             © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
             </div>
           </div>
-        </footer>
-   
+        </footer>    
 </body>
 </html>

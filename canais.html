@@ -11,8 +11,6 @@
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript">		
 	</script>
-  <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
-
   <!-- jQuery library (served from Google) -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <!-- bxSlider Javascript file -->
@@ -53,9 +51,9 @@
       document.getElementById("duracoes").style.display="block";
     }
 
-    function getCanais(){
-      window.location.href = "http://localhost/icomptv/canais.html";
-    }
+		function getVideos(){
+			window.location.href = "http://localhost/icomptv/index.html";
+		}
 
     function getPlaylists(){
       window.location.href = "http://localhost/icomptv/playlists.html";
@@ -69,16 +67,16 @@
 </head>
 <body class="index">
 	<nav class="cabecalho">
-      <div class="nav-wrapper">
-          <a href="http://icomp.tv/" class="brand-logo">
-            <img src="dev/img/logo.png" alt="logo" class="logo"> 
-          </a>
-          <ul class="right hide-on-med-and-down menu">
-            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
-            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
-          </ul>
-      </div>
-    </nav>
+    	<div class="nav-wrapper">
+      		<a href="http://icomp.tv/" class="brand-logo">
+      			<img src="dev/img/logo.png" alt="logo" class="logo"> 
+      		</a>
+      		<ul class="right hide-on-med-and-down menu">
+        		<li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+        		<li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+      		</ul>
+    	</div>
+  	</nav>
 
   	<div class="busca" id="busca">
   		<form >
@@ -140,16 +138,28 @@
     
       <div class="row">
         <div class="categorias col s12">
-          <input type="submit" class="categoria selecionado" value="Vídeos">
-          <input type="submit" class="categoria" value="Canais" onClick="getCanais()">
+          <input type="submit" class="categoria" value="Vídeos" onClick="getVideos()">
+          <input type="submit" class="categoria selecionado" value="Canais">
           <input type="submit" class="categoria" value="Playlists" onClick="getPlaylists()">
           <hr class="hr2">
         </div>
       </div>
 
-      <div class="videos" id="videos">
+      <div class="canais" id="canais">
         <div class="lista">
-            <p class="titulo">Mais Vistos</p>
+            <p class="titulo">Canais populares no Icomp.TV</p>
+            <div class="row itens">
+              <div class="col l1 s2">
+                <img src="dev/img/icone.png" alt="icone" class="icone">
+              </div>
+              <div class="col l2 s4">
+                <p class="nome">Nome do Canal</p>
+                <p class="inscritos">Número de Inscritos</p>
+              </div>
+              <div class="inscricao col l2 s4">
+                <a class="inscrever" href="#!" onClick="inscrever()"><i class="tiny material-icons">check_box</i>Inscrever-se</a>
+              </div>
+            </div>
             <ul class="bxslider">
               <li>
                 <div class="video-container">
@@ -216,8 +226,20 @@
                 <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
             </ul>
-            <hr class="hr">
-            <p class="titulo">Recomendados</p>
+            
+            
+            <div class="row itens">
+              <div class="col l1 s2">
+                <img src="dev/img/icone.png" alt="icone" class="icone">
+              </div>
+              <div class="col l2 s4">
+                <p class="nome">Nome do Canal</p>
+                <p class="inscritos">Número de Inscritos</p>
+              </div>
+              <div class="inscricao col l2 s4">
+                <a class="inscrever" href="#!" onClick="inscrever()"><i class="tiny material-icons">check_box</i>Inscrever-se</a>
+              </div>
+            </div>
             <ul class="bxslider">
               <li>
                 <div class="video-container">
@@ -225,9 +247,7 @@
                 </div>
                 <p class="destaque">Título do Vídeo</p>
                 <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
               <li>
                 <div class="video-container">
@@ -235,9 +255,7 @@
                 </div>
                 <p class="destaque">Título do Vídeo</p>
                 <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
               <li>
                 <div class="video-container">
@@ -245,9 +263,7 @@
                 </div>
                 <p class="destaque">Título do Vídeo</p>
                 <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
               <li>
                 <div class="video-container">
@@ -255,9 +271,7 @@
                 </div>
                 <p class="destaque">Título do Vídeo</p>
                 <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
               <li>
                 <div class="video-container">
@@ -265,9 +279,7 @@
                 </div>
                 <p class="destaque">Título do Vídeo</p>
                 <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
               <li>
                 <div class="video-container">
@@ -275,9 +287,7 @@
                 </div>
                 <p class="destaque">Título do Vídeo</p>
                 <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
               <li>
                 <div class="video-container">
@@ -285,9 +295,7 @@
                 </div>
                 <p class="destaque">Título do Vídeo</p>
                 <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
               <li>
                 <div class="video-container">
@@ -295,22 +303,19 @@
                 </div>
                 <p class="destaque">Título do Vídeo</p>
                 <p class="detalhes">Nome do Canal</p>
-                <a class="detalhes">100 visualizações</a>
-                <a class="detalhes">|</a>
-                <a class="detalhes">há 2 dias</a>
+                <a class="detalhes">100 visualizações | há 2 dias</a>
               </li>
             </ul>
         </div>
       </div>
 
-   <footer class="page-footer" >
+  <footer class="page-footer" >
           
           <div class="footer-copyright">
             <div class="container">
             © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
             </div>
           </div>
-        </footer>
-   
+        </footer>   
 </body>
 </html>
