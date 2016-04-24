@@ -1,0 +1,296 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript">		
+	</script>
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+
+  <!-- jQuery library (served from Google) -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script language="javascript">
+		function getBusca() {
+      document.getElementById("busca").style.display = "block";
+      document.getElementById("login").style.display = "none";
+      search.classList.add("ativo");
+      account.classList.remove("ativo");
+    }
+    function getLogin() {
+      document.getElementById("login").style.display = "block";
+      document.getElementById("busca").style.display = "none";
+      search.classList.remove("ativo");
+      account.classList.add("ativo");
+    }
+		function getFiltros() {
+			document.getElementById("options").style.display= "block";
+			document.getElementById("delimitador").style.display= "block";
+			document.getElementById("delimitador2").style.display= "block";
+		}
+
+    function editarNome(){
+       document.getElementById("editarNome").style.display="block";
+    }
+
+    function editarEmail(){
+       document.getElementById("editarEmail").style.display="block";
+    }
+
+    function editarSenha(){
+       document.getElementById("editarSenha").style.display="block";
+    }
+
+    function cancelarNome(){
+       document.getElementById("editarNome").style.display="none";
+    }
+
+    function cancelarEmail(){
+       document.getElementById("editarEmail").style.display="none";
+    }
+
+    function cancelarSenha(){
+       document.getElementById("editarSenha").style.display="none";
+    }
+
+    function getDuracao(){
+      document.getElementById("duracoes").style.display="block";
+    }
+
+    function getCanais(){
+      window.location.href = "http://localhost/icomptv/canais.html";
+    }
+
+    function getPlaylists(){
+      window.location.href = "http://localhost/icomptv/playlists.html";
+    }
+
+    function meusvideos(){
+      window.location.href = "meusvideos.html";
+    }
+
+    function inscrever(){
+      Materialize.toast('I am a toast!', 4000);
+    }
+	</script>
+      
+</head>
+<body class="perfil">
+	<nav class="cabecalho">
+      <div class="nav-wrapper">
+          <a href="http://icomp.tv/" class="brand-logo">
+            <img src="dev/img/logo.png" alt="logo" class="logo"> 
+          </a>
+          <ul class="right hide-on-med-and-down menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#!">Minha conta</a></li>
+            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+          </ul>
+      </div>
+    </nav>
+
+  	<div class="busca" id="busca">
+  		<form >
+
+
+  			<div class="texto">
+  				<input type="text" class="campo">
+  				<input href="result.html" type="submit" class="botao" value="Pesquisar">
+          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
+          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
+          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
+          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
+      
+  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
+  			</div>
+  			<hr class="delimitador" id="delimitador">
+  			<div class="options" id="options">
+  				<ul>
+  					<li>
+  						<a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
+
+  					</li>
+  					<div class="details" id="duracoes">
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Hoje</a>						
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há uma semana</a>
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há um mês</a>
+  						</li>
+  					</div>
+  				</ul>
+  			</div>
+  			<hr class="delimitador" id="delimitador2">
+  		</form>
+    </div>
+
+    <div class="row login" id="login">
+    	<div class="formulario col l7 s12">
+    		<ul> 
+    			<li><a class="label">Email</a></li>
+    			<li><input type="email" class="campo"></li>
+    			<li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
+    			<li>
+    				<input type="password" class="campo">
+    				<input type="submit" class="entrar" value="Entrar">
+    			</li>
+    		</ul>
+    	</div>
+      <div class="cadastro col l5 s12">
+        <p class="label">Mas se você ainda não tem cadastro.</p>
+        <input type="submit" class="cadastre" value="CADASTRE-SE">
+      </div>
+    </div>
+    
+      <div class="row">
+        <div class="categorias col s12">
+          <input type="submit" class="categoria selecionado" value="Perfil">
+          <input type="submit" class="categoria" onClick="meusvideos()" value="Meus Vídeos">
+          <input type="submit" class="categoria" value="Meus Canais">
+          <input type="submit" class="categoria" value="Minhas Playlists">
+
+          <hr class="hr2">
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <div class="row lista">
+            <div class="col l12 s12">
+              <img src="dev/img/perfil.png" class="icone user"> 
+              <a class="nome">Nome do Usuário</a>
+              <a class="detalhes numeros">10 vídeos postados | 5 canais | 200 visualizações</a>
+            </div>
+            <div class="col l12 s12">
+              <hr class="hr">
+            <p class="detalhes email">email@icomp.ufam.edu.br</p>
+            </div>
+            <div class="sobre row">
+              <div class="col l12 s12 item">
+                <img src="dev/img/account.png" class="icone about">
+                <a class="principal">Sobre</a>
+              </div>
+              <div class="areas col l3 s12">
+                <ul>
+                  <li class="opcao"><a href="perfil.html" class="area">Visão Geral</a></li>
+                  <li class="opcao"><a href="estatisticas.html" class="area">Estatísticas</a></li>
+                  <li class="opcao ativa"><a href="#!" class="area">Dados Pessoais</a></li>
+                </ul>
+              </div>
+              <div class="dados col l9">
+                <div class="row editarTudo">
+                  <div class=" row" style="background-color: #fff;">
+                  <div class="col l12">
+                    <a class="retorno editar">Editar Informações</a>
+                  </div>
+                  </div>
+                  <div class=" row "style="background-color: #e9e8e8; border-top: 1px solid #cdcbcc;">
+                  
+                  <div class="col l18 areaEditarTudo" style="display:block">
+                    <p class="texto">Nome</p>
+                    <p class="texto"> <input type="text" class="campo2"></p>
+                    <p class="texto">Email</p>
+                    <p class="texto"> <input type="text" class="campo2"></p>
+                    <p class="texto">Senha Atual</p>
+                    <p class="texto"> <input type="password" class="campo2 senha">
+                      <input href="" type="submit" class="botao2" value="Editar Senha">
+                    </p>
+                    <p class="texto">Nova Senha</p>
+                    <p class="texto"> <input type="password" class="campo2 senha">
+                    </p>
+                    <p class="texto">Repetir Senha</p>
+                    <p class="texto"> <input type="password" class="campo2 senha">
+                    </p>
+              
+            </div>
+            <div class="col l4 areaEditarTudo" style="display:block; padding-top: 300px;">
+              <input href="" onClick="cancelarNome()" type="submit" class="botao1" value="Cancelar">
+              <input href="" type="submit" class="botao1" value="Atualizar">
+            </div> 
+            </div>                 
+                </div>
+                <div class="row dadosPessoais">
+                  <div class="col l2">Nome</div>
+                  <div class="col l9 retorno"><b>Anny Caroline Castelo Branco Martins</b></div>
+                  <div class="col l1" >
+                    <img src="dev/img/editar.png" onClick="editarNome()" width="20" class="editar">
+                  </div>
+                  <div class="col l12 areaEditar" id="editarNome">
+             
+             <p> <input type="text" class="campo"></p>
+              <input href="" onClick="cancelarNome()" type="submit" class="botao1" value="Cancelar">
+              <input href="" type="submit" class="botao1" value="Atualizar">
+            </div>                  
+                </div>
+                <div class="row dadosPessoais">
+                  <div class="col l2">Senha</div>
+                  <div class="col l9 retorno">**********</div>
+                  <div class="col l1 ">
+                    <img src="dev/img/editar.png" onClick="editarSenha()" width="20" class="editar">
+                  </div>
+                   <div class="col l12 areaEditarSenha" id="editarSenha">
+                    <div class="row editaSenha">
+                      <div class="col l4 offset-l4">
+                          <p class="textoSenha">Senha atual</p>
+                           <p> <input type="password" class="campo senha"></p>
+                           <p class="textoSenha">Nova senha</p>
+                           <p> <input type="password" class="campo senha"></p>
+                            <p class="textoSenha">Repita a senha</p>
+                           <p> <input type="password" class="campo senha"></p>
+                            
+                      </div>
+                      <div class="col l4">
+                        <input href="" onClick="cancelarSenha()" type="submit" class="botao1 top" value="Cancelar">
+                        <input href="" type="submit" class="botao1 top" value="Atualizar">
+                      </div>
+                    </div>
+             
+            </div>                  
+                </div>
+                <div class="row dadosPessoais">
+                  <div class="col l2">E-mail</div>
+                  <div class="col l9 retorno">annycarolinemartins@hotmail.com</div>
+                  <div class="col l1 " >
+                    <img src="dev/img/editar.png" onClick="editarEmail()" width="20" class="editar">
+                  </div>
+                  <div class="col l12 areaEditar" id="editarEmail">
+             
+             <p> <input type="text" class="campo"></p>
+              <input href="" onClick="cancelarEmail()" type="submit" class="botao1" value="Cancelar">
+              <input href="" type="submit" class="botao1" value="Atualizar">
+            </div>                  
+                </div>
+                <div class="row dadosPessoais">
+                  <div class="col l2">Tipo</div>
+                  <div class="col l9 retorno">Publicador</div>
+                  <div class="col l1"></div>                  
+                </div>
+
+              </div>
+            </div>
+            
+            
+        </div>
+      </div>
+
+   <footer class="page-footer" >
+          
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
+            </div>
+          </div>
+        </footer>
+   
+</body>
+</html>

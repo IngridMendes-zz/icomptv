@@ -1,0 +1,369 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <script src="Chart.min.js"></script>
+
+</head>
+<body class="minhasplaylists">
+	<nav class="cabecalho">
+      <div class="nav-wrapper">
+          <a href="http://icomp.tv/" class="brand-logo">
+            <img src="dev/img/logo.png" alt="logo" class="logo"> 
+          </a>
+          <ul class="right hide-on-med-and-down menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#!">Minha conta</a></li>
+            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+          </ul>
+      </div>
+    </nav>
+
+  	<div class="busca" id="busca">
+  		<form >
+
+
+  			<div class="texto">
+  				<input type="text" class="campo">
+  				<input href="result.html" type="submit" class="botao" value="Pesquisar">
+          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
+          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
+          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
+          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
+      
+  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
+  			</div>
+  			<hr class="delimitador" id="delimitador">
+  			<div class="options" id="options">
+  				<ul>
+  					<li>
+  						<a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
+
+  					</li>
+  					<div class="details" id="duracoes">
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Hoje</a>						
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há uma semana</a>
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há um mês</a>
+  						</li>
+  					</div>
+  				</ul>
+  			</div>
+  			<hr class="delimitador" id="delimitador2">
+  		</form>
+    </div>
+
+    <div class="row login" id="login">
+    	<div class="formulario col l7 s12">
+    		<ul> 
+    			<li><a class="label">Email</a></li>
+    			<li><input type="email" class="campo"></li>
+    			<li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
+    			<li>
+    				<input type="password" class="campo">
+    				<input type="submit" class="entrar" value="Entrar">
+    			</li>
+    		</ul>
+    	</div>
+      <div class="cadastro col l5 s12">
+        <p class="label">Mas se você ainda não tem cadastro.</p>
+        <input type="submit" class="cadastre" value="CADASTRE-SE">
+      </div>
+    </div>
+    
+      <div class="row">
+        <div class="categorias col s12">
+          <input type="submit" class="categoria" onClick="perfil()" value="Perfil">
+          <input type="submit" class="categoria" value="Meus Vídeos">
+          <input type="submit" class="categoria" value="Meus Canais">
+          <input type="submit" class="categoria selecionado" value="Minhas Playlists">
+          <hr class="hr2">
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <div class="row lista">            
+            <div class="col l12 s12">              
+            </div>
+            <div class="sobre row">
+              <div class="row">
+              <div class="col l12 s12 item">
+                <img src="dev/img/play.png" class="icone about">
+                <a class="principal">Minhas Playlists</a>
+              </div></div>
+              <div class="row">
+                <div class=" col l12 resultado ">
+                  <input type="text" class="campo pesquisa" >
+                  <img src="dev/img/lupa.png" width="30">
+                <a href="#!" onClick="adicionar()" id="botaoAdd" class="botaoAdd"><img src="dev/img/add.png" width="20" height="20">Criar Playlist</a>
+              </div>
+            </div>
+              <div class="row adicionar" id="adicionar">
+                <div class="col l5 parte">
+                <p class="infoVideo">Pesquisar Vídeo</p>
+                <input type="text" class="campo">
+                
+                <input type="radio" disabled="disabled"/>
+                
+                <label class="infoVideo" >Selecionar todos</label>
+                <div class="row escolher">
+
+                  <p class="infoVideo desabilitado"><i>Nenhum vídeo pesquisado</i></p>
+                </div>
+
+                </div>
+                <div class="col l2 resultado">
+                  <input href="" type="submit" class="botao2 desabili" value="Copiar">
+                </div>
+                <div class="col l5 parte">
+                <p class="infoVideo">Nome da Playlist</p>
+                <input type="text" class="campo nome-playlist">
+                <input href="" type="submit" class="botao2" value="Criar">
+                
+                
+                <a class="infoVideo desabilitado"><i class="tiny material-icons status excluir">delete</i>Excluir</a>
+                <input type="radio" disabled="disabled"/>
+                
+                <label class="infoVideo" >Selecionar todos</label>
+                <div class="row escolher">
+
+                  <p class="infoVideo desabilitado"><i>Digite o nome da playlist e clique em CRIAR para habilitar a pesquisa de vídeo e poder acrescentar vídeos a sua playlist</i></p>
+                </div>
+                </div>
+                <div class="col l3 offset-l9">
+                  <input href="" type="submit" class="botao2" value="Cancelar">
+                  <input href="" type="submit" class="botao2" value="Salvar">
+                </div>
+                
+              </div>
+              <div class="row videos" id="titulo">
+              <div class="col l2 offset-l1 area">Playlist</div>
+              
+            </div>
+            <div class="grupo" id="grupo">
+           
+            <div class="areaExcluir" id="areaExcluir">
+              <p>Tem certeza que deseja remover a playlist?</p>
+              <input href="" onClick="cancelar()" type="submit" class="botao1" value="Cancelar">
+              <input href="" type="submit" class="botao1" value="Remover">
+            </div>
+            <div class="row videos">
+
+              <div class="col l2 offset-l1" style="padding-left: 31px; padding-right: 31px;">
+                <div style="width:56px; height:64px; background-color: #065c7b; position: absolute; opacity: 0.8; margin-left: 57px;">
+                  <p style="color: #fff">10 vídeos</p>
+                </div>
+                <img src="dev/img/video.jpg" width="113" height="64"> 
+              </div>
+              <div class="col l4 info">Seleção para assistir mais tarde</div>
+              
+              <div class="col l1 offset-l4">
+                <a href="#!" class="botaoAdd" id="botaoUpdate" onClick="editarVideo()">Editar</a>
+                <i class="small material-icons tooltipped status excluir" onClick="excluirVideo()" id="botaoDelete" data-position="top" data-delay="50" data-tooltip="Excluir">delete</i></div>
+                <div class="col l12" >
+                  <div class="row editar" id="editarVideo">
+                    
+                  
+                <div class="col l5 parte">
+                <p class="infoVideo">Pesquisar Vídeo</p>
+                <input type="text" class="campo">
+                
+                <input type="radio" disabled="disabled"/>
+                
+                <label class="infoVideo" >Selecionar todos</label>
+                <a class="infoVideo desabilitado" style="padding-left: 145px;">1 resultado</a>
+                <div class="row escolher">
+                  <div class="col l4 offset-l1" style="padding-right: 0px;">
+                    <img src="dev/img/video.jpg" width="95" height="55" > 
+                  </div>
+                  <div class="col l6" style="padding: 0px;">
+                    <p style="margin: 0px; font-size: 12px;"><b>Nome do Vídeo</b></p>
+                    <p style="margin: 0px; font-size: 11px;">Nome do Canal</p>
+                    <p style="margin: 0px; font-size: 11px;">100 visualizações</p>
+                    <p style="margin: 0px; font-size: 11px;">há uma semana</p>
+                  </div>
+                  <div class="col l1"><input type="checkbox"/> <label for="todos" style="color: #fff;" class="filtros">Todos</label> </div>
+                  
+                </div>
+
+                </div>
+                <div class="col l2 resultado">
+                  <input href="" type="submit" class="botao2 desabili" value="Copiar">
+                </div>
+                <div class="col l5 parte">
+                <p class="infoVideo">Nome da Playlist</p>
+                <input type="text" class="campo nome-playlist">
+                <input href="" type="submit" class="botao2" value="Criar">
+                
+                
+                <a class="infoVideo desabilitado"><i class="tiny material-icons status excluir">delete</i>Excluir</a>
+                <input type="radio" disabled="disabled"/>
+                
+                <label class="infoVideo" >Selecionar todos</label>
+                 <a class="infoVideo desabilitado" style="padding-left: 90px;">1 vídeo</a>
+                <div class="row escolher">
+                  <div class="col l1" style="margin-top: 20px;">
+                    <img src="dev/img/canais-66.png" width="20"  > 
+                  </div>
+                  <div class="col l4 " style="padding-right: 0px;">
+                    <img src="dev/img/video.jpg" width="95" height="55" > 
+                  </div>
+                  <div class="col l6" style="padding: 0px;">
+                    <p style="margin: 0px; font-size: 12px;"><b>Nome do Vídeo</b></p>
+                    <p style="margin: 0px; font-size: 11px;">Nome do Canal</p>
+                    <p style="margin: 0px; font-size: 11px;">100 visualizações</p>
+                    <p style="margin: 0px; font-size: 11px;">há uma semana</p>
+                  </div>
+                  <div class="col l1"><input type="checkbox"/> <label for="todos" style="color: #fff;" class="filtros">Todos</label> </div>
+                </div>
+                </div>
+                <div class="col l3 offset-l9">
+                  <input href="" type="submit" class="botao2" value="Cancelar">
+                  <input href="" type="submit" class="botao2" value="Salvar">
+                </div>
+                
+              
+                  
+                </div>
+                  </div>
+
+                </div>
+            </div>
+            
+            <div class=" row videos">
+              <div class="col l12 resultado">
+                  <ul class="pagination">
+    <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+    <li class="active"><a href="#!">1</a></li>
+    <li class="waves-effect"><a href="#!">2</a></li>
+    <li class="waves-effect"><a href="#!">3</a></li>
+    <li class="waves-effect"><a href="#!">4</a></li>
+    <li class="waves-effect"><a href="#!">5</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+              </div>
+            </div>
+
+            </div>  
+              
+            </div>
+            
+            
+        </div>
+      </div>
+
+   <footer class="page-footer" >
+          
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+
+
+  <script language="javascript">
+    function getBusca() {
+      document.getElementById("busca").style.display = "block";
+      document.getElementById("login").style.display = "none";
+      search.classList.add("ativo");
+      account.classList.remove("ativo");
+    }
+
+    function excluirVideo() {
+      document.getElementById("areaExcluir").style.display = "block";
+    }
+
+     function cancelar() {
+      document.getElementById("areaExcluir").style.display = "none";
+    }
+
+    function adicionar() {
+      document.getElementById("adicionar").style.display = "block";
+      document.getElementById("botaoAdd").style.display = "none";
+      
+    }
+
+    function editarVideo(){
+      document.getElementById("editarVideo").style.display = "block";
+      document.getElementById("botaoDelete").style.display = "none";
+      document.getElementById("botaoUpdate").style.display = "none";
+    }
+
+     function cancelarEdicao(){
+      document.getElementById("editarVideo").style.display = "none";
+      document.getElementById("botaoDelete").style.display = "block";
+      document.getElementById("botaoUpdate").style.display = "block";
+    }
+
+    function cancelarAdicao(){
+      document.getElementById("adicionar").style.display = "none";
+      document.getElementById("botaoAdd").style.display = "block";
+       document.getElementById("grupo").style.display = "block";
+      document.getElementById("titulo").style.display = "block";
+    }
+
+    function getLogin() {
+      document.getElementById("login").style.display = "block";
+      document.getElementById("busca").style.display = "none";
+      search.classList.remove("ativo");
+      account.classList.add("ativo");
+    }
+    function getFiltros() {
+      document.getElementById("options").style.display= "block";
+      document.getElementById("delimitador").style.display= "block";
+      document.getElementById("delimitador2").style.display= "block";
+    }
+
+    function getDuracao(){
+      document.getElementById("duracoes").style.display="block";
+    }
+
+    function getCanais(){
+      window.location.href = "http://localhost/icomptv/canais.html";
+    }
+
+    function getPlaylists(){
+      window.location.href = "http://localhost/icomptv/playlists.html";
+    }
+
+    function perfil(){
+      window.location.href = "perfil.html";
+    }
+
+    function inscrever(){
+      Materialize.toast('I am a toast!', 4000);
+    }
+  </script>
+  <script>
+    
+
+
+     $(document).ready(function(){
+
+          $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+    });
+ 
+</script>
+   
+</body>
+</html>
