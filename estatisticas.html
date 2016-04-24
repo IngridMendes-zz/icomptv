@@ -1,0 +1,463 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <script src="Chart.min.js"></script>
+
+</head>
+<body class="perfil">
+	<nav class="cabecalho">
+      <div class="nav-wrapper">
+          <a href="http://icomp.tv/" class="brand-logo">
+            <img src="dev/img/logo.png" alt="logo" class="logo"> 
+          </a>
+          <ul class="right hide-on-med-and-down menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#!">Minha conta</a></li>
+            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+          </ul>
+      </div>
+    </nav>
+
+  	<div class="busca" id="busca">
+  		<form >
+
+
+  			<div class="texto">
+  				<input type="text" class="campo">
+  				<input href="result.html" type="submit" class="botao" value="Pesquisar">
+          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
+          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
+          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
+          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
+      
+  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
+  			</div>
+  			<hr class="delimitador" id="delimitador">
+  			<div class="options" id="options">
+  				<ul>
+  					<li>
+  						<a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
+
+  					</li>
+  					<div class="details" id="duracoes">
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Hoje</a>						
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há uma semana</a>
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há um mês</a>
+  						</li>
+  					</div>
+  				</ul>
+  			</div>
+  			<hr class="delimitador" id="delimitador2">
+  		</form>
+    </div>
+
+    <div class="row login" id="login">
+    	<div class="formulario col l7 s12">
+    		<ul> 
+    			<li><a class="label">Email</a></li>
+    			<li><input type="email" class="campo"></li>
+    			<li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
+    			<li>
+    				<input type="password" class="campo">
+    				<input type="submit" class="entrar" value="Entrar">
+    			</li>
+    		</ul>
+    	</div>
+      <div class="cadastro col l5 s12">
+        <p class="label">Mas se você ainda não tem cadastro.</p>
+        <input type="submit" class="cadastre" value="CADASTRE-SE">
+      </div>
+    </div>
+    
+      <div class="row">
+        <div class="categorias col s12">
+          <input type="submit" class="categoria selecionado" value="Perfil">
+          <input type="submit" class="categoria" onClick="meusvideos()" value="Meus Vídeos">
+          <input type="submit" class="categoria" value="Meus Canais">
+          <input type="submit" class="categoria" value="Minhas Playlists">
+          <hr class="hr2">
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <div class="row lista">
+            <div class="col l12 s12">
+              <img src="dev/img/perfil.png" class="icone user"> 
+              <a class="nome">Nome do Usuário</a>
+              <a class="detalhes numeros">10 vídeos postados | 5 canais | 200 visualizações</a>
+            </div>
+            
+            <div class="col l12 s12">
+              <hr class="hr">
+            <p class="detalhes email">email@icomp.ufam.edu.br</p>
+            </div>
+            <div class="sobre row">
+              <div class="col l12 s12 item">
+                <img src="dev/img/account.png" class="icone about">
+                <a class="principal">Sobre</a>
+              </div>
+              <div class="areas col l3 s12">
+                <ul>
+                  <li class="opcao"><a href="perfil.html" class="area">Visão Geral</a></li>
+                  <li class="opcao ativa"><a href="#!" class="area">Estatísticas</a></li>
+                  <li class="opcao"><a href="dados.html" class="area">Dados Pessoais</a></li>
+                </ul>
+              </div>
+              <div class="geral col l9">
+                 <ul class="collapsible meu" data-collapsible="expandable">
+                    <li>
+                      <div class="collapsible-header top active">Número de publicações<i class="material-icons">keyboard_arrow_down</i></div>
+                      <div class="collapsible-body">
+                        <div class="publicacoes row">
+                          <div class="areaGrafico col l4" >
+                          <div class="grafico ">
+                            <p class="info">Gráfico</p>
+                            <div class="box-chart">
+                              <canvas id="Grafico1"></canvas>
+                            </div>
+                          </div>
+                            <p class="grupo">
+                              <input class="with-gap" name="group1" type="radio" id="diaria"  checked/>
+                              <label class="rad" for="diaria">Diária</label>
+                            </p>
+                            <p class="grupo">
+                              <input class="with-gap" name="group1" type="radio" id="mensal"  />
+                              <label class="rad" for="mensal">Mensal</label>
+                            </p>
+                            <p class="grupo">
+                              <input class="with-gap" name="group1" type="radio" id="anual"  />
+                              <label class="rad" for="anual">Anual</label>
+                            </p>
+                          </div>
+                          <div class="col l3">
+                            <div class="anual">
+                            <p class="info">Diariamente</p>
+                            <p class="num">1</p>
+                            <p class="dado">vídeo/dia</p>
+                            </div>
+                            <div class="anual">
+                            <p class="info">Mensalmente</p>
+                            <p class="num">30</p>
+                            <p class="dado">vídeos/mês</p>
+                            </div>
+                          </div>
+                          <div class="anual col l3">
+                            <p class="info">Anualmente</p>
+                            <br><br><br>
+                            <p class="num">360</p>
+                            <p class="dado">vídeos/ano</p>
+                            <br><br><br>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header top active">Visualizações por canal<i class="material-icons">keyboard_arrow_down</i></div>
+                      <div class="collapsible-body">
+                        <div class="row publicacoes">
+                          <div class="anual col l5">
+                            <div class="grafico">
+                              <p class="info">Gráfico</p>
+                              <div class="box-chart">
+                              <canvas id="Grafico2" ></canvas>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header top active">Visualizações por vídeos<i class="material-icons">keyboard_arrow_down</i></div>
+                      <div class="collapsible-body">
+                        <div class="publicacoes row">
+                          <div class="anual col l6">
+                            <p class="rad escolha">Escolha o vídeo para saber o número de visualizações</p>
+                            <select class="browser-default select">
+                              <option class="rad" value="" disabled selected></option>
+                              <option class="rad" value="1">Option 1</option>
+                              <option class="rad" value="2">Option 2</option>
+                              <option class="rad" value="3">Option 3</option>
+                            </select>
+                          </div>
+                          <div class="anual col l4">
+                            <p class="num">200</p><p class="dado">Visualizações</p>
+                          </div>
+                        </div>
+            
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header top active"><i class="material-icons">keyboard_arrow_down</i>Tempo de visualização por vídeo</div>
+                      <div class="collapsible-body">
+                        <div class="publicacoes row">
+                          <div class="anual col l6">
+                            <p class="rad escolha">Escolha o canal para saber o tempo de visualização dos vídeos</p>
+                            <select class="browser-default select">
+                              <option class="rad" value="" disabled selected></option>
+                              <option class="rad" value="1">Option 1</option>
+                              <option class="rad" value="2">Option 2</option>
+                              <option class="rad" value="3">Option 3</option>
+                            </select>
+                            <br><br>
+                          </div>
+                          
+                            <div class="anual col l4">
+                            <div class="grafico">
+                              <p class="info">Gráfico</p>
+                              <div class="box-chart">
+                              <canvas id="Grafico3" ></canvas>
+                            </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header top active"><i class="material-icons">keyboard_arrow_down</i>Acessos por plataformas</div>
+                      <div class="collapsible-body">
+                        <div class="row publicacoes">
+                          <div class="anual col l5">
+                            <div class="grafico">
+                              <p class="info">Gráfico</p>
+                              <div class="box-chart">
+                              <canvas id="Grafico4" ></canvas>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header top active"><i class="material-icons">keyboard_arrow_down</i>Acessos por horários</div>
+                      <div class="collapsible-body">
+                        <div class="row publicacoes">
+                          <div class="anual col l5">
+                            <div class="grafico">
+                              <p class="info">Gráfico</p>
+                              <div class="box-chart">
+                              <canvas id="Grafico5" ></canvas>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header top active"><i class="material-icons">keyboard_arrow_down</i>Acessos por região</div>
+                      <div class="collapsible-body">
+                        <div class="row publicacoes">
+                          <div class="anual col l5">
+                            <div class="grafico">
+                              <p class="info">Gráfico</p>
+                              <div class="box-chart">
+                              <canvas id="Grafico6" ></canvas>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+
+              </div>
+            </div>
+            
+            
+        </div>
+      </div>
+
+   <footer class="page-footer" >
+          
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+
+
+  <script language="javascript">
+    function getBusca() {
+      document.getElementById("busca").style.display = "block";
+      document.getElementById("login").style.display = "none";
+      search.classList.add("ativo");
+      account.classList.remove("ativo");
+    }
+    function getLogin() {
+      document.getElementById("login").style.display = "block";
+      document.getElementById("busca").style.display = "none";
+      search.classList.remove("ativo");
+      account.classList.add("ativo");
+    }
+    function getFiltros() {
+      document.getElementById("options").style.display= "block";
+      document.getElementById("delimitador").style.display= "block";
+      document.getElementById("delimitador2").style.display= "block";
+    }
+
+    function meusvideos(){
+      window.location.href = "meusvideos.html";
+    }
+
+    function getDuracao(){
+      document.getElementById("duracoes").style.display="block";
+    }
+
+    function getCanais(){
+      window.location.href = "http://localhost/icomptv/canais.html";
+    }
+
+    function getPlaylists(){
+      window.location.href = "http://localhost/icomptv/playlists.html";
+    }
+
+    function inscrever(){
+      Materialize.toast('I am a toast!', 4000);
+    }
+  </script>
+    <script src="Chart.min.js"></script>
+    <script type="text/javascript">
+        var randomnb = function(){ return Math.round(Math.random()*300)};
+    </script>
+  <script>
+    
+
+
+     $(document).ready(function(){
+
+          $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+    });
+ 
+</script>
+
+<script type="text/javascript">                                        
+
+                                  var data1 = {
+                                      labels: ["", "", "", ""],
+                                      datasets: [
+                                          {
+                                              label: "Dados primários",
+                                              fillColor: "rgba(233, 83, 22,0.5)", <!--background-->
+                                              strokeColor: "rgba(233, 83, 22,0.8)", <!--linha-->
+                                              highlightFill: "rgba(233, 83, 22,0.75)", <!--background hover-->
+                                              highlightStroke: "rgba(233, 83, 22,1)", <!--linha hover-->
+                                              data: [28, 48, 70, 19]
+                                          },
+                                      ]
+                                  };
+
+                                  var data2 = {
+                                      labels: ["Canal 1", "Canal 2", "Canal 3", "Canal 4"],
+                                      datasets: [
+                                          {
+                                              label: "Dados primários",
+                                              fillColor: "rgba(233, 83, 22,0.5)", <!--background-->
+                                              strokeColor: "rgba(233, 83, 22,0.8)", <!--linha-->
+                                              highlightFill: "rgba(233, 83, 22,0.75)", <!--background hover-->
+                                              highlightStroke: "rgba(233, 83, 22,1)", <!--linha hover-->
+                                              data: [78, 84, 52, 107]
+                                          },
+                                      ]
+                                  };  
+
+                                   var data3 = {
+                                      labels: ["Vídeo 1", "Vídeo 2", "Vídeo 3", "Vídeo 4"],
+                                      datasets: [
+                                          {
+                                              label: "Dados primários",
+                                              fillColor: "rgba(233, 83, 22,0.5)", <!--background-->
+                                              strokeColor: "rgba(233, 83, 22,0.8)", <!--linha-->
+                                              highlightFill: "rgba(233, 83, 22,0.75)", <!--background hover-->
+                                              highlightStroke: "rgba(233, 83, 22,1)", <!--linha hover-->
+                                              data: [78, 84, 52, 107]
+                                          },
+                                      ]
+                                  }; 
+
+                                  var data4 = {
+                                      labels: ["Plataforma 1", "Plataforma 2", "Plataforma 3", "Plataforma 4"],
+                                      datasets: [
+                                          {
+                                              label: "Dados primários",
+                                              fillColor: "rgba(233, 83, 22,0.5)", <!--background-->
+                                              strokeColor: "rgba(233, 83, 22,0.8)", <!--linha-->
+                                              highlightFill: "rgba(233, 83, 22,0.75)", <!--background hover-->
+                                              highlightStroke: "rgba(233, 83, 22,1)", <!--linha hover-->
+                                              data: [78, 84, 52, 107]
+                                          },
+                                      ]
+                                  };
+
+                                  var data5 = {
+                                      labels: ["Horário 1", "Horário 2", "Horário 3", "Horário 4"],
+                                      datasets: [
+                                          {
+                                              label: "Dados primários",
+                                              fillColor: "rgba(233, 83, 22,0.5)", <!--background-->
+                                              strokeColor: "rgba(233, 83, 22,0.8)", <!--linha-->
+                                              highlightFill: "rgba(233, 83, 22,0.75)", <!--background hover-->
+                                              highlightStroke: "rgba(233, 83, 22,1)", <!--linha hover-->
+                                              data: [78, 84, 52, 107]
+                                          },
+                                      ]
+                                  };  
+
+                                  var data6 = {
+                                      labels: ["Região 1", "Região 2", "Região 3", "Região 4"],
+                                      datasets: [
+                                          {
+                                              label: "Dados primários",
+                                              fillColor: "rgba(233, 83, 22,0.5)", <!--background-->
+                                              strokeColor: "rgba(233, 83, 22,0.8)", <!--linha-->
+                                              highlightFill: "rgba(233, 83, 22,0.75)", <!--background hover-->
+                                              highlightStroke: "rgba(233, 83, 22,1)", <!--linha hover-->
+                                              data: [78, 84, 52, 107]
+                                          },
+                                      ]
+                                  };             
+
+                                  window.onload = function(){
+                                      var ctx1 = document.getElementById("Grafico1").getContext("2d");
+                                      var BarChart1 = new Chart(ctx1).Bar(data1, {responsive : true, scaleShowGridLines : false, showScale: false});
+                                      var ctx2 = document.getElementById("Grafico2").getContext("2d");
+                                      var BarChart2 = new Chart(ctx2).Bar(data2, {responsive : true, scaleShowGridLines : false});
+
+                                      var ctx3 = document.getElementById("Grafico3").getContext("2d");
+                                      var BarChart3 = new Chart(ctx3).Bar(data3, {responsive : true, scaleShowGridLines : false});
+
+                                      var ctx4 = document.getElementById("Grafico4").getContext("2d");
+                                      var BarChart4 = new Chart(ctx4).Bar(data4, {responsive : true, scaleShowGridLines : false});
+
+                                      var ctx5 = document.getElementById("Grafico5").getContext("2d");
+                                      var BarChart5 = new Chart(ctx5).Bar(data5, {responsive : true, scaleShowGridLines : false});
+
+                                      var ctx6 = document.getElementById("Grafico6").getContext("2d");
+                                      var BarChart6 = new Chart(ctx6).Bar(data6, {responsive : true, scaleShowGridLines : false});
+                                  }           
+                              </script>
+   
+</body>
+</html>
