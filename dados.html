@@ -16,6 +16,17 @@
   <!-- jQuery library (served from Google) -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script language="javascript">
+    function editarasenha() {
+       document.getElementById("editarasenha").style.display = "block";
+    }
+    function editarTudo() {
+      document.getElementById("editarTudo").style.display = "block";
+      var elems = document.getElementsByClassName('dadosPessoais');
+      for(var i = 0; i < elems.length; i++) {
+        elems[i].style.display = 'none';
+       //console.log("Elemento: " + i);
+      }
+    }
 		function getBusca() {
       document.getElementById("busca").style.display = "block";
       document.getElementById("login").style.display = "none";
@@ -191,10 +202,10 @@
                 <div class="row editarTudo">
                   <div class=" row" style="background-color: #fff;">
                   <div class="col l12">
-                    <a class="retorno editar">Editar Informações</a>
+                    <a class="retorno editar" onClick="editarTudo()">Editar Informações</a>
                   </div>
                   </div>
-                  <div class=" row "style="background-color: #e9e8e8; border-top: 1px solid #cdcbcc;">
+                  <div class=" row " id="editarTudo"style="background-color: #e9e8e8; border-top: 1px solid #cdcbcc; display:none;">
                   
                   <div class="col l18 areaEditarTudo" style="display:block">
                     <p class="texto">Nome</p>
@@ -203,14 +214,16 @@
                     <p class="texto"> <input type="text" class="campo2"></p>
                     <p class="texto">Senha Atual</p>
                     <p class="texto"> <input type="password" class="campo2 senha">
-                      <input href="" type="submit" class="botao2" value="Editar Senha">
+                      <input onClick="editarasenha()" type="submit" class="botao2" value="Editar Senha">
                     </p>
+                    <div id="editarasenha" style="display:none">
                     <p class="texto">Nova Senha</p>
                     <p class="texto"> <input type="password" class="campo2 senha">
                     </p>
                     <p class="texto">Repetir Senha</p>
                     <p class="texto"> <input type="password" class="campo2 senha">
                     </p>
+                    </div>
               
             </div>
             <div class="col l4 areaEditarTudo" style="display:block; padding-top: 300px;">

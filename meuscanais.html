@@ -116,36 +116,49 @@
                 <p class="infoVideo">Nome do Canal</p>
                 <input type="text" class="campo">
                 <p class="infoVideo">Descrição</p>
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" ></textarea>
                 <p class="infoVideo">Vídeos que pertencem ao canal</p>
                 <div class="row">
                   <div class="col l6 parte">
-                <p class="infoVideo">Nome do Vídeo</p>
+                <p class="infoVideo" style="padding-left: 12px">Nome do Vídeo</p>
                 <div class="row">
-                <div class="input-field col s12 m6">
-                <select class="icons">
-      <option value="" disabled selected>Choose your option</option>
-      <option value="" data-icon="images/sample-1.jpg" class="left circle">example 1</option>
-      <option value="" data-icon="images/office.jpg" class="left circle">example 2</option>
-      <option value="" data-icon="images/yuna.jpg" class="left circle">example 3</option>
-    </select>
-    <label>Images in select</label>
+                <div class="col l8">
+                  <select class="browser-default select" style="width: 195px;margin: 0px;">
+                              <option class="rad" value="" disabled selected></option>
+                              <option class="rad" value="1">Option 1</option>
+                              <option class="rad" value="2">Option 2</option>
+                              <option class="rad" value="3">Option 3</option>
+                            </select>
                 </div>
-                <input href="" type="submit" class="botao3" value="Adicionar">
+                <div class="col l4">
+                   <input href="" type="submit" class="botao4" value="Adicionar">
+                </div>
+                
+                
+               
               </div>
                 
                 <div class="row escolher">
 
-                  <p class="infoVideo desabilitado"><i>Você ainda não tem vídeos/playlists associados a este canal.Adicione acima e clique em ADICIONAR.</i></p>
+                  <p class="infoVideo desabilitado" style="padding-left: 12px; text-align: justify; color: #878786;"><i>Você ainda não tem vídeos/playlists associados a este canal.Adicione acima e clique em ADICIONAR.</i></p>
                 </div>
                 </div>
                 </div>
                 
      
                 </div>
-                <div class="col l3 offset-l1 submeter">
+                <div class="col l3 offset-l1 ">
+                  <p class="infoVideo">Ícone do canal</p>
+                  <div style="background-color: #fff; text-align: center; height: 136px; padding-top: 20px; width: 163;">
+                    <img src="dev/img/icone2.png" width="115px">
+                  </div>
+                  <div style="background-color: #fff; text-align: justify; height: 27px; width: 163; padding-top: 5px; padding-left: 5px;">
+                    <img src="dev/img/canais-58.png" width="20px">
+                  </div>
+                  <div class="submeter">
                   <input href="" onClick="cancelarAdicao()" type="submit" class="botao2" value="Cancelar">
                   <input href="" type="submit" class="botao2" value="Carregar">
+                  </div>
                 </div>
               </div>
               <div class="row videos" id="titulo">
@@ -176,6 +189,91 @@
                 <i class="small material-icons tooltipped status excluir" onClick="excluirVideo()" id="botaoDelete" data-position="top" data-delay="50" data-tooltip="Excluir">delete</i></div>
               <!--<div class="col l1"><i class="medium material-icons">file_upload</i></div>-->
             </div>
+            <div class="row adicionar" id="editar" style="display: block">
+                <div class="col l8">
+                <p class="infoVideo">Nome do Canal</p>
+                <input type="text" class="campo">
+                <p class="infoVideo">Descrição</p>
+                <textarea class="textarea" ></textarea>
+                <p class="infoVideo">Vídeos que pertencem ao canal</p>
+                <div class="row">
+                  <div class="col l6 parte">
+                <p class="infoVideo" style="padding-left: 12px">Nome do Vídeo</p>
+                <div class="row">
+                <div class="col l8">
+                  <select class="browser-default select" style="width: 195px;margin: 0px;">
+                              <option class="rad" value="" disabled selected></option>
+                              <option class="rad" value="1">Option 1</option>
+                              <option class="rad" value="2">Option 2</option>
+                              <option class="rad" value="3">Option 3</option>
+                            </select>
+                </div>
+                <div class="col l4">
+                   <input href="" type="submit" class="botao4" value="Adicionar">
+                </div>
+                <div class="col l12">
+                  <a class="infoVideo desabilitado"><i class="tiny material-icons status excluir">delete</i>Excluir</a>
+                <input type="radio" disabled="disabled"/>
+                
+                <label class="infoVideo" >Selecionar todos</label>
+                 <a class="infoVideo desabilitado" style="padding-left: 60px;">1 vídeo</a>
+                </div>   
+               
+              </div>
+                
+                 <div class="row escolher">
+                  <div class="row">
+                    <div class="col l1" style="margin-top: 20px;">
+                    <img src="dev/img/canais-66.png" width="20"  > 
+                  </div>
+                  <div class="col l4 " style="padding-right: 0px;">
+                    <img src="dev/img/video.jpg" width="95" height="55" > 
+                  </div>
+                  <div class="col l5" style="padding: 0px;">
+                    <p style="margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 12px;"><b>Nome do Vídeo</b></p>
+                    <p style="margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 11px;">Nome do Canal</p>
+                    <p style="margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 11px;">100 visualizações</p>
+                    <p style="margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 11px;">há uma semana</p>
+                  </div>
+                  <div class="col l2"><input type="checkbox"/> <label for="todos" style="color: #fff;" class="filtros">Todos</label> </div>
+                  </div>
+                  <div class="row">
+                    <div class="col l1" style="margin-top: 20px;">
+                    <img src="dev/img/canais-66.png" width="20"  > 
+                  </div>
+                  <div class="col l4 " style="padding-right: 0px;">
+                    <img src="dev/img/video.jpg" width="95" height="55" > 
+                  </div>
+                  <div class="col l5" style="padding: 0px;">
+                    <p style="margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 12px;"><b>Nome do Vídeo</b></p>
+                    <p style="margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 11px;">Nome do Canal</p>
+                    <p style="margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 11px;">100 visualizações</p>
+                    <p style="margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 11px;">há uma semana</p>
+                  </div>
+                  <div class="col l2"><input type="checkbox"/> <label for="todos" style="color: #fff;" class="filtros">Todos</label> </div>
+                  </div>
+
+                </div>
+
+                </div>
+                </div>
+                
+     
+                </div>
+                <div class="col l3 offset-l1 ">
+                  <p class="infoVideo">Ícone do canal</p>
+                  <div style="background-color: #fff; text-align: center; height: 136px; padding-top: 20px; width: 163;">
+                    <img src="dev/img/icone2.png" width="115px">
+                  </div>
+                  <div style="background-color: #fff; text-align: justify; height: 27px; width: 163; padding-top: 5px; padding-left: 5px;">
+                    <img src="dev/img/canais-58.png" width="20px">
+                  </div>
+                  <div class="submeter">
+                  <input href="" onClick="cancelarAdicao()" type="submit" class="botao2" value="Cancelar">
+                  <input href="" type="submit" class="botao2" value="Carregar">
+                  </div>
+                </div>
+              </div>
             
             
            
