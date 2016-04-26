@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <!--<meta content="width=device-width, initial-scale=1" name="viewport">-->
+    <script src="Chart.min.js"></script>
+    <!--<style type="text/css">
+
+    .box {
+        margin: 0px auto;
+        width: 70%;
+    }
+
+    .box-chart {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    </style>  -->
+
+    <script type="text/javascript">
+        var randomnb = function(){ return Math.round(Math.random()*300)};
+    </script>  
+
+</head>
+
+<body class="perfil">  
+
+<nav class="cabecalho">
+      <div class="nav-wrapper">
+          <a href="http://icomp.tv/" class="brand-logo">
+            <img src="dev/img/logo.png" alt="logo" class="logo"> 
+          </a>
+          <ul class="right hide-on-med-and-down menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#!">Minha conta</a></li>
+            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <div class="busca" id="busca">
+      <form >
+
+
+        <div class="texto">
+          <input type="text" class="campo">
+          <input href="result.html" type="submit" class="botao" value="Pesquisar">
+          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
+          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
+          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
+          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
+      
+          <p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
+        </div>
+        <hr class="delimitador" id="delimitador">
+        <div class="options" id="options">
+          <ul>
+            <li>
+              <a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
+              <a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
+              <a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
+
+            </li>
+            <div class="details" id="duracoes">
+              <li>
+                <a href="#!" class="topico"><i class="material-icons check">check</i>Hoje</a>           
+              </li>
+              <li>
+                <a href="#!" class="topico"><i class="material-icons check">check</i>Há uma semana</a>
+              </li>
+              <li>
+                <a href="#!" class="topico"><i class="material-icons check">check</i>Há um mês</a>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <hr class="delimitador" id="delimitador2">
+      </form>
+    </div>
+
+    <div class="row login" id="login">
+      <div class="formulario col l7 s12">
+        <ul> 
+          <li><a class="label">Email</a></li>
+          <li><input type="email" class="campo"></li>
+          <li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
+          <li>
+            <input type="password" class="campo">
+            <input type="submit" class="entrar" value="Entrar">
+          </li>
+        </ul>
+      </div>
+      <div class="cadastro col l5 s12">
+        <p class="label">Mas se você ainda não tem cadastro.</p>
+        <input type="submit" class="cadastre" value="CADASTRE-SE">
+      </div>
+    </div>
+    
+      <div class="row">
+        <div class="categorias col s12">
+          <input type="submit" class="categoria selecionado" value="Perfil">
+          <input type="submit" class="categoria" value="Meus Vídeos">
+          <input type="submit" class="categoria" value="Meus Canais">
+          <input type="submit" class="categoria" value="Minhas Playlists">
+          <hr class="hr2">
+        </div>
+      </div>  
+
+    <div class="conteudo">
+
+        <div class="box-chart">
+
+            <canvas id="GraficoBarra" style="width:100%;"></canvas>
+
+            <script type="text/javascript">                                        
+
+                var options = {
+                    responsive:true
+                };
+
+                var data = {
+                    labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+                    datasets: [
+                        {
+                            label: "Dados primários",
+                            fillColor: "rgba(220,220,220,0.5)",
+                            strokeColor: "rgba(220,220,220,0.8)",
+                            highlightFill: "rgba(220,220,220,0.75)",
+                            highlightStroke: "rgba(220,220,220,1)",
+                            data: [randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb(), randomnb()]
+                        },
+                        {
+                            label: "Dados secundários",
+                            fillColor: "rgba(151,187,205,0.5)",
+                            strokeColor: "rgba(151,187,205,0.8)",
+                            highlightFill: "rgba(151,187,205,0.75)",
+                            highlightStroke: "rgba(151,187,205,1)",
+                            data: [28, 48, 40, 19, 86, 27, 90, randomnb(), randomnb(), randomnb(), randomnb(), randomnb()]
+                        }
+                    ]
+                };                
+
+                window.onload = function(){
+                    var ctx = document.getElementById("GraficoBarra").getContext("2d");
+                    var BarChart = new Chart(ctx).Bar(data, options);
+                }           
+            </script>
+
+        </div>
+    
+    </div>
+
+    <footer class="page-footer" >
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">VOD</h5>
+                <p class="grey-text text-lighten-4">VOD - Portal de Gerência e Distribuição de Vídeo</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contate-nos</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Entre em contato com o Instituto de Computação da UFAM:</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons">phone</i> (92) 3305-1193/2808/2809</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!"><i class="material-icons">email</i> secretaria@icomp.ufam.edu.br</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
+            <a class="grey-text text-lighten-4 right" href="http://icomp.ufam.edu.br/">http://icomp.ufam.edu.br/</a>
+            </div>
+          </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+
+  <script language="javascript">
+    function getBusca() {
+      document.getElementById("busca").style.display = "block";
+      document.getElementById("login").style.display = "none";
+      search.classList.add("ativo");
+      account.classList.remove("ativo");
+    }
+    function getLogin() {
+      document.getElementById("login").style.display = "block";
+      document.getElementById("busca").style.display = "none";
+      search.classList.remove("ativo");
+      account.classList.add("ativo");
+    }
+    function getFiltros() {
+      document.getElementById("options").style.display= "block";
+      document.getElementById("delimitador").style.display= "block";
+      document.getElementById("delimitador2").style.display= "block";
+    }
+
+    function getDuracao(){
+      document.getElementById("duracoes").style.display="block";
+    }
+
+    function getCanais(){
+      window.location.href = "http://localhost/icomptv/canais.html";
+    }
+
+    function getPlaylists(){
+      window.location.href = "http://localhost/icomptv/playlists.html";
+    }
+
+    function inscrever(){
+      Materialize.toast('I am a toast!', 4000);
+    }
+  </script>
+
+  <script>
+    
+
+
+     $(document).ready(function(){
+
+          $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+    });
+ 
+</script>
+</body>
+
+</html>

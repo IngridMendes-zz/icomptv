@@ -2,6 +2,27 @@ body.playlist{
 	background-color: #CDCBCC;
   font-family: "Trebuchet MS", Helvetica, sans-serif; 
 
+  .bx-wrapper {
+    margin-bottom: 44px;
+  }
+
+  .bx-wrapper .bx-viewport {
+  /*-moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border:  5px solid #fff;
+  background: #fff;
+  left: -5px;*/
+  height: 310px !important;
+  
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+  -moz-transform: translatez(0);
+      -ms-transform: translatez(0);
+      -o-transform: translatez(0);
+      transform: translatez(0);
+}
+
 	.media{
 
 		margin-top: 20px;

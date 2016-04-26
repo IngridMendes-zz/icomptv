@@ -1,10 +1,59 @@
 body{
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 
+	.box-chart {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+
+    .pagination li.active {
+    background-color: #065C7B;
+}
+
+    .select{
+    	    border: 1px solid #e95316;
+    	   	height: 2rem;
+    	    width: 80%;
+    	    margin-left: 40px;
+    		margin-bottom: 17px;
+    }
+
 	[type="checkbox"].filled-in:checked + label:after,
 	[type="checkbox"].filled-in:not(:checked) + label:after{
      border: 2px solid #fff;
      background-color: #E95316;
+	}
+
+	[type="radio"].with-gap:checked+label:before,
+	[type="radio"].with-gap:not(:checked) + label:before {
+    border-radius: 50%;
+    border: 2px solid #e95316;
+	}
+
+	[type="radio"]:not(:checked)+label, [type="radio"]:checked+label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    line-height: 25px;
+    font-size: 0.8rem;
+    transition: .28s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	}
+
+	[type="radio"].with-gap:checked+label:after {
+	    border-radius: 50%;
+	    border: 2px solid #e95316;
+	    background-color: #e95316;
+	    z-index: 0;
+	    -webkit-transform: scale(0.5);
+	    transform: scale(0.5);
 	}
 
 	/*[type="checkbox"].filled-in:checked + label:before {
@@ -37,7 +86,8 @@ body{
 		.nav-wrapper {
 			border-bottom: 8px solid #E95316;
 		}
-		
+
+
 		.logo{
 			width: 80px;
 			margin-top: 19px;
@@ -50,9 +100,12 @@ body{
 			margin-top: 10px;
 			background-size: contain;
 			background-repeat: no-repeat;
+			margin-left: 15px;
+			margin-right: 15px;
 			&.icon-busca{
-				margin-right: 25px;
+				
 				background-image:url(../img/search.png);
+				
 
 				&.ativo{
 					background-image:url(../img/search-selected.png);
@@ -233,8 +286,13 @@ body{
 	}
 
 	footer.page-footer{
-		background-color: #065C7B;
+		background-color: transparent;
 	}
+
+	footer.page-footer .footer-copyright{
+		background-color: #065C7B;
+		
+	} 
 
 	.cadastro{
 		text-align: center;
