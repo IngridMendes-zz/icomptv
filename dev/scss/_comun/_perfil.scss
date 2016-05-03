@@ -8,6 +8,8 @@ body.perfil{
 		background-color: #fff;
 	}
 
+	
+
 	.dados{
 		//overflow-y: scroll;
     	//height: 352px;
@@ -57,6 +59,19 @@ body.perfil{
 		background-color: #e9e8e8;
     	color: #065C7B;
     	display: none;
+	}
+
+	.bloqueio{
+		
+			border-radius: 10px;
+			width:80px;
+    		height:30px;
+			margin-left: 10px;
+			font-size: 14px;
+			color: #cdcbcc;
+			background: #fff;
+			border: 1px solid #cdcbcc;
+
 	}
 
 	.botao2{

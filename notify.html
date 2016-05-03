@@ -1,0 +1,239 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  <!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript">		
+	</script>
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+
+  <!-- jQuery library (served from Google) -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script language="javascript">
+    function editarasenha() {
+       document.getElementById("editarasenha").style.display = "block";
+    }
+    function editarTudo() {
+      document.getElementById("editarTudo").style.display = "block";
+      var elems = document.getElementsByClassName('dadosPessoais');
+      for(var i = 0; i < elems.length; i++) {
+        elems[i].style.display = 'none';
+       //console.log("Elemento: " + i);
+      }
+    }
+
+    function getNotify() {
+      document.getElementById("notify").style.display = "block";
+    }
+		function getBusca() {
+      document.getElementById("busca").style.display = "block";
+      document.getElementById("login").style.display = "none";
+      search.classList.add("ativo");
+      account.classList.remove("ativo");
+    }
+    function getLogin() {
+      document.getElementById("login").style.display = "block";
+      document.getElementById("busca").style.display = "none";
+      search.classList.remove("ativo");
+      account.classList.add("ativo");
+    }
+		function getFiltros() {
+			document.getElementById("options").style.display= "block";
+			document.getElementById("delimitador").style.display= "block";
+			document.getElementById("delimitador2").style.display= "block";
+		}
+
+    function editarNome(){
+       document.getElementById("editarNome").style.display="block";
+    }
+
+    function editarEmail(){
+       document.getElementById("editarEmail").style.display="block";
+    }
+
+    function editarSenha(){
+       document.getElementById("editarSenha").style.display="block";
+    }
+
+    function cancelarNome(){
+       document.getElementById("editarNome").style.display="none";
+    }
+
+    function cancelarEmail(){
+       document.getElementById("editarEmail").style.display="none";
+    }
+
+    function cancelarSenha(){
+       document.getElementById("editarSenha").style.display="none";
+    }
+
+    function getDuracao(){
+      document.getElementById("duracoes").style.display="block";
+    }
+
+    function getCanais(){
+      window.location.href = "http://localhost/icomptv/canais.html";
+    }
+
+    function getPlaylists(){
+      window.location.href = "http://localhost/icomptv/playlists.html";
+    }
+
+    function meusvideos(){
+      window.location.href = "meusvideos.html";
+    }
+
+    function inscrever(){
+      Materialize.toast('I am a toast!', 4000);
+    }
+	</script>
+      
+</head>
+<body class="perfil">
+	<nav class="cabecalho">
+      <div class="nav-wrapper">
+          <a href="http://icomp.tv/" class="brand-logo">
+            <img src="dev/img/logo.png" alt="logo" class="logo"> 
+          </a>
+          <ul class="right hide-on-med-and-down menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#!">Minha conta</a></li>
+            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+            <li><a href="#!" class="icon icon-notify" onClick="getNotify()" ></a></li>
+          </ul>
+      </div>
+    </nav>
+    
+  	<div class="busca" id="busca">
+  		<form >
+
+
+  			<div class="texto">
+  				<input type="text" class="campo">
+  				<input href="result.html" type="submit" class="botao" value="Pesquisar">
+          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
+          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
+          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
+          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
+      
+  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
+  			</div>
+  			<hr class="delimitador" id="delimitador">
+  			<div class="options" id="options">
+  				<ul>
+  					<li>
+  						<a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
+
+  					</li>
+  					<div class="details" id="duracoes">
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Hoje</a>						
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há uma semana</a>
+  						</li>
+  						<li>
+  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há um mês</a>
+  						</li>
+  					</div>
+  				</ul>
+  			</div>
+  			<hr class="delimitador" id="delimitador2">
+  		</form>
+    </div>
+
+    <div class="row login" id="login">
+    	<div class="formulario col l7 s12">
+    		<ul> 
+    			<li><a class="label">Email</a></li>
+    			<li><input type="email" class="campo"></li>
+    			<li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
+    			<li>
+    				<input type="password" class="campo">
+    				<input type="submit" class="entrar" value="Entrar">
+    			</li>
+    		</ul>
+    	</div>
+      <div class="cadastro col l5 s12">
+        <p class="label">Mas se você ainda não tem cadastro.</p>
+        <input type="submit" class="cadastre" value="CADASTRE-SE">
+      </div>
+    </div>
+
+      <div class="conteudo">
+        <div class="row lista">
+            <div class="col l12 s12" style="    margin-bottom: 5px;"> 
+              <a style="margin: 0px; padding-left: 20px; font-weight: bold; color: #000">Todas suas notificações</a>
+              <img src="dev/img/config.png" style="float: right; padding-right: 20px; width: 40px;">
+            </div>
+            <div class="col l12 s12" >
+              <hr class="hr">
+            </div>
+
+            <div class="row" style="border-bottom: 1px solid #cdcbcc; padding-bottom: 20px; margin-bottom: 0px;">
+              <div class="col l1">
+                <img src="dev/img/icone2.png" style="width: 75px; padding-left: 20px; padding-top: 27px;">
+              </div>
+              <div class="col l1">
+                <img src="dev/img/video.jpg" style="width: 110px; height: 70px; margin-top: 20px;">
+              </div>
+              <div class="col l8" style="margin-top: 20px; margin-left: 20px;">
+            <p style="margin: 0px; color: #065c7b; font-weight: bold; font-size: 14px;">Nome do Vídeo</p>
+            <p style="margin: 0px; color: #878786; font-size: 14px;">Nome do Canal</p>
+            <p style="margin: 0px; color: #878786; font-size: 14px;">78 visualizações | há 5 dias</p>
+          </div>
+            </div>
+
+            <div class="row" style="border-bottom: 1px solid #cdcbcc; padding-bottom: 20px; margin-bottom: 0px;">
+              <div class="col l1">
+                <img src="dev/img/icone2.png" style="width: 75px; padding-left: 20px; padding-top: 27px;">
+              </div>
+              <div class="col l1">
+                <img src="dev/img/video.jpg" style="width: 110px; height: 70px; margin-top: 20px;">
+              </div>
+              <div class="col l8" style="margin-top: 20px; margin-left: 20px;">
+            <p style="margin: 0px; color: #065c7b; font-weight: bold; font-size: 14px;">Nome do Vídeo</p>
+            <p style="margin: 0px; color: #878786; font-size: 14px;">Nome do Canal</p>
+            <p style="margin: 0px; color: #878786; font-size: 14px;">78 visualizações | há 5 dias</p>
+          </div>
+            </div>
+
+            <div class="row" style="border-bottom: 1px solid #cdcbcc; padding-bottom: 20px; margin-bottom: 0px;">
+              <div class="col l1">
+                <img src="dev/img/icone2.png" style="width: 75px; padding-left: 20px; padding-top: 27px;">
+              </div>
+              <div class="col l1">
+                <img src="dev/img/video.jpg" style="width: 110px; height: 70px; margin-top: 20px;">
+              </div>
+              <div class="col l8" style="margin-top: 20px; margin-left: 20px;">
+            <p style="margin: 0px; color: #065c7b; font-weight: bold; font-size: 14px;">Nome do Vídeo</p>
+            <p style="margin: 0px; color: #878786; font-size: 14px;">Nome do Canal</p>
+            <p style="margin: 0px; color: #878786; font-size: 14px;">78 visualizações | há 5 dias</p>
+          </div>
+            </div>
+            
+            
+            
+        </div>
+      </div>
+
+   <footer class="page-footer" >
+          
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
+            </div>
+          </div>
+        </footer>
+   
+</body>
+</html>

@@ -126,6 +126,19 @@ body{
 					background-image:url(../img/account-selected.png);	
 				}
 			}
+			&.icon-notify{
+				
+				background-image:url(../img/notify.png);
+				
+
+				&.ativo{
+					background-image:url(../img/notify-selected.png);
+				}
+				
+				&:hover{
+					background-image:url(../img/notify-selected.png);	
+				}
+			}
 		}
 
 
