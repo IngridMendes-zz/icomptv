@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="navbar.js"></script>
+<meta charset="UTF-8">
+
+<nav class="cabecalho">
+      <div class="nav-wrapper">
+          <a href="http://icomp.tv/" class="brand-logo">
+            <img src="dev/img/logo.png" alt="logo" class="logo"> 
+          </a>
+          <ul class="right hide-on-med-and-down menu">
+            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
+            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+          </ul>
+      </div>
+    </nav>
+
+  	<div class="busca" id="busca">
+  		<form >
+
+
+  			<div class="texto">
+  				<input type="text" class="campo">
+  				<input href="result.html" type="submit" class="botao" value="Pesquisar">
+          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
+          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
+          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
+          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
+      
+  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
+  			</div>
+  			<hr class="delimitador" id="delimitador">
+  			<div class="options" id="options">
+  				<ul>
+  					<li>
+  						<a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
+  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
+
+  					</li>
+  					<div class="details" id="duracoes">
+  						<li>
+  							<p href="#!" class="topico" onClick="ontopico()">
+                  <i id="hoje" class="material-icons check">check</i>
+                  <a href="">Hoje</a></p>						
+  						</li>
+  						<li>
+  							<a href="#!" class="topico" onClick="ontopico2()">
+                  <i id="umasemana" class="material-icons check">check</i>Há uma semana</a>
+  						</li>
+  						<li>
+  							<a href="#!" class="topico" onClick="ontopico3()">
+                  <i id="ummes" class="material-icons check">check</i>Há um mês</a>
+  						</li>
+  					</div>
+  				</ul>
+  			</div>
+  			<hr class="delimitador" id="delimitador2">
+  		</form>
+    </div>
+
+    <div class="row login" id="login">
+    	<div class="formulario col l7 s12">
+    		<ul> 
+    			<li><a class="label">Email</a></li>
+    			<li><input type="email" class="campo"></li>
+    			<li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
+    			<li>
+    				<input type="password" class="campo">
+    				<input type="submit" class="entrar" value="Entrar">
+    			</li>
+    		</ul>
+    	</div>
+      <div class="cadastro col l5 s12">
+        <p class="label">Mas se você ainda não tem cadastro.</p>
+        <input type="submit" class="cadastre" value="CADASTRE-SE">
+      </div>
+    </div>

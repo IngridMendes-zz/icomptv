@@ -181,10 +181,10 @@ body{
 			background: #FFFFFF;
 			border-radius: 5px;
 			border: 1px solid #E95316;
-			width: 156px;
+			width: 180px;
 			position: absolute;
 			display: none;
-			
+			padding: 5px;
 			li{
 				text-align:justify;
 			}
@@ -193,10 +193,11 @@ body{
 		.topico{
 			color: #878786;
 			font-size: 20px;
+			margin: 0px;
 		}
 
 		.check{
-			display: none;
+			//display: none;
 		}
 
 		.delimitador{
@@ -300,6 +301,8 @@ body{
 
 	footer.page-footer{
 		background-color: transparent;
+		margin-top: 0px;
+    	padding-top: 0px;
 	}
 
 	footer.page-footer .footer-copyright{

@@ -134,16 +134,16 @@ body {
       background: #FFFFFF;
       border-radius: 5px;
       border: 1px solid #E95316;
-      width: 156px;
+      width: 180px;
       position: absolute;
-      display: none; }
+      display: none;
+      padding: 5px; }
       body .busca .details li {
         text-align: justify; }
     body .busca .topico {
       color: #878786;
-      font-size: 20px; }
-    body .busca .check {
-      display: none; }
+      font-size: 20px;
+      margin: 0px; }
     body .busca .delimitador {
       display: none;
       border: 1px solid #FFFFFF; }
@@ -214,7 +214,9 @@ body {
       height: 35px;
       margin-right: 15px; }
   body footer.page-footer {
-    background-color: transparent; }
+    background-color: transparent;
+    margin-top: 0px;
+    padding-top: 0px; }
   body footer.page-footer .footer-copyright {
     background-color: #065C7B; }
   body .cadastro {
@@ -1662,3 +1664,134 @@ body.minhasplaylists {
     background-repeat: no-repeat; }
     body.minhasplaylists .icone.about {
       margin-left: 15px; }
+
+.main.main {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding-bottom: 20px; }
+  .main.main .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    .main.main .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 10px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 110px; }
+      .main.main .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      .main.main .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+    .main.main .categorias .hr2 {
+      border: 1px solid #cdcbcc;
+      margin-top: 0px; }
+  .main.main .hr {
+    border: 1px solid #cdcbcc; }
+  .main.main .videos {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+    .main.main .videos .bx-wrapper .bx-viewport {
+      left: -5px;
+      height: 205px !important;
+      -webkit-transform: translatez(0);
+      -ms-transform: translatez(0);
+      transform: translatez(0); }
+  .main.main .lista {
+    padding-top: 35px;
+    padding-bottom: 35px; }
+  .main.main .canais {
+    display: block;
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+    .main.main .canais .bx-wrapper .bx-viewport {
+      /*-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border:  5px solid #fff;
+	background: #fff;*/
+      left: -5px;
+      height: 205px !important;
+      -webkit-transform: translatez(0);
+      -ms-transform: translatez(0);
+      transform: translatez(0); }
+    .main.main .canais .itens {
+      padding-left: 35px;
+      padding-right: 35px; }
+    .main.main .canais .nome {
+      font-size: 22px;
+      font-weight: bold;
+      color: #065C7B;
+      margin-bottom: 0px;
+      margin-top: 0px; }
+    .main.main .canais .icone {
+      width: 70px; }
+    .main.main .canais .inscritos {
+      color: #878786;
+      font-weight: bold; }
+    .main.main .canais .inscricao {
+      margin-top: 20px; }
+      .main.main .canais .inscricao .inscrever {
+        color: #065C7B; }
+  .main.main .destaque {
+    color: #065C7B;
+    font-weight: bold;
+    margin-bottom: 0px; }
+  .main.main .detalhes {
+    color: #878786;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .main.main .playlists {
+    display: block;
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+    .main.main .playlists .quantidade {
+      color: #fff;
+      width: 80px;
+      height: 116.364px;
+      background-color: #065c7b;
+      position: absolute;
+      opacity: 0.8;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+      right: 0;
+      text-align: center;
+      font-size: 20px; }
+    .main.main .playlists .bx-wrapper {
+      margin-bottom: 40px; }
+    .main.main .playlists .bx-wrapper .bx-viewport {
+      left: -5px;
+      height: 170px !important;
+      -webkit-transform: translatez(0);
+      -ms-transform: translatez(0);
+      transform: translatez(0); }
+  .main.main .titulo {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 35px; }

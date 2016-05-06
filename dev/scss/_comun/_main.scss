@@ -1,8 +1,7 @@
-body.index{
+.main.main{
 	background:#CDCBCC;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-
-
+	padding-bottom: 20px;
 	
 	.categorias{
 		background-color:#ffffff;
@@ -27,12 +26,14 @@ body.index{
 				border-bottom: 12px solid #E95316;
 			}
 		}
-	}
 
-	.hr2{
+		.hr2{
 			border: 1px solid #cdcbcc;
 			margin-top: 0px;
 		}
+	}
+
+	
 
 	.hr{
 			border: 1px solid #cdcbcc;			
@@ -50,15 +51,8 @@ body.index{
 		margin-right: 30px;
 
 		.bx-wrapper .bx-viewport {
-	/*-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
-	background: #fff;*/
 	left: -5px;
 	height: 205px !important;
-	
-	/*fix other elements on the page moving (on Chrome)*/
 	-webkit-transform: translatez(0);
 	-moz-transform: translatez(0);
     	-ms-transform: translatez(0);
@@ -67,14 +61,70 @@ body.index{
 }
 	}
 
+	.lista{
+    	padding-top: 35px;
+    	padding-bottom: 35px;
+	}
+
+	.canais{
+		display: block;
+		position: relative;
+    	background-color: #fff;
+    	margin: 0.5rem 0 1rem 0;
+    	transition: box-shadow .25s;
+    	border-radius: 2px;
+
+    	margin-top: 30px;
+		margin-left: 30px;
+		margin-right: 30px;
+
+		.bx-wrapper .bx-viewport {
+	/*-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	border:  5px solid #fff;
+	background: #fff;*/
+	left: -5px;
+	height: 205px !important;
+
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+    	-ms-transform: translatez(0);
+    	-o-transform: translatez(0);
+    	transform: translatez(0);
+}
+
 	.itens{
 		padding-left: 35px;
     	padding-right: 35px;
 	}
 
-	.lista{
-    	padding-top: 35px;
-    	padding-bottom: 35px;
+.nome{
+		font-size: 22px;
+		font-weight: bold;
+		color: #065C7B;
+		margin-bottom: 0px;
+    	margin-top: 0px;
+   
+	}
+
+		.icone{
+			width:70px;
+		}
+
+		.inscritos{
+			color: #878786;
+			font-weight: bold;
+	
+		}
+
+		.inscricao{
+			margin-top: 20px;
+			.inscrever{
+				color: #065C7B;
+		
+			}
+		}				
 	}
 
 	.destaque{
@@ -101,22 +151,27 @@ body.index{
 		margin-left: 30px;
 		margin-right: 30px;
 
+		.quantidade{
+			color: #fff;
+			width: 80px;
+    		height: 116.364px;
+    		background-color: #065c7b;
+    		position: absolute;
+    		opacity: 0.8;
+    		right: 0;
+    		text-align: center;
+    		font-size: 20px;
+		}
+
 		.bx-wrapper  {
 	    margin-bottom: 40px;
 }
 
 		.bx-wrapper .bx-viewport {
-	/*-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
-	background: #fff;*/
-	left: -5px;
-	height: 170px !important;
-	
-	/*fix other elements on the page moving (on Chrome)*/
-	-webkit-transform: translatez(0);
-	-moz-transform: translatez(0);
+		left: -5px;
+		height: 170px !important;
+		-webkit-transform: translatez(0);
+		-moz-transform: translatez(0);
     	-ms-transform: translatez(0);
     	-o-transform: translatez(0);
     	transform: translatez(0);
@@ -129,60 +184,4 @@ body.index{
 		padding-left: 35px;
 	}
 
-	.nome{
-		font-size: 22px;
-		font-weight: bold;
-		color: #065C7B;
-		margin-bottom: 0px;
-    	margin-top: 0px;
-   
-	}
-
-	.canais{
-		display: block;
-		position: relative;
-    	background-color: #fff;
-    	margin: 0.5rem 0 1rem 0;
-    	transition: box-shadow .25s;
-    	border-radius: 2px;
-
-    	margin-top: 30px;
-		margin-left: 30px;
-		margin-right: 30px;
-
-		.bx-wrapper .bx-viewport {
-	/*-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
-	background: #fff;*/
-	left: -5px;
-	height: 205px !important;
-	
-	/*fix other elements on the page moving (on Chrome)*/
-	-webkit-transform: translatez(0);
-	-moz-transform: translatez(0);
-    	-ms-transform: translatez(0);
-    	-o-transform: translatez(0);
-    	transform: translatez(0);
-}
-
-		.icone{
-			width:70px;
-		}
-
-		.inscritos{
-			color: #878786;
-			font-weight: bold;
-	
-		}
-
-		.inscricao{
-			margin-top: 20px;
-			.inscrever{
-				color: #065C7B;
-		
-			}
-		}				
-	}
 }
