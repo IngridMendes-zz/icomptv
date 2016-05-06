@@ -1,6 +1,8 @@
-body.result{
+main.result{
 	background-color: #CDCBCC;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
 	.resultado{
 		margin-top: 20px;
@@ -33,7 +35,7 @@ body.result{
 		}
 
     		.icon-canal{
-    			width: 150px;
+    			width: 120px;
     			padding-right: 0px; 
 
     		}
@@ -41,6 +43,11 @@ body.result{
     		.info{
     			padding-left: 0px;
     		}
+
+            .info-canal{
+                padding-left: 50px;
+            }
+
 
     		.section{
     			color: #000000;

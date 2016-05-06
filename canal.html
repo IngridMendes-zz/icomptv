@@ -1,163 +1,14 @@
-<html>
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" />
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	  <!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>Canal</title>
+<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="jquery.bxslider.min.js"></script>
+<link href="jquery.bxslider.css" rel="stylesheet" />      
 
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript">		
-	</script>
-
-  <!-- jQuery library (served from Google) -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <!-- bxSlider Javascript file -->
-  <script src="jquery.bxslider.min.js"></script>
-  <!-- bxSlider CSS file -->
-  <link href="jquery.bxslider.css" rel="stylesheet" />
-  
-  <script>
-    $(document).ready(function(){
-      $('.bxslider').bxSlider({
-      minSlides: 2,
-      maxSlides: 5,
-      slideWidth: 207,
-      slideMargin: 15,
-    });
-  });
-  </script>
-	<script language="javascript">
-
-		function getBusca() {
-			document.getElementById("busca").style.display= "block";
-			document.getElementById("login").style.display= "none";
-		}
-
-    function getInfo() {
-      document.getElementById("info").style.display= "none";
-      document.getElementById("recentes").style.display= "none";
-      document.getElementById("informacoes").style.display= "block";
-      informa.classList.add("selecionado");
-      vide.classList.remove("selecionado");
-    }
-
-    function getVid() {
-      document.getElementById("info").style.display= "block";
-      document.getElementById("recentes").style.display= "block";
-      document.getElementById("informacoes").style.display = "none";
-      informa.classList.remove("selecionado");
-      vide.classList.add("selecionado");
-    }
-		function getLogin() {
-			document.getElementById("login").style.display= "block";
-			document.getElementById("busca").style.display= "none";
-		}
-		function getFiltros() {
-			//window.alert("Botão Pressionado");
-			document.getElementById("options").style.display= "block";
-			document.getElementById("delimitador").style.display= "block";
-			document.getElementById("delimitador2").style.display= "block";
-		}
-		
-		function getTipos(){
-			document.getElementById("tipos").style.display="block";
-		}
-
-		function getCanais(){
-			document.getElementById("videos").style.display="none";
-			document.getElementById("canais").style.display="block";
-			document.getElementById("botcanal").style.borderBottom="12px solid #E95316";
-			document.getElementById("botvideo").style.borderBottom="0px";
-		}
-
-		function getVideos(){
-			document.getElementById("videos").style.display="block";
-			document.getElementById("canais").style.display="none";
-			document.getElementById("botcanal").style.borderBottom="0px";
-			document.getElementById("botvideo").style.borderBottom="12px solid #E95316";
-		}
-
-    function getDescricao(){
-      document.getElementById("descricaocanal").style.display="block";      
-    }
-
-    function hello() { document.write(a); }
-	</script>
-      
-</head>
-<body class="canalpagina">
-	<nav class="cabecalho">
-      <div class="nav-wrapper">
-          <a href="http://icomp.tv/" class="brand-logo">
-            <img src="dev/img/logo.png" alt="logo" class="logo"> 
-          </a>
-          <ul class="right hide-on-med-and-down menu">
-            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
-            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
-          </ul>
-      </div>
-    </nav>
-
-  	<div class="busca" id="busca">
-      <form >
-
-
-        <div class="texto">
-          <input type="text" class="campo">
-          <input href="result.html" type="submit" class="botao" value="Pesquisar">
-          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
-          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
-          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
-          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
-      
-          <p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
-        </div>
-        <hr class="delimitador" id="delimitador">
-        <div class="options" id="options">
-          <ul>
-            <li>
-              <a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
-              <a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
-              <a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
-
-            </li>
-            <div class="details" id="duracoes">
-              <li>
-                <a href="#!" class="topico"><i class="material-icons check">check</i>Hoje</a>           
-              </li>
-              <li>
-                <a href="#!" class="topico"><i class="material-icons check">check</i>Há uma semana</a>
-              </li>
-              <li>
-                <a href="#!" class="topico"><i class="material-icons check">check</i>Há um mês</a>
-              </li>
-            </div>
-          </ul>
-        </div>
-        <hr class="delimitador" id="delimitador2">
-      </form>
-    </div>
-
-   <div class="row login" id="login">
-      <div class="formulario col l7 s12">
-        <ul> 
-          <li><a class="label">Email</a></li>
-          <li><input type="email" class="campo"></li>
-          <li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
-          <li>
-            <input type="password" class="campo">
-            <input type="submit" class="entrar" value="Entrar">
-          </li>
-        </ul>
-      </div>
-      <div class="cadastro col l5 s12">
-        <p class="label">Mas se você ainda não tem cadastro.</p>
-        <input type="submit" class="cadastre" value="CADASTRE-SE">
-      </div>
-    </div>
+<main class="canalpagina">
 
     <div class="pag row">
       <div class="inicio col l12 s12">
@@ -170,7 +21,8 @@
             <p class="inscritos">72 inscritos</p>
           </div>
           <div class="col l3 s12">
-            <p class="inscrever" href="#!"><i class="tiny material-icons">check_box</i>Inscrever-se</p>
+            <p class="inscrever tooltipped" href="#!" data-position="bottom" data-delay="50" data-tooltip="Faça login para inscrever-se"><i class="tiny material-icons" 
+                  >check_box</i>Inscrever-se</p>
             <p class="detalhes">200 vídeos | 1000 visualizações</p>
           </div>
         </div>
@@ -204,69 +56,49 @@
 
         <ul class="bxslider">
               <li>
-                <div class="video-container">
-                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="dev/img/video.jpg" width="207.273px" height="116.364px">
                 <p class="nome-video">Nome do Vídeo</p>
                 <p class="inscritos">100 visualizações | há 3 dias</p>
               </li>
               <li>
-                <div class="video-container">
-                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="dev/img/video.jpg" width="207.273px" height="116.364px">
                 <p class="nome-video">Nome do Vídeo</p>
                 <p class="inscritos">100 visualizações | há 3 dias</p>
               </li>
               <li>
-                <div class="video-container">
-                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="dev/img/video.jpg" width="207.273px" height="116.364px">
                 <p class="nome-video">Nome do Vídeo</p>
                 <p class="inscritos">100 visualizações | há 3 dias</p>
               </li>
               <li>
-                <div class="video-container">
-                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="dev/img/video.jpg" width="207.273px" height="116.364px">
                 <p class="nome-video">Nome do Vídeo</p>
                 <p class="inscritos">100 visualizações | há 3 dias</p>
               </li>
               <li>
-                <div class="video-container">
-                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="dev/img/video.jpg" width="207.273px" height="116.364px">
                 <p class="nome-video">Nome do Vídeo</p>
                 <p class="inscritos">100 visualizações | há 3 dias</p>
               </li>
               <li>
-                <div class="video-container">
-                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="dev/img/video.jpg" width="207.273px" height="116.364px">
                 <p class="nome-video">Nome do Vídeo</p>
                 <p class="inscritos">100 visualizações | há 3 dias</p>
               </li>
               <li>
-                <div class="video-container">
-                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="dev/img/video.jpg" width="207.273px" height="116.364px">
                 <p class="nome-video">Nome do Vídeo</p>
                 <p class="inscritos">100 visualizações | há 3 dias</p>
               </li>
               <li>
-                <div class="video-container">
-                  <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <img src="dev/img/video.jpg" width="207.273px" height="116.364px">
                 <p class="nome-video">Nome do Vídeo</p>
                 <p class="inscritos">100 visualizações | há 3 dias</p>
               </li>
             </ul>
-        
-        
-
         </div>
-
+        
         <div class="informacoes" id="informacoes">
-
 
           <p class="top">Canal ativo desde: 11/12/2016</p>
           <p class="top">Descrição</p>
@@ -288,13 +120,7 @@
       </div>
     </div>
 
-    <footer class="page-footer" >
-          
-          <div class="footer-copyright">
-            <div class="container">
-            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
-            </div>
-          </div>
-        </footer>  
-</body>
-</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+<script src="canal.js"></script> 
+<script src="slider-horizontal.js"></script>  
+</main>

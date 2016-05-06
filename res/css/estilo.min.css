@@ -423,15 +423,17 @@ body.main {
         margin-top: 0px;
         margin-bottom: 0px; }
 
-body.result {
+main.result {
   background-color: #CDCBCC;
-  font-family: "Trebuchet MS", Helvetica, sans-serif; }
-  body.result .resultado {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+  main.result .resultado {
     margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
     background-color: #CDCBCC; }
-  body.result .lista {
+  main.result .lista {
     position: relative;
     margin: 8px 0 16px 0;
     margin: 0.5rem 0 1rem 0;
@@ -443,34 +445,36 @@ body.result {
     padding-right: 0px;
     padding-top: 20px;
     padding-bottom: 20px; }
-    body.result .lista .hr {
+    main.result .lista .hr {
       border: 1px solid #cdcbcc; }
-    body.result .lista .item {
+    main.result .lista .item {
       padding-top: 30px; }
-    body.result .lista .row {
+    main.result .lista .row {
       padding-left: 45px; }
-    body.result .lista .icon-canal {
-      width: 150px;
+    main.result .lista .icon-canal {
+      width: 120px;
       padding-right: 0px; }
-    body.result .lista .info {
+    main.result .lista .info {
       padding-left: 0px; }
-    body.result .lista .section {
+    main.result .lista .info-canal {
+      padding-left: 50px; }
+    main.result .lista .section {
       color: #000000;
       font-weight: bold;
       padding-left: 30px; }
-    body.result .lista .quantidade {
+    main.result .lista .quantidade {
       float: right;
       color: #878786;
       padding-right: 30px; }
-    body.result .lista .titulo {
+    main.result .lista .titulo {
       color: #065C7B;
       font-weight: bold;
       margin-top: 0px;
       font-size: 20px;
       margin-bottom: 0px; }
-    body.result .lista .inscrever {
+    main.result .lista .inscrever {
       color: #065C7B; }
-    body.result .lista .detalhes {
+    main.result .lista .detalhes {
       margin-top: 0px;
       margin-bottom: 0px;
       color: #878786; }
@@ -617,10 +621,12 @@ body.playlist {
         margin-top: 0px;
         margin-bottom: 0px; }
 
-body.canalpagina {
+main.canalpagina {
   background-color: #CDCBCC;
-  font-family: "Trebuchet MS", Helvetica, sans-serif; }
-  body.canalpagina .bx-wrapper .bx-viewport {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+  main.canalpagina .bx-wrapper .bx-viewport {
     /*-moz-box-shadow: 0 0 5px #ccc;
 	-webkit-box-shadow: 0 0 5px #ccc;
 	box-shadow: 0 0 5px #ccc;
@@ -632,11 +638,11 @@ body.canalpagina {
     -webkit-transform: translatez(0);
     -ms-transform: translatez(0);
     transform: translatez(0); }
-  body.canalpagina .pag {
+  main.canalpagina .pag {
     margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px; }
-  body.canalpagina .inicio {
+  main.canalpagina .inicio {
     margin-bottom: 0px;
     position: relative;
     background-color: #fff;
@@ -645,7 +651,7 @@ body.canalpagina {
     -webkit-transition: box-shadow .25s;
             transition: box-shadow .25s;
     border-radius: 2px; }
-  body.canalpagina .principal {
+  main.canalpagina .principal {
     margin-bottom: 0px;
     position: relative;
     background-color: #fff;
@@ -657,80 +663,80 @@ body.canalpagina {
     padding-right: 0px;
     padding-left: 0px;
     padding-top: 20px; }
-  body.canalpagina .title {
+  main.canalpagina .title {
     color: #ffffff;
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 0px; }
-  body.canalpagina .top {
+  main.canalpagina .top {
     color: #065c7b;
     font-weight: bold;
     margin-left: 30px; }
-  body.canalpagina .sub {
+  main.canalpagina .sub {
     color: #065c7b;
     margin-left: 30px;
     text-align: justify;
     margin-right: 30px; }
-  body.canalpagina .detalhe {
+  main.canalpagina .detalhe {
     color: #ffffff;
     margin-top: 0px; }
-  body.canalpagina .descricao {
+  main.canalpagina .descricao {
     color: #ffffff;
     font-size: 20px; }
-  body.canalpagina .opcoes {
+  main.canalpagina .opcoes {
     text-align: center; }
-  body.canalpagina .media {
+  main.canalpagina .media {
     padding-left: 0px;
     padding-right: 0px; }
-  body.canalpagina .info {
+  main.canalpagina .info {
     background-color: #065C7B;
     margin-left: 20px;
     margin-right: 20;
     margin-top: 30px; }
-  body.canalpagina .hr {
+  main.canalpagina .hr {
     border: 1px solid #cdcbcc;
     margin-top: 0px;
     margin-bottom: 0px; }
-  body.canalpagina .area {
+  main.canalpagina .area {
     color: #065c7b;
     background: #FFFFFF;
     border-style: none; }
-    body.canalpagina .area.selecionado {
+    main.canalpagina .area.selecionado {
       border-bottom: 2px solid #E95316;
       color: #E95316; }
-  body.canalpagina .ultima {
+  main.canalpagina .ultima {
     font-weight: bold;
     color: #065C7B;
     font-size: 20px; }
-  body.canalpagina .nome-video {
+  main.canalpagina .nome-video {
     color: #065C7B;
     margin-bottom: 0px;
     font-weight: bold;
     margin-top: 10px; }
-  body.canalpagina .informacoes {
+  main.canalpagina .informacoes {
     display: none; }
-  body.canalpagina .icon-canal {
+  main.canalpagina .icon-canal {
     width: 80px;
     padding-top: 20px; }
-  body.canalpagina .recentes {
+  main.canalpagina .recentes {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 30px; }
-  body.canalpagina .titulo {
+  main.canalpagina .titulo {
     color: #065c7b;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 0px;
     padding-top: 10px; }
-  body.canalpagina .inscrever {
+  main.canalpagina .inscrever {
     margin-top: 35px;
     text-align: -webkit-right;
     color: #065C7B;
     margin-bottom: 0px; }
-  body.canalpagina .inscritos {
+  main.canalpagina .inscritos {
     color: #878786;
     margin-top: 0px; }
-  body.canalpagina .detalhes {
+  main.canalpagina .detalhes {
     text-align: -webkit-right;
     color: #878786;
     margin-top: 0px; }
