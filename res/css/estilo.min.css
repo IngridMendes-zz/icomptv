@@ -423,138 +423,6 @@ body.main {
         margin-top: 0px;
         margin-bottom: 0px; }
 
-body.index {
-  background: #CDCBCC;
-  font-family: "Trebuchet MS", Helvetica, sans-serif; }
-  body.index .categorias {
-    background-color: #ffffff;
-    text-align: center;
-    padding-top: 35px;
-    padding-right: 0px;
-    padding-left: 0px; }
-    body.index .categorias .categoria {
-      background: #FFFFFF;
-      margin-right: 10px;
-      color: #000000;
-      font-size: 20px;
-      border-style: none;
-      width: 110px; }
-      body.index .categorias .categoria.selecionado {
-        border-bottom: 12px solid #E95316; }
-      body.index .categorias .categoria:hover {
-        border-bottom: 12px solid #E95316; }
-  body.index .hr2 {
-    border: 1px solid #cdcbcc;
-    margin-top: 0px; }
-  body.index .hr {
-    border: 1px solid #cdcbcc; }
-  body.index .videos {
-    position: relative;
-    background-color: #fff;
-    margin: 8px 0 16px 0;
-    margin: 0.5rem 0 1rem 0;
-    -webkit-transition: box-shadow .25s;
-            transition: box-shadow .25s;
-    border-radius: 2px;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px; }
-    body.index .videos .bx-wrapper .bx-viewport {
-      /*-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
-	background: #fff;*/
-      left: -5px;
-      height: 205px !important;
-      /*fix other elements on the page moving (on Chrome)*/
-      -webkit-transform: translatez(0);
-      -ms-transform: translatez(0);
-      transform: translatez(0); }
-  body.index .itens {
-    padding-left: 35px;
-    padding-right: 35px; }
-  body.index .lista {
-    padding-top: 35px;
-    padding-bottom: 35px; }
-  body.index .destaque {
-    color: #065C7B;
-    font-weight: bold;
-    margin-bottom: 0px; }
-  body.index .detalhes {
-    color: #878786;
-    margin-top: 0px;
-    margin-bottom: 0px; }
-  body.index .playlists {
-    display: block;
-    position: relative;
-    background-color: #fff;
-    margin: 8px 0 16px 0;
-    margin: 0.5rem 0 1rem 0;
-    -webkit-transition: box-shadow .25s;
-            transition: box-shadow .25s;
-    border-radius: 2px;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px; }
-    body.index .playlists .bx-wrapper {
-      margin-bottom: 40px; }
-    body.index .playlists .bx-wrapper .bx-viewport {
-      /*-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
-	background: #fff;*/
-      left: -5px;
-      height: 170px !important;
-      /*fix other elements on the page moving (on Chrome)*/
-      -webkit-transform: translatez(0);
-      -ms-transform: translatez(0);
-      transform: translatez(0); }
-  body.index .titulo {
-    font-size: 20px;
-    font-weight: bold;
-    padding-left: 35px; }
-  body.index .nome {
-    font-size: 22px;
-    font-weight: bold;
-    color: #065C7B;
-    margin-bottom: 0px;
-    margin-top: 0px; }
-  body.index .canais {
-    display: block;
-    position: relative;
-    background-color: #fff;
-    margin: 8px 0 16px 0;
-    margin: 0.5rem 0 1rem 0;
-    -webkit-transition: box-shadow .25s;
-            transition: box-shadow .25s;
-    border-radius: 2px;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px; }
-    body.index .canais .bx-wrapper .bx-viewport {
-      /*-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border:  5px solid #fff;
-	background: #fff;*/
-      left: -5px;
-      height: 205px !important;
-      /*fix other elements on the page moving (on Chrome)*/
-      -webkit-transform: translatez(0);
-      -ms-transform: translatez(0);
-      transform: translatez(0); }
-    body.index .canais .icone {
-      width: 70px; }
-    body.index .canais .inscritos {
-      color: #878786;
-      font-weight: bold; }
-    body.index .canais .inscricao {
-      margin-top: 20px; }
-      body.index .canais .inscricao .inscrever {
-        color: #065C7B; }
-
 body.result {
   background-color: #CDCBCC;
   font-family: "Trebuchet MS", Helvetica, sans-serif; }
@@ -1704,7 +1572,7 @@ body.minhasplaylists {
     margin-right: 30px; }
     .main.main .videos .bx-wrapper .bx-viewport {
       left: -5px;
-      height: 205px !important;
+      height: 210px !important;
       -webkit-transform: translatez(0);
       -ms-transform: translatez(0);
       transform: translatez(0); }
@@ -1730,7 +1598,7 @@ body.minhasplaylists {
 	border:  5px solid #fff;
 	background: #fff;*/
       left: -5px;
-      height: 205px !important;
+      height: 210px !important;
       -webkit-transform: translatez(0);
       -ms-transform: translatez(0);
       transform: translatez(0); }
