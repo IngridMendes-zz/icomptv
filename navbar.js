@@ -1,20 +1,35 @@
-function ontopico() {
-  document.getElementById("hoje").style.display = "block";
-}
-
-function ontopico2() {
-  document.getElementById("umasemana").style.display = "block";
-}
-
-function ontopico3() {
-  document.getElementById("ummes").style.display = "block";
-}
-
 function getBusca() {
   document.getElementById("busca").style.display = "block";
   document.getElementById("login").style.display = "none";
   search.classList.add("ativo");
   account.classList.remove("ativo");
+}
+
+function getAutentica() {
+  document.getElementById("bemvindo").style.display = "block";
+  document.getElementById("principal").style.display = "none";
+}
+
+function getAtualiza() {
+  document.getElementById("bemvindo").style.display = "none";
+  document.getElementById("atuali").style.display = "block";
+  document.getElementById("principal").style.display = "none";
+}
+
+function getCadastro() {
+  document.getElementById("cadastroo").style.display = "block";
+  document.getElementById("principal").style.display = "none";
+}
+
+function getCancelar() {
+  document.getElementById("cadastroo").style.display = "none";
+  document.getElementById("atuali").style.display = "none";
+  document.getElementById("principal").style.display = "block";
+}
+
+function getSenha() {
+  document.getElementById("novo").style.display = "block";
+  document.getElementById("principal").style.display = "none";
 }
     
 function getLogin() {
@@ -28,6 +43,7 @@ function getFiltros() {
   document.getElementById("options").style.display= "block";
   document.getElementById("delimitador").style.display= "block";
   document.getElementById("delimitador2").style.display= "block";
+  document.getElementById("outros").style.transform = "rotate(180deg)";
 }
 
 function getDuracao(){

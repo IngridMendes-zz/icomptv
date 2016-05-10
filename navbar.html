@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 <link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src="navbar.js"></script>
 <meta charset="UTF-8">
 
 <nav class="cabecalho">
@@ -10,11 +9,35 @@
             <img src="dev/img/logo.png" alt="logo" class="logo"> 
           </a>
           <ul class="right hide-on-med-and-down menu">
+            <li class="logado"><a href="main.html">Início</a></li>
+            <li class="logado"><a href="#!">Minha conta</a></li>
             <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
             <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
+            <li class="logado"><a href="#!" class="icon icon-notify" onClick="getNotify()" ></a></li>
           </ul>
       </div>
     </nav>
+
+    <div class="right notificar" id="notify">
+        <p class="not">
+          Notificações
+          <img src="dev/img/config.png" class="iconfig">
+        </p>
+        <hr class="separador">
+        <div class="row" class="uma">
+          <div class="col l4">
+            <img src="dev/img/video.jpg" width="110px" height="70px">
+          </div>
+          <div class="col l8">
+            <p class="enfase">Nome do Vídeo</p>
+            <p class="extra">Nome do Canal</p>
+            <p class="extra">78 visualizações | há 5 dias</p>
+          </div>
+        </div>
+        <hr class="separador">
+        <p class="center-align">
+          <a href="notify.html" class="ver ">Ver todas as notificações</a></p>
+      </div>
 
   	<div class="busca" id="busca">
   		<form >
@@ -28,7 +51,7 @@
           <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
           <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
       
-  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
+  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90" id="outros">keyboard_arrow_down</i></p>
   			</div>
   			<hr class="delimitador" id="delimitador">
   			<div class="options" id="options">
@@ -40,19 +63,11 @@
 
   					</li>
   					<div class="details" id="duracoes">
-  						<li>
-  							<p href="#!" class="topico" onClick="ontopico()">
-                  <i id="hoje" class="material-icons check">check</i>
-                  <a href="">Hoje</a></p>						
-  						</li>
-  						<li>
-  							<a href="#!" class="topico" onClick="ontopico2()">
-                  <i id="umasemana" class="material-icons check">check</i>Há uma semana</a>
-  						</li>
-  						<li>
-  							<a href="#!" class="topico" onClick="ontopico3()">
-                  <i id="ummes" class="material-icons check">check</i>Há um mês</a>
-  						</li>
+              <input type="checkbox" class="ingrid" id="hoje"/><label for="hoje" class="topico">Hoje</label>
+              <input type="checkbox" class="ingrid" id="semana"/><label for="semana" class="topico">Há uma semana</label>
+              <input type="checkbox" class="ingrid" id="mes"/><label for="mes" class="topico">Há um mês</label>
+  							
+  						
   					</div>
   				</ul>
   			</div>
@@ -61,19 +76,79 @@
     </div>
 
     <div class="row login" id="login">
-    	<div class="formulario col l7 s12">
+      <div id="principal">
+    	<div class="formulario col l7 s12" id="formulario">
     		<ul> 
     			<li><a class="label">Email</a></li>
     			<li><input type="email" class="campo"></li>
-    			<li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
+    			<li><a class="label">Senha</a><a href="" onClick="getSenha()" class="label2">Esqueceu a senha?</a></li>
     			<li>
     				<input type="password" class="campo">
-    				<input type="submit" class="entrar" value="Entrar">
+    				<input type="submit" class="entrar" value="Entrar" onClick="getAutentica()">
     			</li>
     		</ul>
     	</div>
-      <div class="cadastro col l5 s12">
+      <div class="cadastro col l5 s12" id="cadastro">
         <p class="label">Mas se você ainda não tem cadastro.</p>
-        <input type="submit" class="cadastre" value="CADASTRE-SE">
+        <input type="submit" class="cadastre" value="CADASTRE-SE" onClick="getCadastro()">
+      </div>
+      </div>
+      <div class="atualizarr col l7 offset-l3" id="novo">
+        <ul>
+          <li><a class="label">Email</a></li>
+          <li>
+            <input type="password" class="campo">
+            <input type="submit" class="entrar" value="Enviar">
+          </li>
+        </ul>
+      </div>
+      <div class="cadastro col l12 atualizarr" id="bemvindo">
+        <p class="label">Seja bem vindo(a), Nome do Usuário</p>
+        <input type="submit" class="entrar atualizar" onClick="getAtualiza()" value="Atualizar Cadastro">
+        <input type="submit" class="entrar" value="SAIR">
+      </div>
+      <div class="row atualizarr" id="atuali">
+        <div class="col l5 offset-l1">
+          <ul>
+            <li><a class="label">Nome</a></li>
+            <li><input type="text" class="campo"></li>
+            <li><a class="label">Email</a></li>
+            <li><input type="email" class="campo"></li>
+          </ul>
+        </div>
+        <div class="col l5">
+          <ul>
+            <li><a class="label">Senha</a></li>
+            <li><input type="password" class="campo"></li>
+            <li><a class="label">Repetir senha</a></li>
+            <li><input type="password" class="campo"></li>
+          </ul>
+          
+        <input type="submit" class="cadastre atual" value="ATUALIZAR">
+        <input type="submit" class="cadastre atual"  onClick="getCancelar()"  value="CANCELAR">
+        </div>
+      </div>
+      <div class="row atualizarr" id="cadastroo">
+        <div class="col l5 offset-l1">
+          <ul>
+            <li><a class="label">Nome</a></li>
+            <li><input type="text" class="campo"></li>
+            <li><a class="label">Email</a></li>
+            <li><input type="email" class="campo"></li>
+          </ul>
+        </div>
+        <div class="col l5">
+          <ul>
+            <li><a class="label">Senha</a></li>
+            <li><input type="password" class="campo"></li>
+            <li><a class="label">Repetir senha</a></li>
+            <li><input type="password" class="campo"></li>
+          </ul>
+          
+        <input type="submit" class="cadastre atual" value="CADASTRE-SE">
+        <input type="submit" class="cadastre atual" onClick="getCancelar()" value="CANCELAR">
+        </div>
       </div>
     </div>
+
+<script src="navbar.js"></script>

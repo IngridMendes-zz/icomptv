@@ -21,6 +21,8 @@ body{
     		margin-bottom: 17px;
     }
 
+
+
 	[type="checkbox"].filled-in:checked + label:after,
 	[type="checkbox"].filled-in:not(:checked) + label:after{
      border: 2px solid #fff;
@@ -57,11 +59,18 @@ body{
 	    transform: scale(0.5);
 	}
 
-	/*[type="checkbox"].filled-in:checked + label:before {
-  		border-right: 3px solid #E95316;
-  		border-bottom: 3px solid #E95316;
-  		background-color: #fff;
-  	}*/
+	.ingrid[type="checkbox"] + label:before,
+	.ingrid[type="checkbox"]:checked + label:before {
+  		border-right: 3px solid #878786;
+  		border-bottom: 3px solid #878786;
+  		//background-color: #878786;
+  	}
+
+  	.ingrid[type="checkbox"]:checked + label:after,
+	.ingrid[type="checkbox"]:not(:checked) + label:after{
+     border: 2px solid #878786;
+     background-color: #878786;
+	}
 
 	@media all and (min-width: 960px) {
     	body{
@@ -81,6 +90,53 @@ body{
     	}
  	}
 
+ 	.logado{
+ 		display: none;
+ 	}
+
+ 	.notificar{
+			width: 30%;
+    		box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px;
+		    display: none;
+		    background-color: rgb(255, 255, 255);
+		    position: fixed;
+		    z-index: 2;
+		    right: 0;
+		    .enfase{
+		    	margin: 0px; 
+		    	color: #065c7b; 
+		    	font-weight: bold; 
+		    	font-size: 14px;
+		    }
+		    .uma{
+		    	padding-left: 10px;
+		    }
+		    .separador{
+		    	border: 1px solid #cdcbcc;
+		    }
+		    .extra{
+		    	margin: 0px; 
+		    	color: #878786; 
+		    	font-size: 14px;
+		    }
+		    .not{
+		    	color: #065c7b; 
+		    	font-size: 12px; 
+		    	font-weight: bold; 
+		    	padding-left: 10px;
+		    }
+		    .ver{
+		    	color: #065c7b; 
+		    	font-size: 12px; 
+		    	font-weight: bold;
+		    }
+		    .iconfig{
+		    	float: right; 
+		    	padding-right: 10px; 
+		    	width: 30px;
+		    }
+		}
+
 	.cabecalho{
 		
 		background: #065C7B;
@@ -88,6 +144,7 @@ body{
 			border-bottom: 8px solid #E95316;
 		}
 
+		
 
 		.logo{
 			width: 80px;
@@ -182,7 +239,7 @@ body{
 			background: #FFFFFF;
 			border-radius: 5px;
 			border: 1px solid #E95316;
-			width: 180px;
+			width: 190px;
 			position: absolute;
 			display: none;
 			padding: 5px;
@@ -207,6 +264,7 @@ body{
 		}
 
 		.filtros{
+			cursor: pointer;
 			color: #FFFFFF;
 			font-size: 20px;
 			margin-right: 46px;
@@ -255,6 +313,13 @@ body{
 				color: #E95316;
 				background: #FFFFFF;
 			}
+			&.atualizar{
+				width: 200px;
+			}
+	}
+
+	.atualizarr{
+		display: none;
 	}
 
 	.cadastre{
@@ -271,6 +336,11 @@ body{
 			&:hover{
 				color: #E95316;
 				background: #FFFFFF;
+			}
+
+			&.atual{
+				float: right;
+				margin-left: 10px;
 			}
 	}
 

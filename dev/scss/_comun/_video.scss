@@ -1,7 +1,11 @@
-body.main{
+main.videopagina{
 
 	background-color: #CDCBCC;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+
+  .bx-prev, .bx-next {
+  transform: rotate(90deg);
+}
 
   .bx-wrapper .bx-viewport {
   /*-moz-box-shadow: 0 0 5px #ccc;
@@ -189,6 +193,10 @@ body.main{
 				color: #878786;
 				padding-left: 15px;
 				padding-right: 15px;
+        &.ativa{
+
+          cursor: pointer;
+        }
 				.small{
     			color: #065C7B;
     			font-size: 2rem;
