@@ -533,16 +533,16 @@ main.result {
       margin-bottom: 0px;
       color: #878786; }
 
-body.playlist {
+main.playlist {
   background-color: #CDCBCC;
   font-family: "Trebuchet MS", Helvetica, sans-serif; }
-  body.playlist .bx-wrapper {
+  main.playlist .bx-wrapper {
     margin-bottom: 44px; }
-  body.playlist .bx-prev, body.playlist .bx-next {
+  main.playlist .bx-prev, main.playlist .bx-next {
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg); }
-  body.playlist .bx-wrapper .bx-viewport {
+  main.playlist .bx-wrapper .bx-viewport {
     /*-moz-box-shadow: 0 0 5px #ccc;
   -webkit-box-shadow: 0 0 5px #ccc;
   box-shadow: 0 0 5px #ccc;
@@ -554,16 +554,16 @@ body.playlist {
     -webkit-transform: translatez(0);
     -ms-transform: translatez(0);
     transform: translatez(0); }
-  body.playlist .media {
+  main.playlist .media {
     margin-top: 20px;
     margin-left: 30px;
     margin-right: 30px;
     background-color: #CDCBCC; }
-    body.playlist .media .hr {
+    main.playlist .media .hr {
       border: 1px solid #cdcbcc; }
-    body.playlist .media .esquerda {
+    main.playlist .media .esquerda {
       padding-right: 0px; }
-    body.playlist .media .exibido {
+    main.playlist .media .exibido {
       margin-bottom: 0px;
       position: relative;
       margin: 8px 0 16px 0;
@@ -571,7 +571,7 @@ body.playlist {
       -webkit-transition: box-shadow .25s;
               transition: box-shadow .25s;
       border-radius: 2px; }
-    body.playlist .media .informacoes {
+    main.playlist .media .informacoes {
       position: relative;
       margin: 8px 0 16px 0;
       margin: 0.5rem 0 1rem 0;
@@ -580,27 +580,27 @@ body.playlist {
               transition: box-shadow .25s;
       border-radius: 2px;
       padding-bottom: 12; }
-      body.playlist .media .informacoes .nome-canal {
+      main.playlist .media .informacoes .nome-canal {
         margin-top: 5;
         margin-bottom: 0;
         color: #065C7B;
         font-weight: bold; }
-      body.playlist .media .informacoes .inscritos {
+      main.playlist .media .informacoes .inscritos {
         color: #878786;
         margin-top: 0px; }
-      body.playlist .media .informacoes .row {
+      main.playlist .media .informacoes .row {
         margin-top: 10;
         margin-bottom: 10; }
-      body.playlist .media .informacoes .icone {
+      main.playlist .media .informacoes .icone {
         width: 55px; }
-      body.playlist .media .informacoes .inscrever {
+      main.playlist .media .informacoes .inscrever {
         color: #065C7B;
         float: right;
         padding-top: 20px; }
-      body.playlist .media .informacoes .feed {
+      main.playlist .media .informacoes .feed {
         width: 35px;
         padding-left: 15px; }
-      body.playlist .media .informacoes .titulo {
+      main.playlist .media .informacoes .titulo {
         padding-top: 7px;
         font-size: 25px;
         font-weight: bold;
@@ -608,29 +608,29 @@ body.playlist {
         padding-right: 15px;
         margin-top: 0px;
         margin-bottom: 0px; }
-      body.playlist .media .informacoes .longa {
+      main.playlist .media .informacoes .longa {
         margin-top: 0px;
         color: #878786;
         padding-left: 15px;
         padding-right: 15px;
         display: none; }
-      body.playlist .media .informacoes .descr {
+      main.playlist .media .informacoes .descr {
         margin-top: 0px;
         color: #878786;
         padding-left: 15px;
         padding-right: 15px; }
-        body.playlist .media .informacoes .descr.ativa {
+        main.playlist .media .informacoes .descr.ativa {
           cursor: pointer; }
-        body.playlist .media .informacoes .descr .small {
+        main.playlist .media .informacoes .descr .small {
           color: #065C7B;
           font-size: 32px;
           font-size: 2rem; }
-      body.playlist .media .informacoes .like {
+      main.playlist .media .informacoes .like {
         margin-top: 0px;
         color: #878786;
         padding-left: 0px;
         padding-right: 15px; }
-    body.playlist .media .sugeridos {
+    main.playlist .media .sugeridos {
       position: relative;
       margin: 8px 0 16px 0;
       margin: 0.5rem 0 1rem 0;
@@ -640,22 +640,22 @@ body.playlist {
       border-radius: 2px;
       padding-left: 0px;
       padding-right: 0px; }
-      body.playlist .media .sugeridos .ativa {
+      main.playlist .media .sugeridos .ativa {
         background-color: #033e51; }
-      body.playlist .media .sugeridos .item {
+      main.playlist .media .sugeridos .item {
         padding-top: 10;
         padding-bottom: 10px;
         margin-bottom: 0; }
-      body.playlist .media .sugeridos .info {
+      main.playlist .media .sugeridos .info {
         padding-left: 0px; }
-      body.playlist .media .sugeridos .botao {
+      main.playlist .media .sugeridos .botao {
         margin: 0 auto;
         display: block;
         width: 20%;
         color: #ffffff;
         margin-bottom: 0px;
         margin-top: 0px; }
-      body.playlist .media .sugeridos .section {
+      main.playlist .media .sugeridos .section {
         margin-top: 0;
         padding-left: 10px;
         color: #ffffff;
@@ -663,19 +663,19 @@ body.playlist {
         font-size: 16px;
         margin-bottom: 0px;
         padding-bottom: 0px; }
-      body.playlist .media .sugeridos .detalhe {
+      main.playlist .media .sugeridos .detalhe {
         margin-top: 0;
         padding-left: 10px;
         color: #ffffff;
         font-size: 13px;
         padding-bottom: 15px;
         margin-bottom: 5px; }
-      body.playlist .media .sugeridos .titulo {
+      main.playlist .media .sugeridos .titulo {
         margin-top: 0px;
         margin-bottom: 0px;
         color: #ffffff;
         font-weight: bold; }
-      body.playlist .media .sugeridos .descr {
+      main.playlist .media .sugeridos .descr {
         color: #ffffff;
         font-size: 13px;
         margin-top: 0px;
@@ -1089,7 +1089,7 @@ body.perfil {
     margin: 0.5rem 0 1rem 0;
     box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }
 
-body.meusvideos {
+main.meusvideos {
   background: #CDCBCC;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   /*.excluir {
@@ -1099,32 +1099,44 @@ body.meusvideos {
 		background-size: contain;
 		background-repeat: no-repeat;	
 	}*/ }
-  body.meusvideos .parte {
+  main.meusvideos .parte {
     background-color: #fff;
     padding-right: 0px;
     padding-left: 0px;
     margin-bottom: 10px; }
-  body.meusvideos .categorias {
+  main.meusvideos .grup {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    font-size: 12px; }
+  main.meusvideos .label {
+    color: #000; }
+  main.meusvideos [type="radio"]:checked + label {
+    font-size: 14.4px;
+    font-size: 0.9rem;
+    color: #000; }
+  main.meusvideos .categorias {
     background-color: #ffffff;
     text-align: center;
     padding-top: 35px;
     padding-right: 0px;
     padding-left: 0px; }
-    body.meusvideos .categorias .categoria {
+    main.meusvideos .categorias .categoria {
       background: #FFFFFF;
       margin-right: 1px;
       color: #000000;
       font-size: 20px;
       border-style: none;
       width: 145px; }
-      body.meusvideos .categorias .categoria.selecionado {
+      main.meusvideos .categorias .categoria.selecionado {
         border-bottom: 12px solid #E95316; }
-      body.meusvideos .categorias .categoria:hover {
+      main.meusvideos .categorias .categoria:hover {
         border-bottom: 12px solid #E95316; }
-  body.meusvideos .hr2 {
+  main.meusvideos .hr2 {
     border: 1px solid #cdcbcc;
     margin-top: 0px; }
-  body.meusvideos .conteudo {
+  main.meusvideos .conteudo {
     position: relative;
     background-color: #fff;
     margin: 8px 0 16px 0;
@@ -1135,29 +1147,29 @@ body.meusvideos {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px; }
-  body.meusvideos .item {
+  main.meusvideos .item {
     background-color: #065C7B;
     padding-top: 10px;
     padding-bottom: 15px; }
-  body.meusvideos .sobre {
+  main.meusvideos .sobre {
     margin-left: 40px;
     margin-right: 40px;
     /*border-bottom: thin #cdcbcc solid;
 		border-left: thin #cdcbcc solid;
 		border-right: thin #cdcbcc solid;
 		height: 447px;*/ }
-  body.meusvideos .lista {
+  main.meusvideos .lista {
     padding-top: 40px;
     padding-bottom: 25px; }
-  body.meusvideos .adicionar {
+  main.meusvideos .adicionar {
     margin-top: 0px;
     background: #e9e8e8;
     padding-right: 35px;
     padding-left: 35px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding-top: 10px;
     display: none; }
-  body.meusvideos .editar {
+  main.meusvideos .editar {
     text-align: justify;
     margin-top: 12px;
     background: #e9e8e8;
@@ -1166,91 +1178,156 @@ body.meusvideos {
     padding-bottom: 10px;
     padding-top: 10px;
     display: none; }
-  body.meusvideos .ou {
+  main.meusvideos .ou {
     padding: 10px;
     color: #000;
     font-size: 14px; }
-  body.meusvideos .textarea {
+  main.meusvideos .textarea {
     width: 640px;
     height: 100px;
     background-color: #fff;
     border-color: #fff; }
-  body.meusvideos .categor {
+  main.meusvideos .categor {
     width: 170px;
     height: 27px; }
-  body.meusvideos .escolher {
+  main.meusvideos .escolher {
     border-top: 1px solid #cdcbcc;
     overflow-y: scroll;
     margin-bottom: 0px;
     height: 180px;
     padding-top: 8px;
     overflow-x: hidden; }
-  body.meusvideos .campo {
+  main.meusvideos .campo {
     background: #FFFFFF;
     border-bottom: 0px solid #9e9e9e;
     width: 640px;
     height: 27px;
     margin-right: 15px;
     margin-bottom: 0px; }
-    body.meusvideos .campo.pesquisa {
+    main.meusvideos .campo.pesquisa {
       width: 70%;
       border: 1px solid #cdcbcc;
       margin-right: 5px; }
-    body.meusvideos .campo.nome-playlist {
+    main.meusvideos .campo.nome-playlist {
       border: 1px solid #cdcbcc;
       margin-right: 5px;
       width: 279px; }
-  body.meusvideos .url {
+  main.meusvideos .url {
     background: #FFFFFF;
     border-bottom: 0px solid #9e9e9e;
     width: 424px;
     height: 27px;
     margin-right: 15px; }
-  body.meusvideos .principal {
+  main.meusvideos .principal {
     font-size: 25px;
     font-weight: bold;
     padding-left: 74px;
     color: #fff;
     margin-bottom: 0px; }
-  body.meusvideos .status {
+  main.meusvideos .status {
     padding: 20px; }
-    body.meusvideos .status.carregando {
+    main.meusvideos .status.carregando {
       color: #e95316; }
-    body.meusvideos .status.publicado {
+    main.meusvideos .status.publicado {
       color: #558b2f; }
-    body.meusvideos .status.inesperado {
+    main.meusvideos .status.inesperado {
       color: #9e9e9e; }
-    body.meusvideos .status.excluir {
-      padding: 3px;
-      color: #9e9e9e; }
-      body.meusvideos .status.excluir:hover {
-        color: #065c7b;
-        cursor: pointer; }
-    body.meusvideos .status.versionamento {
+    main.meusvideos .status.excluir {
+      padding-left: 9px;
+      padding-right: 9px;
+      padding-top: 15px;
+      color: #9e9e9e;
+      cursor: pointer; }
+    main.meusvideos .status.versionamento {
       color: #ffd740; }
-  body.meusvideos .submeter {
+  main.meusvideos .mensagem {
+    background-color: #e9e8e8;
+    text-align: center;
+    padding: 30px;
+    display: none; }
+  main.meusvideos .processo {
+    padding: 0px; }
+  main.meusvideos .fase {
+    color: #065c7b;
+    margin: 0px;
+    word-break: break-all; }
+  main.meusvideos .separador {
+    padding: 0px;
+    margin-top: 15px; }
+    main.meusvideos .separador.um {
+      margin-right: -70px;
+      margin-left: -28px; }
+    main.meusvideos .separador.dois {
+      margin-right: -28px;
+      margin-left: -70px; }
+  main.meusvideos .ordem {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3.5px;
+    padding-bottom: 3.5px;
+    font-size: 40px;
+    font-weight: bold;
+    border: 1px solid #065c7b; }
+    main.meusvideos .ordem.um {
+      color: #e95316; }
+    main.meusvideos .ordem.dois {
+      color: #cddc39; }
+    main.meusvideos .ordem.tres {
+      color: #81d4fa; }
+    main.meusvideos .ordem.quatro {
+      color: #43a047; }
+  main.meusvideos .mensagem-descricao {
+    color: #065c7b;
+    margin-top: 0px;
+    margin-bottom: 20px; }
+  main.meusvideos .close {
+    color: #065c7b;
+    cursor: pointer;
+    border: 1px solid #065c7b;
+    border-radius: 5px;
+    padding: 3px; }
+    main.meusvideos .close:hover {
+      color: #fff;
+      background-color: #065C7B; }
+  main.meusvideos .mensagem-texto {
+    font-size: 25px;
+    color: #065c7b;
+    font-weight: bold;
+    margin: 0px; }
+  main.meusvideos .submeter {
     padding-left: 37px; }
-  body.meusvideos .carregar {
-    background: #e95316;
-    color: #FFFFFF;
+  main.meusvideos .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; }
+  main.meusvideos .inputfile + label {
+    font-size: 14px;
+    color: white;
+    background-color: #e95316;
+    display: inline-block;
+    width: 170px;
+    height: 28px;
     border: 3px solid #e95316;
     text-align: center;
     border-radius: 10px;
-    width: 170px;
-    height: 28px;
-    font-size: 14px; }
-  body.meusvideos .infoVideo {
+    cursor: pointer; }
+  main.meusvideos .infoVideo {
     margin-bottom: 3px;
     font-size: 14px;
     margin-top: 12px; }
-    body.meusvideos .infoVideo.desabilitado {
+    main.meusvideos .infoVideo.desabilitado {
       color: #878786; }
-  body.meusvideos .botaoAdd {
+  main.meusvideos .botaoAdd {
     color: #065c7b;
-    float: right; }
-    body.meusvideos .botaoAdd:hover {
+    float: right;
+    margin-top: 0px; }
+    main.meusvideos .botaoAdd:hover {
       text-decoration: underline; }
-  body.meusvideos .botao4 {
+  main.meusvideos .botao4 {
     background: transparent;
     color: #e95316;
     border: 2px solid #e95316;
@@ -1258,11 +1335,11 @@ body.meusvideos {
     height: 30px;
     margin-left: 5px;
     font-size: 14px; }
-    body.meusvideos .botao4:hover {
+    main.meusvideos .botao4:hover {
       color: #fff;
       background: #e95316;
       border: 3px solid #e95316; }
-  body.meusvideos .botao3 {
+  main.meusvideos .botao3 {
     background: transparent;
     color: #065C7B;
     border: 2px solid #065C7B;
@@ -1270,29 +1347,32 @@ body.meusvideos {
     height: 30px;
     margin-left: 5px;
     font-size: 14px; }
-    body.meusvideos .botao3:hover {
+    main.meusvideos .botao3:hover {
       color: #fff;
       background: #065C7B;
       border: 3px solid #065C7B; }
-    body.meusvideos .botao3.desabili {
+    main.meusvideos .botao3.desabili {
       margin-top: 35px;
       color: #878786;
       border: 2px solid #878786; }
-  body.meusvideos .botao2 {
+  main.meusvideos .espaco {
+    margin: 230px;
+    padding: 1px; }
+  main.meusvideos .botao2 {
     background: transparent;
     color: #065C7B;
     border: 2px solid #065C7B;
     border-radius: 10px;
     width: 90px;
     height: 30px;
-    margin-top: 300px;
+    margin-top: 20px;
     margin-left: 5px;
     font-size: 14px; }
-    body.meusvideos .botao2:hover {
+    main.meusvideos .botao2:hover {
       color: #fff;
       background: #065C7B;
       border: 3px solid #065C7B; }
-  body.meusvideos .botao1 {
+  main.meusvideos .botao1 {
     background: transparent;
     color: #FFFFFF;
     border: 3px solid #FFFFFF;
@@ -1300,11 +1380,11 @@ body.meusvideos {
     border-radius: 10px;
     width: 110px;
     height: 35px; }
-    body.meusvideos .botao1:hover {
+    main.meusvideos .botao1:hover {
       color: #065C7B;
       background: #cdcbcc;
       border: 3px solid #cdcbcc; }
-  body.meusvideos .areaExcluir {
+  main.meusvideos .areaExcluir {
     display: none;
     text-align: center;
     color: #fff;
@@ -1314,31 +1394,31 @@ body.meusvideos {
     position: absolute;
     opacity: 0.9;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
-  body.meusvideos .info {
+  main.meusvideos .info {
     padding: 30px; }
-  body.meusvideos .sending {
+  main.meusvideos .sending {
     background-color: #065c7b;
     padding: 24px; }
-  body.meusvideos .area {
+  main.meusvideos .area {
     color: #065c7b; }
-  body.meusvideos .grupo {
+  main.meusvideos .grupo {
     border-bottom: thin #cdcbcc solid; }
-  body.meusvideos .resultado {
+  main.meusvideos .resultado {
     text-align: center; }
-  body.meusvideos .videos {
+  main.meusvideos .videos {
     border-top: thin #cdcbcc solid;
     border-bottom: thin #cdcbcc solid;
     margin-bottom: 0px;
     margin-top: 0px;
     padding: 10px;
     text-align: center; }
-  body.meusvideos .icone {
+  main.meusvideos .icone {
     width: 44px;
     height: 44px;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat; }
-    body.meusvideos .icone.about {
+    main.meusvideos .icone.about {
       margin-left: 15px; }
 
 body.minhasplaylists {
@@ -1597,6 +1677,258 @@ body.minhasplaylists {
     background-size: contain;
     background-repeat: no-repeat; }
     body.minhasplaylists .icone.about {
+      margin-left: 15px; }
+
+body.meuscanais {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  /*.excluir {
+		width: 20px;
+		height: 20px;
+		background-image:url(../img/excluir.png);	
+		background-size: contain;
+		background-repeat: no-repeat;	
+	}*/ }
+  body.meuscanais .parte {
+    background-color: #fff;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 10px; }
+  body.meuscanais .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    body.meuscanais .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 1px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 145px; }
+      body.meuscanais .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      body.meuscanais .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+  body.meuscanais .hr2 {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px; }
+  body.meuscanais .conteudo {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  body.meuscanais .item {
+    background-color: #065C7B;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  body.meuscanais .sobre {
+    margin-left: 40px;
+    margin-right: 40px;
+    /*border-bottom: thin #cdcbcc solid;
+		border-left: thin #cdcbcc solid;
+		border-right: thin #cdcbcc solid;
+		height: 447px;*/ }
+  body.meuscanais .lista {
+    padding-top: 40px;
+    padding-bottom: 25px; }
+  body.meuscanais .adicionar {
+    margin-top: 0px;
+    background: #e9e8e8;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: none; }
+  body.meuscanais .editar {
+    text-align: justify;
+    margin-top: 12px;
+    background: #e9e8e8;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: none; }
+  body.meuscanais .ou {
+    padding: 10px;
+    color: #000;
+    font-size: 14px; }
+  body.meuscanais .textarea {
+    width: 640px;
+    height: 100px;
+    background-color: #fff;
+    border-color: #fff; }
+  body.meuscanais .categor {
+    width: 170px;
+    height: 27px; }
+  body.meuscanais .escolher {
+    border-top: 1px solid #cdcbcc;
+    overflow-y: scroll;
+    margin-bottom: 0px;
+    height: 180px;
+    padding-top: 8px;
+    overflow-x: hidden; }
+  body.meuscanais .campo {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 640px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 0px; }
+    body.meuscanais .campo.pesquisa {
+      width: 70%;
+      border: 1px solid #cdcbcc;
+      margin-right: 5px; }
+    body.meuscanais .campo.nome-playlist {
+      border: 1px solid #cdcbcc;
+      margin-right: 5px;
+      width: 279px; }
+  body.meuscanais .url {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 424px;
+    height: 27px;
+    margin-right: 15px; }
+  body.meuscanais .principal {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 74px;
+    color: #fff;
+    margin-bottom: 0px; }
+  body.meuscanais .status {
+    padding: 20px; }
+    body.meuscanais .status.carregando {
+      color: #e95316; }
+    body.meuscanais .status.publicado {
+      color: #558b2f; }
+    body.meuscanais .status.inesperado {
+      color: #9e9e9e; }
+    body.meuscanais .status.excluir {
+      padding: 3px;
+      color: #9e9e9e; }
+      body.meuscanais .status.excluir:hover {
+        color: #065c7b;
+        cursor: pointer; }
+    body.meuscanais .status.versionamento {
+      color: #ffd740; }
+  body.meuscanais .submeter {
+    padding-left: 37px; }
+  body.meuscanais .carregar {
+    background: #e95316;
+    color: #FFFFFF;
+    border: 3px solid #e95316;
+    text-align: center;
+    border-radius: 10px;
+    width: 170px;
+    height: 28px;
+    font-size: 14px; }
+  body.meuscanais .infoVideo {
+    margin-bottom: 3px;
+    font-size: 14px;
+    margin-top: 12px; }
+    body.meuscanais .infoVideo.desabilitado {
+      color: #878786; }
+  body.meuscanais .botaoAdd {
+    color: #065c7b;
+    float: right; }
+    body.meuscanais .botaoAdd:hover {
+      text-decoration: underline; }
+  body.meuscanais .botao4 {
+    background: transparent;
+    color: #e95316;
+    border: 2px solid #e95316;
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 5px;
+    font-size: 14px; }
+    body.meuscanais .botao4:hover {
+      color: #fff;
+      background: #e95316;
+      border: 3px solid #e95316; }
+  body.meuscanais .botao3 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 5px;
+    font-size: 14px; }
+    body.meuscanais .botao3:hover {
+      color: #fff;
+      background: #065C7B;
+      border: 3px solid #065C7B; }
+    body.meuscanais .botao3.desabili {
+      margin-top: 35px;
+      color: #878786;
+      border: 2px solid #878786; }
+  body.meuscanais .botao2 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-top: 300px;
+    margin-left: 5px;
+    font-size: 14px; }
+    body.meuscanais .botao2:hover {
+      color: #fff;
+      background: #065C7B;
+      border: 3px solid #065C7B; }
+  body.meuscanais .botao1 {
+    background: transparent;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px; }
+    body.meuscanais .botao1:hover {
+      color: #065C7B;
+      background: #cdcbcc;
+      border: 3px solid #cdcbcc; }
+  body.meuscanais .areaExcluir {
+    display: none;
+    text-align: center;
+    color: #fff;
+    background-color: #065c7b;
+    width: 93.2%;
+    height: 105px;
+    position: absolute;
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+  body.meuscanais .info {
+    padding: 30px; }
+  body.meuscanais .sending {
+    background-color: #065c7b;
+    padding: 24px; }
+  body.meuscanais .area {
+    color: #065c7b; }
+  body.meuscanais .grupo {
+    border-bottom: thin #cdcbcc solid; }
+  body.meuscanais .resultado {
+    text-align: center; }
+  body.meuscanais .videos {
+    border-top: thin #cdcbcc solid;
+    border-bottom: thin #cdcbcc solid;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 10px;
+    text-align: center; }
+  body.meuscanais .icone {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    body.meuscanais .icone.about {
       margin-left: 15px; }
 
 .main.main {

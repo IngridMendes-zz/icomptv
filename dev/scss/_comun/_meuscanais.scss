@@ -1,4 +1,4 @@
-main.meusvideos{
+body.meuscanais{
 	background:#CDCBCC;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 
@@ -8,23 +8,6 @@ main.meusvideos{
     	padding-left: 0px;
     	    margin-bottom: 10px;
 	}
-
-	.grup{
-			padding-top: 0px;
-			padding-left: 0px;
-			padding-right: 0px;
-			padding-bottom: 0px;
-			font-size: 12px;
-		}
-
-		.label{
-			color: #000;
-		}
-
-		[type="radio"]:checked + label {
-			font-size: 0.9rem;
-			color: #000;
-		}
 
 	.categorias{
 		background-color:#ffffff;
@@ -96,7 +79,7 @@ main.meusvideos{
     background: #e9e8e8;
     padding-right: 35px;
     padding-left: 35px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 10px;
 		display: none;
 
@@ -190,119 +173,31 @@ main.meusvideos{
 			color: #9e9e9e;
 		}
 		&.excluir{
-			padding-left: 9px;
-			padding-right: 9px;
-			padding-top: 15px;
+			padding: 3px;
 			color: #9e9e9e;
-			cursor: pointer;
+			&:hover{
+				color: #065c7b;
+				cursor: pointer;
+			}
 		}
 		&.versionamento {
 			color: #ffd740;
 		}
 	}
 
-	.mensagem{
-		background-color: #e9e8e8; 
-		text-align: center; 
-		padding: 30px;
-		display: none;
-	}
-
-	.processo{
-		padding: 0px;
-	}
-
-	.fase{
-		color: #065c7b; 
-		margin: 0px;
-		word-break: break-all;
-	}
-
-	.separador{
-		padding: 0px; 
-		margin-top: 15px; 
-		&.um{
-			margin-right: -70px; 
-			margin-left: -28px;
-		}
-		&.dois{
-			margin-right: -28px; 
-			margin-left: -70px;
-		}
-	}
-
-	.ordem{
-		padding-left: 15px; 
-		padding-right: 15px; 
-		padding-top: 3.5px; 
-		padding-bottom: 3.5px; 
-		font-size: 40px;  
-		font-weight: bold; 
-		border: 1px solid #065c7b;
-
-		&.um{
-			color: #e95316;
-		}
-		&.dois{
-			color: #cddc39;
-		} 
-		&.tres{
-			color: #81d4fa;
-		}
-		&.quatro{
-			color: #43a047;
-		}
-	}
-
-	.mensagem-descricao{
-		color: #065c7b; 
-		margin-top: 0px; 
-		margin-bottom: 20px;
-	}
-
-	.close{
-		color: #065c7b; 
-		cursor: pointer; 
-		border: 1px solid #065c7b; 
-		border-radius: 5px; 
-		padding: 3px;
-		&:hover{
-			color: #fff;
-			background-color: #065C7B;
-		}
-	}
-
-	.mensagem-texto{
-		font-size: 25px; 
-		color: #065c7b; 
-		font-weight: bold; 
-		margin: 0px;
-	}
-
 	.submeter{
 		padding-left: 37px;
 	}
-	.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
-.inputfile + label {
-    font-size: 14px;
-    color: white;
-    background-color: #e95316;
-    display: inline-block;
-    width:170px;
-    height:28px;
-    border: 3px solid #e95316;
-	text-align: center;
-	border-radius: 10px;
-	cursor: pointer;
-}
-
+	.carregar{
+			background: #e95316;
+			color: #FFFFFF;
+			border: 3px solid #e95316;
+			text-align: center;
+			border-radius: 10px;
+			width:170px;
+    		height:28px;
+    		font-size: 14px;
+		}
 
 		.infoVideo {
 			margin-bottom: 3px;
@@ -316,7 +211,6 @@ main.meusvideos{
 	.botaoAdd{
 		color: #065c7b;
 		float: right;
-		margin-top: 0px;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -365,11 +259,6 @@ main.meusvideos{
 			}
 	
 		}
-
-		.espaco{
-			margin:230px;
-			padding: 1px;
-		}
 			
 
 	.botao2{
@@ -379,7 +268,7 @@ main.meusvideos{
 			border-radius: 10px;
 			width:90px;
     		height:30px;
-    		margin-top: 20px;
+    		margin-top: 300px;
     		margin-left: 5px;
     		font-size: 14px;
 

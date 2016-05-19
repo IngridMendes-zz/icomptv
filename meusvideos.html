@@ -1,95 +1,18 @@
-<html>
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" />
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	  <!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>Meus Vídeos</title>
+<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<script src="Chart.min.js"></script>
 
-  <script src="Chart.min.js"></script>
-
-</head>
-<body class="meusvideos">
-	<nav class="cabecalho">
-      <div class="nav-wrapper">
-          <a href="http://icomp.tv/" class="brand-logo">
-            <img src="dev/img/logo.png" alt="logo" class="logo"> 
-          </a>
-          <ul class="right hide-on-med-and-down menu">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="#!">Minha conta</a></li>
-            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
-            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
-          </ul>
-      </div>
-    </nav>
-
-  	<div class="busca" id="busca">
-  		<form >
-
-
-  			<div class="texto">
-  				<input type="text" class="campo">
-  				<input href="result.html" type="submit" class="botao" value="Pesquisar">
-          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
-          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
-          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
-          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
-      
-  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
-  			</div>
-  			<hr class="delimitador" id="delimitador">
-  			<div class="options" id="options">
-  				<ul>
-  					<li>
-  						<a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
-  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
-  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
-
-  					</li>
-  					<div class="details" id="duracoes">
-  						<li>
-  							<a href="#!" class="topico"><i class="material-icons check">check</i>Hoje</a>						
-  						</li>
-  						<li>
-  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há uma semana</a>
-  						</li>
-  						<li>
-  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há um mês</a>
-  						</li>
-  					</div>
-  				</ul>
-  			</div>
-  			<hr class="delimitador" id="delimitador2">
-  		</form>
-    </div>
-
-    <div class="row login" id="login">
-    	<div class="formulario col l7 s12">
-    		<ul> 
-    			<li><a class="label">Email</a></li>
-    			<li><input type="email" class="campo"></li>
-    			<li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
-    			<li>
-    				<input type="password" class="campo">
-    				<input type="submit" class="entrar" value="Entrar">
-    			</li>
-    		</ul>
-    	</div>
-      <div class="cadastro col l5 s12">
-        <p class="label">Mas se você ainda não tem cadastro.</p>
-        <input type="submit" class="cadastre" value="CADASTRE-SE">
-      </div>
-    </div>
-    
+<main class="meusvideos">   
       <div class="row">
         <div class="categorias col s12">
           <input type="submit" class="categoria" onClick="perfil()" value="Perfil">
           <input type="submit" class="categoria selecionado" value="Meus Vídeos">
-          <input type="submit" class="categoria" value="Meus Canais">
-          <input type="submit" class="categoria" value="Minhas Playlists">
+          <input type="submit" class="categoria" onClick="meuscanais()" value="Meus Canais">
+          <input type="submit" class="categoria" onClick="minhasplaylists()" value="Minhas Playlists">
           <hr class="hr2">
         </div>
       </div>
@@ -111,13 +34,45 @@
                 <a href="#!" onClick="adicionar()" id="botaoAdd" class="botaoAdd"><img src="dev/img/add.png" width="20" height="20">Adicionar vídeo</a>
               </div>
             </div>
+            <div class="row mensagem" id="mensagem">
+    <span class="card-title">
+      <a class="mensagem-texto">Seu vídeo está sendo enviado!</a>
+      <i class="material-icons right close" onClick="fecharmsg()">close</i>
+    </span>  
+    <p class="mensagem-descricao">Este processo pode demorar algumas horas, enquanto isso você poderá assistir outros vídeos disponíveis no ICOMP.TV</p>
+    <div class="col l1 s3 offset-l2 processo">
+      <a class="circle ordem um">1</a>
+      <p class="fase">Upload</p>
+    </div>
+    <div class="col l2 hide-on-med-and-down separador um">
+      <a class="black-text">-----------------------</a>
+    </div>
+    <div class="col l2 s3 processo">
+      <a class="circle ordem dois">2</a>
+      <p class="fase">Versionamento</p>
+    </div>
+     <div class="col l2 hide-on-med-and-down separador dois">
+      <a class="black-text">-----------------------</a>
+    </div>
+     <div class="col l1 s3 processo">
+      <a class="circle ordem tres">3</a>
+      <p class="fase">Aprovação</p>
+    </div>
+     <div class="col l2 hide-on-med-and-down separador um">
+      <a class="black-text">-----------------------</a>
+    </div>
+     <div class="col l2 s3 processo">
+      <a class="circle ordem quatro">4</a>
+      <p class="fase">Seu vídeo será publicado!</p>
+    </div>
+  </div>
               <div class="row adicionar" id="adicionar">
                 <div class="col l8">
                 <p class="infoVideo">Título do Vídeo</p>
                 <input type="text" class="campo">
                 <p class="infoVideo">Descrição</p>
                 <textarea class="textarea"></textarea>
-                <p class="infoVideo">Categoria</p>
+                <p class="infoVideo">Categoria do Vídeo</p>
                 <select class="browser-default categor">
                               <option class="rad" value="" disabled selected></option>
                               <option class="rad" value="1">Option 1</option>
@@ -125,18 +80,32 @@
                               <option class="rad" value="3">Option 3</option>
                             </select>
                 <p class="infoVideo">Carregamento do Vídeo</p>                
-        <input type="submit" value="Selecione o vídeo" class="carregar">
+        <input type="file" name="file" id="file" class="inputfile"/>
+        <label for="file">Selecione o vídeo</label>
       <a class="ou">ou</a>
-      <input placeholder="Informe a URL do vídeo" type="text" class="url">              
+      <input placeholder="Informe a URL do vídeo" type="text" class="url">
+              <p class="infoVideo">Categoria de Versionamento</p>
+              <p class="grup">
+                              <input class="with-gap" name="group1" type="radio" id="diaria"  checked/>
+                              <label class="rad" for="diaria">HLS</label>
+                            </p>  
+              <p class="infoVideo">Formato do Vídeo</p>
+              <select class="browser-default categor">
+                              <option class="rad" value="" disabled selected></option>
+                              <option class="rad" value="1">Option 1</option>
+                              <option class="rad" value="2">Option 2</option>
+                              <option class="rad" value="3">Option 3</option>
+                            </select>            
                 <p class="infoVideo">Tags</p>
                 <input type="text" class="campo">
                 </div>
                 <div class="col l3 offset-l1 submeter">
+                  <p class="espaco hide-on-med-and-down"></p>
                   <input href="" onClick="cancelarAdicao()" type="submit" class="botao2" value="Cancelar">
-                  <input href="" type="submit" class="botao2" value="Carregar">
+                  <input href="" onClick="adicionarVideo()" type="submit" class="botao2" value="Carregar">
                 </div>
               </div>
-              <div class="row videos" id="titulo">
+              <div class="row videos hide-on-med-and-down" id="titulo">
               <div class="col l2 offset-l2 area">Nome do Vídeo</div>
               <div class="col l2 area">Categoria</div>
               <div class="col l1 area">Status</div>
@@ -152,8 +121,9 @@
               </div>
               <div class="col l2 s12 info">aula 6525</div>
               <div class="col l2 s12 info">Educacional</div>
-              <div class="col l1 s12 status carregando"><i class="small material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Vídeo carregando">file_upload</i></div>
-              <!--<div class="col l1"><i class="medium material-icons">file_upload</i></div>-->
+              <div class="col l1 s12 status carregando">
+                <i class="tooltipped" data-position="top" data-delay="50" data-tooltip="Vídeo carregando"><img src="dev/img/carregando.png" width="25"></i>
+              </div>
             </div>
             <div class="areaExcluir" id="areaExcluir">
               <p>Tem certeza que deseja remover o vídeo?</p>
@@ -167,12 +137,20 @@
               </div>
               <div class="col l2 s12 info">aula 6525</div>
               <div class="col l2 s12 info">Educacional</div>
-              <div class="col l1 s12 status publicado"><i class="small material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Vídeo publicado">check</i></div>
+              <div class="col l1 s12 status publicado">
+                <i class="tooltipped" data-position="top" data-delay="50" data-tooltip="Vídeo publicado">
+                  <img src="dev/img/check.png" width="25">
+                </i> 
+              </div>
               <div class="col l2 s12 info">30/01/2016</div>
               <div class="col l2 s12 info">32</div>
               <div class="col l1 s12 ">
-                <a href="#!" class="botaoAdd" id="botaoUpdate" onClick="editarVideo()">Editar</a>
-                <i class="small material-icons tooltipped status excluir" onClick="excluirVideo()" id="botaoDelete" data-position="top" data-delay="50" data-tooltip="Excluir">delete</i></div>
+                <p href="#!" class="botaoAdd" id="botaoUpdate" onClick="editarVideo()">Editar</p>
+                <i class="tooltipped status excluir" onClick="excluirVideo()" id="botaoDelete" data-position="top" data-delay="50" data-tooltip="Excluir">
+          <img src="dev/img/trash.png" width="20" onmouseover="ativaImg(this)" onmouseout="normalImg(this)"></i>
+                
+              </div>
+
                 <div class="col l12 s12" >
                   <div class="row editar" id="editarVideo">
                     <div class="col l8">
@@ -213,7 +191,9 @@
               </div>
               <div class="col l2 s12 info">aula 6525</div>
               <div class="col l2 s12 info">Educacional</div>
-              <div class="col l1 s12 status inesperado"><i class="small material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Algo inesperado aconteceu! Tente fazer o upload novamente">refresh</i></div>
+              <div class="col l1 s12 status inesperado">
+                <i class="small material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Algo inesperado aconteceu! Tente fazer o upload novamente"><img src="dev/img/tente.png" width="25"></i>
+              </div>
             </div>
             <div class="row videos">
               <div class="col l2 s12">
@@ -221,7 +201,23 @@
               </div>
               <div class="col l2 s12 info">aula 6525</div>
               <div class="col l2 s12 info">Educacional</div>
-              <div class="col l1 s12 status versionamento"><i class="small material-icons tooltipped" data-position="top" data-delay="50" data-tooltip="Aguardando versionamento">fiber_manual_record</i></div>
+              <div class="col l1 s12 status versionamento">
+                <i class="tooltipped" data-position="top" data-delay="50" data-tooltip="Aguardando versionamento"><img src="dev/img/yellow.png" width="25"></i>
+                 
+              </div>
+              
+              <div class="col l1 s12"></div>
+            </div>
+            <div class="row videos">
+              <div class="col l2 s12">
+                 <img src="dev/img/capa_video.png" width="113" height="64"> 
+              </div>
+              <div class="col l2 s12 info">aula 6525</div>
+              <div class="col l2 s12 info">Educacional</div>
+              <div class="col l1 s12 status versionamento">
+                <i class="tooltipped" data-position="top" data-delay="50" data-tooltip="Aguardando aprovação"><img src="dev/img/blue.png" width="25"></i>
+                 
+              </div>
               
               <div class="col l1 s12"></div>
             </div>
@@ -247,106 +243,8 @@
         </div>
       </div>
 
-   <footer class="page-footer" >
-          
-          <div class="footer-copyright">
-            <div class="container">
-            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
-            </div>
-          </div>
-        </footer>
-
-        <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
-
-
-  <script language="javascript">
-    function getBusca() {
-      document.getElementById("busca").style.display = "block";
-      document.getElementById("login").style.display = "none";
-      search.classList.add("ativo");
-      account.classList.remove("ativo");
-    }
-
-    function excluirVideo() {
-      document.getElementById("areaExcluir").style.display = "block";
-    }
-
-     function cancelar() {
-      document.getElementById("areaExcluir").style.display = "none";
-    }
-
-    function adicionar() {
-      document.getElementById("adicionar").style.display = "block";
-      document.getElementById("botaoAdd").style.display = "none";
-      document.getElementById("grupo").style.display = "none";
-      document.getElementById("titulo").style.display = "none";
-    }
-
-    function editarVideo(){
-      document.getElementById("editarVideo").style.display = "block";
-      document.getElementById("botaoDelete").style.display = "none";
-      document.getElementById("botaoUpdate").style.display = "none";
-    }
-
-     function cancelarEdicao(){
-      document.getElementById("editarVideo").style.display = "none";
-      document.getElementById("botaoDelete").style.display = "block";
-      document.getElementById("botaoUpdate").style.display = "block";
-    }
-
-    function cancelarAdicao(){
-      document.getElementById("adicionar").style.display = "none";
-      document.getElementById("botaoAdd").style.display = "block";
-       document.getElementById("grupo").style.display = "block";
-      document.getElementById("titulo").style.display = "block";
-    }
-
-    function getLogin() {
-      document.getElementById("login").style.display = "block";
-      document.getElementById("busca").style.display = "none";
-      search.classList.remove("ativo");
-      account.classList.add("ativo");
-    }
-    function getFiltros() {
-      document.getElementById("options").style.display= "block";
-      document.getElementById("delimitador").style.display= "block";
-      document.getElementById("delimitador2").style.display= "block";
-    }
-
-    function getDuracao(){
-      document.getElementById("duracoes").style.display="block";
-    }
-
-    function getCanais(){
-      window.location.href = "http://localhost/icomptv/canais.html";
-    }
-
-    function getPlaylists(){
-      window.location.href = "http://localhost/icomptv/playlists.html";
-    }
-
-    function perfil(){
-      window.location.href = "perfil.html";
-    }
-
-    function inscrever(){
-      Materialize.toast('I am a toast!', 4000);
-    }
-  </script>
-  <script>
-    
-
-
-     $(document).ready(function(){
-
-          $('.collapsible').collapsible({
-      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-    });
-    });
- 
-</script>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+<script src="meusvideos.js"></script>
    
-</body>
-</html>
+</main>
