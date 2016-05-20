@@ -76,12 +76,9 @@ body {
   @media all and (max-width: 599px) and (min-width: 320px) {
     body body {
       font-size: 12px; } }
-  body .logado {
-    display: none; }
   body .notificar {
     width: 30%;
     box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px;
-    display: none;
     background-color: white;
     position: fixed;
     z-index: 2;
@@ -151,8 +148,7 @@ body {
   body .busca {
     background: #E95316;
     padding-top: 50px;
-    padding-bottom: 30px;
-    display: none; }
+    padding-bottom: 30px; }
     body .busca .campo {
       background: #FFFFFF;
       border-radius: 10px;
@@ -165,7 +161,6 @@ body {
       left: 0;
       margin: auto; }
     body .busca .options {
-      display: none;
       width: 682px;
       right: 0;
       left: 0;
@@ -176,7 +171,6 @@ body {
       border: 1px solid #E95316;
       width: 190px;
       position: absolute;
-      display: none;
       padding: 5px; }
       body .busca .details li {
         text-align: justify; }
@@ -185,7 +179,6 @@ body {
       font-size: 20px;
       margin: 0px; }
     body .busca .delimitador {
-      display: none;
       border: 1px solid #FFFFFF; }
     body .busca .filtros {
       cursor: pointer;
@@ -225,8 +218,6 @@ body {
       background: #FFFFFF; }
     body .entrar.atualizar {
       width: 200px; }
-  body .atualizarr {
-    display: none; }
   body .cadastre {
     background: #E95316;
     color: #FFFFFF;
@@ -253,8 +244,7 @@ body {
   body .login {
     background: #E95316;
     padding-top: 50px;
-    padding-bottom: 85px;
-    display: none; }
+    padding-bottom: 85px; }
     body .login .campo {
       background: #FFFFFF;
       border-radius: 10px;
@@ -411,8 +401,7 @@ main.videopagina {
         margin-top: 0px;
         color: #878786;
         padding-left: 15px;
-        padding-right: 15px;
-        display: none; }
+        padding-right: 15px; }
       main.videopagina .media .informacoes .descr {
         margin-top: 0px;
         color: #878786;
@@ -612,8 +601,7 @@ main.playlist {
         margin-top: 0px;
         color: #878786;
         padding-left: 15px;
-        padding-right: 15px;
-        display: none; }
+        padding-right: 15px; }
       main.playlist .media .informacoes .descr {
         margin-top: 0px;
         color: #878786;
@@ -773,8 +761,6 @@ main.canalpagina {
     margin-bottom: 0px;
     font-weight: bold;
     margin-top: 10px; }
-  main.canalpagina .informacoes {
-    display: none; }
   main.canalpagina .icon-canal {
     width: 80px;
     padding-top: 20px; }
@@ -816,8 +802,7 @@ body.perfil {
     margin-bottom: 0px; }
   body.perfil .areaEditarTudo {
     padding: 18px;
-    background-color: #e9e8e8;
-    display: none; }
+    background-color: #e9e8e8; }
   body.perfil .texto {
     margin-left: 15px;
     margin-top: 0px;
@@ -827,14 +812,12 @@ body.perfil {
     text-align: center;
     margin-top: 12px;
     background-color: #e9e8e8;
-    color: #065C7B;
-    display: none; }
+    color: #065C7B; }
   body.perfil .areaEditarSenha {
     padding-bottom: 12px;
     margin-top: 12px;
     background-color: #e9e8e8;
-    color: #065C7B;
-    display: none; }
+    color: #065C7B; }
   body.perfil .bloqueio {
     border-radius: 10px;
     width: 80px;
@@ -1099,16 +1082,6 @@ main.meusvideos {
 		background-size: contain;
 		background-repeat: no-repeat;	
 	}*/ }
-  @media all and (min-width: 960px) {
-    main.meusvideos body {
-      font-size: 18px; } }
-  @media all and (max-width: 959px) and (min-width: 600px) {
-    main.meusvideos body {
-      font-size: 16px; } }
-  @media all and (max-width: 599px) and (min-width: 320px) {
-    main.meusvideos body {
-      font-size: 12px;
-      background-color: red; } }
   main.meusvideos .parte {
     background-color: #fff;
     padding-right: 0px;
@@ -1501,8 +1474,7 @@ body.minhasplaylists {
     padding-right: 35px;
     padding-left: 35px;
     padding-bottom: 10px;
-    padding-top: 10px;
-    display: none; }
+    padding-top: 10px; }
   body.minhasplaylists .editar {
     text-align: justify;
     margin-top: 12px;
@@ -1510,8 +1482,7 @@ body.minhasplaylists {
     padding-right: 35px;
     padding-left: 35px;
     padding-bottom: 10px;
-    padding-top: 10px;
-    display: none; }
+    padding-top: 10px; }
   body.minhasplaylists .ou {
     padding: 10px;
     color: #000;
@@ -1660,7 +1631,6 @@ body.minhasplaylists {
       background: #cdcbcc;
       border: 3px solid #cdcbcc; }
   body.minhasplaylists .areaExcluir {
-    display: none;
     text-align: center;
     color: #fff;
     background-color: #065c7b;
@@ -1762,8 +1732,7 @@ body.meuscanais {
     padding-right: 35px;
     padding-left: 35px;
     padding-bottom: 10px;
-    padding-top: 10px;
-    display: none; }
+    padding-top: 10px; }
   body.meuscanais .editar {
     text-align: justify;
     margin-top: 12px;
@@ -1771,8 +1740,7 @@ body.meuscanais {
     padding-right: 35px;
     padding-left: 35px;
     padding-bottom: 10px;
-    padding-top: 10px;
-    display: none; }
+    padding-top: 10px; }
   body.meuscanais .ou {
     padding: 10px;
     color: #000;
@@ -1912,7 +1880,6 @@ body.meuscanais {
       background: #cdcbcc;
       border: 3px solid #cdcbcc; }
   body.meuscanais .areaExcluir {
-    display: none;
     text-align: center;
     color: #fff;
     background-color: #065c7b;
@@ -2078,3 +2045,318 @@ body.meuscanais {
     font-size: 20px;
     font-weight: bold;
     padding-left: 35px; }
+
+main.adm-users {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  main.adm-users .geral {
+    background-color: #fff; }
+  main.adm-users .usuario {
+    cursor: pointer; }
+    main.adm-users .usuario:hover {
+      border-bottom: 1px solid #065c7b; }
+  main.adm-users .clicavel {
+    cursor: pointer; }
+  main.adm-users .dados {
+    height: 100%;
+    padding: 20px;
+    background-color: #fff; }
+  main.adm-users .editar {
+    float: right;
+    cursor: pointer;
+    margin-left: 10px; }
+  main.adm-users .editaSenha {
+    margin-bottom: 0px; }
+  main.adm-users .areaEditarTudo {
+    padding: 18px;
+    background-color: #e9e8e8;
+    display: block; }
+  main.adm-users .texto {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.adm-users .areaEditar {
+    padding-bottom: 12px;
+    text-align: center;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.adm-users .areaEditarSenha {
+    padding-bottom: 12px;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.adm-users .bloqueio {
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #cdcbcc;
+    background: #fff;
+    border: 1px solid #cdcbcc; }
+  main.adm-users .botao2 {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    background: #065c7b;
+    border: 3px solid #065c7b; }
+  main.adm-users .botao1 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px; }
+    main.adm-users .botao1:hover {
+      color: #fff;
+      background: #065c7b;
+      border: 3px solid #065c7b; }
+    main.adm-users .botao1.top {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 162px; }
+  main.adm-users .textoSenha {
+    margin-bottom: -15px; }
+  main.adm-users .campo {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 0px; }
+    main.adm-users .campo.senha {
+      width: 220px; }
+  main.adm-users .campo2 {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px; }
+    main.adm-users .campo2.senha {
+      width: 220px; }
+  main.adm-users .ativado {
+    color: #065C7B; }
+  main.adm-users .editarTudo {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+    height: 40px; }
+  main.adm-users .pesquisa {
+    width: 65%;
+    height: 30px;
+    border: 1px solid #065c7b;
+    margin-right: 10px;
+    margin-bottom: 0px; }
+  main.adm-users .dadosPessoais {
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.adm-users .desativado {
+    color: #878786; }
+  main.adm-users .dadosPessoais2 {
+    border-bottom: 2px #065c7b solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.adm-users .publicacoes {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  main.adm-users .rad {
+    color: #000;
+    font-size: 12px; }
+    main.adm-users .rad.escolha {
+      padding-top: 10px; }
+  main.adm-users input[type=text]:focus:not([readonly]),
+  main.adm-users textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 0px solid white;
+    box-shadow: 0 1px 0 0 transparent; }
+  main.adm-users .categor {
+    width: 220px;
+    height: 31px; }
+  main.adm-users .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    main.adm-users .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 1px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 145px; }
+      main.adm-users .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      main.adm-users .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+  main.adm-users .hr2 {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px; }
+  main.adm-users .conteudo {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  main.adm-users .item {
+    background-color: #065C7B;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  main.adm-users .top {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #065C7B;
+    padding-left: 15px; }
+  main.adm-users .sub {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 13px; }
+  main.adm-users .extra {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #878786; }
+  main.adm-users .sobre {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: thin #cdcbcc solid;
+    border-left: thin #cdcbcc solid;
+    border-right: thin #cdcbcc solid;
+    background-color: #e9e8e8; }
+  main.adm-users .not {
+    padding-left: 30px;
+    padding-right: 30px; }
+  main.adm-users .notificacao {
+    border-top: thin #cdcbcc solid;
+    padding-top: 15px; }
+  main.adm-users .lista {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff; }
+  main.adm-users .nome {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 100px;
+    color: #065C7B;
+    margin-bottom: 0px; }
+  main.adm-users .principal {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 74px;
+    color: #fff;
+    margin-bottom: 0px; }
+  main.adm-users .hr {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.adm-users .detalhes {
+    color: #000; }
+    main.adm-users .detalhes.email {
+      padding-left: 100px;
+      margin-top: 5px;
+      background-color: #fff; }
+    main.adm-users .detalhes.numeros {
+      float: right;
+      padding-top: 12px;
+      padding-right: 40px;
+      padding-left: 40px; }
+  main.adm-users .area {
+    color: #000;
+    padding-left: 20px; }
+  main.adm-users .opcao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    main.adm-users .opcao.ativa {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+    main.adm-users .opcao:hover {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+  main.adm-users .icone {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    main.adm-users .icone.user {
+      margin-left: 40px; }
+    main.adm-users .icone.about {
+      margin-left: 15px; }
+  main.adm-users .col {
+    padding-right: 0px;
+    padding-left: 0px; }
+  main.adm-users .anual {
+    border: thin #cdcbcc solid; }
+  main.adm-users .areaGrafico {
+    border: thin #cdcbcc solid;
+    height: 262px; }
+  main.adm-users canvas {
+    width: 100%; }
+  main.adm-users .grafico {
+    margin: 0px auto;
+    width: 215px; }
+  main.adm-users .areas {
+    background-color: #e9e8e8;
+    height: 100%; }
+  main.adm-users .num {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #065C7B;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px; }
+  main.adm-users .dado {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: #065C7B;
+    font-size: 20px;
+    padding-bottom: 0px; }
+  main.adm-users .info {
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: #e95316;
+    text-align: center; }
+  main.adm-users .grupo {
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-size: 12px; }
+  main.adm-users .meu {
+    border-top: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }

@@ -91,13 +91,13 @@ body{
  	}
 
  	.logado{
- 		display: none;
+ 		//display: none;
  	}
 
  	.notificar{
 			width: 30%;
     		box-shadow: rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px;
-		    display: none;
+		    //display: none;
 		    background-color: rgb(255, 255, 255);
 		    position: fixed;
 		    z-index: 2;
@@ -210,7 +210,7 @@ body{
 		background: #E95316;
 		padding-top: 50px;
     	padding-bottom: 30px;
-    	display: none;
+    	//display: none;
 
 		.campo{
 			background: #FFFFFF;
@@ -228,7 +228,7 @@ body{
 		}
 
 		.options{
-			display: none;
+			//display: none;
 			width: 682px;
     		right: 0;
     		left: 0;
@@ -241,7 +241,7 @@ body{
 			border: 1px solid #E95316;
 			width: 190px;
 			position: absolute;
-			display: none;
+			//display: none;
 			padding: 5px;
 			li{
 				text-align:justify;
@@ -255,11 +255,11 @@ body{
 		}
 
 		.check{
-			//display: none;
+			////display: none;
 		}
 
 		.delimitador{
-			display: none;
+			//display: none;
     		border: 1px solid #FFFFFF;
 		}
 
@@ -319,7 +319,7 @@ body{
 	}
 
 	.atualizarr{
-		display: none;
+		//display: none;
 	}
 
 	.cadastre{
@@ -359,7 +359,7 @@ body{
 		background: #E95316;
 		padding-top: 50px;
     	padding-bottom: 85px;
-    	display: none;
+    	//display: none;
 
     	.campo{
 			background: #FFFFFF;

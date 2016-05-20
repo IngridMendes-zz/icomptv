@@ -2,25 +2,6 @@ main.meusvideos{
 	background:#CDCBCC;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 
-	@media all and (min-width: 960px) {
-    	body{
-        	font-size: 18px;
-    	}
-	}
- 
-	@media all and (max-width: 959px) and (min-width: 600px) {
-    	body{
-        	font-size: 16px;
-    	}
-	}
- 
-	@media all and (max-width: 599px) and (min-width: 320px) {
-    	body{
-        	font-size: 12px;
-        	background-color: red;
-    	}
- 	}
-
 		.parte{
 		background-color: #fff;
 		padding-right: 0px;
