@@ -1099,6 +1099,16 @@ main.meusvideos {
 		background-size: contain;
 		background-repeat: no-repeat;	
 	}*/ }
+  @media all and (min-width: 960px) {
+    main.meusvideos body {
+      font-size: 18px; } }
+  @media all and (max-width: 959px) and (min-width: 600px) {
+    main.meusvideos body {
+      font-size: 16px; } }
+  @media all and (max-width: 599px) and (min-width: 320px) {
+    main.meusvideos body {
+      font-size: 12px;
+      background-color: red; } }
   main.meusvideos .parte {
     background-color: #fff;
     padding-right: 0px;
@@ -1167,29 +1177,27 @@ main.meusvideos {
     padding-right: 35px;
     padding-left: 35px;
     padding-bottom: 20px;
-    padding-top: 10px;
-    display: none; }
+    padding-top: 10px; }
   main.meusvideos .editar {
     text-align: justify;
     margin-top: 12px;
     background: #e9e8e8;
     padding-right: 35px;
     padding-left: 35px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    display: none; }
+    padding-bottom: 20px;
+    padding-top: 10px; }
   main.meusvideos .ou {
     padding: 10px;
     color: #000;
     font-size: 14px; }
   main.meusvideos .textarea {
-    width: 640px;
+    width: 84%;
     height: 100px;
     background-color: #fff;
     border-color: #fff; }
   main.meusvideos .categor {
     width: 170px;
-    height: 27px; }
+    height: 31px; }
   main.meusvideos .escolher {
     border-top: 1px solid #cdcbcc;
     overflow-y: scroll;
@@ -1200,7 +1208,7 @@ main.meusvideos {
   main.meusvideos .campo {
     background: #FFFFFF;
     border-bottom: 0px solid #9e9e9e;
-    width: 640px;
+    width: 84%;
     height: 27px;
     margin-right: 15px;
     margin-bottom: 0px; }
@@ -1215,7 +1223,7 @@ main.meusvideos {
   main.meusvideos .url {
     background: #FFFFFF;
     border-bottom: 0px solid #9e9e9e;
-    width: 424px;
+    width: 54.5%;
     height: 27px;
     margin-right: 15px; }
   main.meusvideos .principal {
@@ -1243,8 +1251,7 @@ main.meusvideos {
   main.meusvideos .mensagem {
     background-color: #e9e8e8;
     text-align: center;
-    padding: 30px;
-    display: none; }
+    padding: 30px; }
   main.meusvideos .processo {
     padding: 0px; }
   main.meusvideos .fase {
@@ -1315,6 +1322,10 @@ main.meusvideos {
     text-align: center;
     border-radius: 10px;
     cursor: pointer; }
+  main.meusvideos input[type=text]:focus:not([readonly]),
+  main.meusvideos textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 0px solid white;
+    box-shadow: 0 1px 0 0 white; }
   main.meusvideos .infoVideo {
     margin-bottom: 3px;
     font-size: 14px;
@@ -1324,7 +1335,8 @@ main.meusvideos {
   main.meusvideos .botaoAdd {
     color: #065c7b;
     float: right;
-    margin-top: 0px; }
+    margin-top: 0px;
+    cursor: pointer; }
     main.meusvideos .botaoAdd:hover {
       text-decoration: underline; }
   main.meusvideos .botao4 {
@@ -1344,9 +1356,12 @@ main.meusvideos {
     color: #065C7B;
     border: 2px solid #065C7B;
     border-radius: 10px;
+    width: 90px;
     height: 30px;
+    float: right;
     margin-left: 5px;
-    font-size: 14px; }
+    font-size: 14px;
+    margin-top: 20px; }
     main.meusvideos .botao3:hover {
       color: #fff;
       background: #065C7B;
@@ -1357,7 +1372,9 @@ main.meusvideos {
       border: 2px solid #878786; }
   main.meusvideos .espaco {
     margin: 230px;
-    padding: 1px; }
+    padding: 11px; }
+  main.meusvideos .espaco2 {
+    padding: 31px; }
   main.meusvideos .botao2 {
     background: transparent;
     color: #065C7B;
@@ -1367,7 +1384,8 @@ main.meusvideos {
     height: 30px;
     margin-top: 20px;
     margin-left: 5px;
-    font-size: 14px; }
+    font-size: 14px;
+    float: right; }
     main.meusvideos .botao2:hover {
       color: #fff;
       background: #065C7B;
@@ -1385,17 +1403,16 @@ main.meusvideos {
       background: #cdcbcc;
       border: 3px solid #cdcbcc; }
   main.meusvideos .areaExcluir {
-    display: none;
     text-align: center;
     color: #fff;
     background-color: #065c7b;
     width: 93.2%;
-    height: 105px;
+    height: 100px;
     position: absolute;
     opacity: 0.9;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
   main.meusvideos .info {
-    padding: 30px; }
+    padding: 20px; }
   main.meusvideos .sending {
     background-color: #065c7b;
     padding: 24px; }
