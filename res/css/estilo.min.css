@@ -2051,6 +2051,9 @@ main.adm-users {
   font-family: "Trebuchet MS", Helvetica, sans-serif; }
   main.adm-users .geral {
     background-color: #fff; }
+  main.adm-users .espaco {
+    margin: 130px;
+    padding: 11px; }
   main.adm-users .usuario {
     cursor: pointer; }
     main.adm-users .usuario:hover {
@@ -2133,13 +2136,13 @@ main.adm-users {
   main.adm-users .campo2 {
     background: #FFFFFF;
     border-bottom: 0px solid #9e9e9e;
-    width: 460px;
+    width: 86%;
     height: 27px;
     margin-right: 15px;
     margin-bottom: 15px;
     margin-top: 0px; }
     main.adm-users .campo2.senha {
-      width: 220px; }
+      width: 42%; }
   main.adm-users .ativado {
     color: #065C7B; }
   main.adm-users .editarTudo {
@@ -2180,12 +2183,16 @@ main.adm-users {
     main.adm-users .rad.escolha {
       padding-top: 10px; }
   main.adm-users input[type=text]:focus:not([readonly]),
+  main.adm-users input[type=password]:focus:not([readonly]),
   main.adm-users textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 0px solid white;
     box-shadow: 0 1px 0 0 transparent; }
   main.adm-users .categor {
-    width: 220px;
+    width: 42%;
     height: 31px; }
+  main.adm-users .novousuario {
+    background-color: #e9e8e8;
+    padding-right: 20px; }
   main.adm-users .categorias {
     background-color: #ffffff;
     text-align: center;
