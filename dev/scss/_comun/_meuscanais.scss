@@ -1,4 +1,4 @@
-body.meuscanais{
+main.meuscanais{
 	background:#CDCBCC;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 
@@ -7,6 +7,68 @@ body.meuscanais{
 		padding-right: 0px;
     	padding-left: 0px;
     	    margin-bottom: 10px;
+	}
+
+	.adicionarCanal{
+		margin-top: 8px;
+	}
+
+	.ui-state-default {
+		padding-top: 8px;
+	    border: 0px solid #d3d3d3;
+	    background: #fff;
+	    font-weight: normal;
+	    color: #555555;
+	    border-top: 1px solid #cdcbcc;
+	    cursor: move;
+	    overflow-y: hidden; 
+	    overflow-x: hidden;
+	}
+
+	.sortable{
+		margin: 0px;
+		list-style-type: none;
+		margin: 0px;
+		overflow-y: scroll;
+		height: 382px;
+	}
+
+	.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+
+}
+
+	.select{
+		width: 100%;margin: 0px;
+	}
+
+	.arrastar{
+		margin-top: 20px;
+	}
+
+	.icone-video{
+		padding-right: 0px;
+	}
+
+	.inexistente{
+		padding-left: 12px; text-align: justify; color: #878786;
+	}
+
+	.icone-canal{
+		height: 136px; padding-top: 20px; width: 163;
+	}
+
+	.icone-file{
+		height: 27px; width: 163; padding-top: 5px; padding-left: 5px;
+	}
+
+	.detalhes{
+		padding: 0px;
 	}
 
 	.categorias{
@@ -103,7 +165,7 @@ body.meuscanais{
 	}
 
 	.textarea{
-		width:640px;
+		width:90%;
 		height: 100px;
 		background-color: #fff;
 		border-color: #fff;
@@ -124,10 +186,18 @@ body.meuscanais{
 
 	}
 
+	.nome{
+		margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 12px;
+	}
+
+	.more{
+		margin-left: 8px; margin-top: 0px; margin-bottom: 0px; font-size: 11px;
+	}
+
 	.campo{
 			background: #FFFFFF;
 			border-bottom: 0px solid #9e9e9e;
-			width:640px;
+			width:90%;
     		height:27px;
     		margin-right: 15px;
     		margin-bottom: 0px;
@@ -185,8 +255,40 @@ body.meuscanais{
 		}
 	}
 
+	.nome-video{
+		padding-left: 12px;
+	}
+
 	.submeter{
 		padding-left: 37px;
+	}
+
+	.destaque{
+		margin-right: 6px; cursor:pointer;
+	}
+
+	.estrela{
+		vertical-align: sub;
+	}
+
+	.importar{
+		cursor: pointer;
+	}
+
+	.label-drop{
+		font-size: 12px;
+	}
+
+	.item-drop{
+		padding-bottom: 5px;
+    padding-top: 5px;
+     padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px;
+	}
+
+	.video-destaque{
+		margin-top: 0px; margin-bottom: 0px; font-size: 12px; color: #065c7b;
 	}
 	.carregar{
 			background: #e95316;
@@ -259,7 +361,27 @@ body.meuscanais{
 			}
 	
 		}
-			
+	.esconder{
+		margin: 143px;
+		padding: 1px;
+	}
+
+	.dropdown-content{
+		min-width: 150px;
+	}
+
+	[type="checkbox"]:checked+label:before {
+	    border-right: 2px solid #065c7b;
+	    border-bottom: 2px solid #065c7b;
+    }	
+
+    [type="checkbox"]+label:before {
+    	border: 2px solid transparent;
+	}
+
+	.dropdown-content li{
+		    min-height: 30px;
+	}		
 
 	.botao2{
 			background: transparent;
@@ -268,7 +390,7 @@ body.meuscanais{
 			border-radius: 10px;
 			width:90px;
     		height:30px;
-    		margin-top: 300px;
+    		margin-top: 5px;
     		margin-left: 5px;
     		font-size: 14px;
 

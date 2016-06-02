@@ -1,0 +1,104 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>Visão Geral</title>
+<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+
+<main class="visaogeral">
+    
+      <div class="row">
+        <div class="categorias col s12">
+          <input type="submit" class="categoria selecionado" value="Perfil">
+          <input type="submit" class="categoria" onClick="meusvideos()" value="Meus Vídeos">
+          <input type="submit" class="categoria" value="Meus Canais">
+          <input type="submit" class="categoria" value="Minhas Playlists">
+          <hr class="hr2">
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <div class="row lista">
+            <div class="col l12 s12">
+              <img src="dev/img/perfil.png" class="icone user"> 
+              <a class="nome">Nome do Usuário</a>
+              <a class="detalhes numeros">10 vídeos postados | 5 canais | 200 visualizações</a>
+            </div>
+           <!-- <div class="numeros col l6 s12"><a class="detalhes">10 vídeos postados | 5 canais | 200 visualizações</a></div>-->
+            <div class="col l12 s12 white">
+              <hr class="hr">
+            <p class="detalhes email">email@icomp.ufam.edu.br</p>
+            </div>
+            <div class="sobre row">
+              <div class="col l12 s12 item">
+                <img src="dev/img/account.png" class="icone about">
+                <a class="principal">Sobre</a>
+              </div>
+              <div class="areas col l3 s12">
+                <ul>
+                  <li class="opcao ativa"><a href="#!" class="area">Visão Geral</a></li>
+                  <li class="opcao"><a href="estatisticas.html" class="area">Estatísticas</a></li>
+                  <li class="opcao"><a href="dados.html" class="area">Dados Pessoais</a></li>
+                  <li class="opcao"><a href="notificacao.html" class="area">Notificação</a></li>
+                </ul>
+              </div>
+              <div class="geral col l9">
+                <div class="row">
+                  <div class="notificacao col l12">
+                    <div class="not row">
+                      <div class="col l2 s12">
+                        <div class="video-container">
+                          <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="col l10 s12">
+                        <p class="top">Seu vídeo foi postado com sucesso!</p>
+                         <p class="sub">Nome do Vídeo</p>
+                         <p class="extra">Canal: Nome do Canal</p> 
+                         <p class="extra">2 visualizações</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="notificacao col l12">
+                    <div class="not row">
+                      <div class="col l2 s12">
+                        <div class="video-container">
+                          <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="col l10 s12">
+                           <p class="top">Compartilhe seus vídeos com seus amigos!</p>
+                      </div>
+                    </div>
+                 
+                  </div>
+                  <div class="notificacao col l12 s12">
+                    <div class="not row">
+                      <div class="col l2 s12">
+                        <div class="video-container">
+                          <iframe width="854" height="480" src="https://www.youtube.com/embed/QRDkJyYtZSI" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="col l10 s12">
+                           <p class="top">Seu vídeo está entre os mais vistos do dia, parabéns!</p>
+                     <p class="sub">Nome do Vídeo</p>
+                     <p class="extra">Canal: Nome do Canal</p> 
+                     <p class="extra">2 visualizações</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            
+            
+        </div>
+      </div>
+<script src="visaogeral.js"></script>   
+</main>

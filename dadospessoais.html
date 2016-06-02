@@ -1,0 +1,150 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>Dados Pessoais</title>
+<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>      
+
+<main class="dadospessoais">
+    
+      <div class="row">
+        <div class="categorias col s12">
+          <input type="submit" class="categoria selecionado" value="Perfil">
+          <input type="submit" class="categoria" onClick="meusvideos()" value="Meus Vídeos">
+          <input type="submit" class="categoria" value="Meus Canais">
+          <input type="submit" class="categoria" value="Minhas Playlists">
+
+          <hr class="hr2">
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <div class="row lista">
+            <div class="col l12 s12">
+              <img src="dev/img/perfil.png" class="icone user"> 
+              <a class="nome">Nome do Usuário</a>
+              <a class="detalhes numeros">10 vídeos postados | 5 canais | 200 visualizações</a>
+            </div>
+            <div class="col l12 s12 white">
+              <hr class="hr">
+            <p class="detalhes email">email@icomp.ufam.edu.br</p>
+            </div>
+            <div class="sobre row">
+              <div class="col l12 s12 item">
+                <img src="dev/img/account.png" class="icone about">
+                <a class="principal">Sobre</a>
+              </div>
+              <div class="areas col l3 s12">
+                <ul>
+                  <li class="opcao"><a href="visaogeral.html" class="area">Visão Geral</a></li>
+                  <li class="opcao"><a href="estatisticas.html" class="area">Estatísticas</a></li>
+                  <li class="opcao ativa"><a href="#!" class="area">Dados Pessoais</a></li>
+                   <li class="opcao"><a href="notificacao.html" class="area">Notificação</a></li>
+                </ul>
+              </div>
+              <div class="dados col l9 s12">
+                <div class="row editarTudo">
+                  <div class=" row white">
+                  <div class="col l12 s12">
+                    <a class="retorno editar" onClick="editarTudo()">Editar Informações</a>
+                  </div>
+                  </div>
+                  <div class="row editarCampos" id="editarTudo">
+                  
+                  <div class="col l8 s12 areaEditarTudo">
+                    <p class="texto">Nome</p>
+                    <p class="texto"> <input type="text" class="campo2"></p>
+                    <p class="texto">Email</p>
+                    <p class="texto"> <input type="text" class="campo2"></p>
+                    <p class="texto">Senha Atual</p>
+                    <p class="texto"> <input type="password" class="campo2 senha">
+                      <input onClick="editarasenha()" type="submit" class="botao2" value="Editar Senha">
+                    </p>
+                    <div id="editarasenha">
+                    <p class="texto">Nova Senha</p>
+                    <p class="texto"> <input type="password" class="campo2 senha">
+                    </p>
+                    <p class="texto">Repetir Senha</p>
+                    <p class="texto"> <input type="password" class="campo2 senha">
+                    </p>
+                    </div>
+              
+            </div>
+            <div class="col l4 s12 areaEditarTudo">
+              <div class="espaco2 hide-on-med-and-down"></div>
+              <input href="" onClick="cancelarNome()" type="submit" class="botao1" value="Cancelar">
+              <input href="" type="submit" class="botao1" value="Atualizar">
+            </div> 
+            </div>                 
+                </div>
+                <div class="row dadosPessoais">
+                  <div class="col l2 s12">Nome</div>
+                  <div class="col l9 s10 retorno"><b>Anny Caroline Castelo Branco Martins</b></div>
+                  <div class="col l1 s2" >
+                    <img src="dev/img/editar.png" onClick="editarNome()" width="20" class="editar">
+                  </div>
+                  <div class="col l12 s12 areaEditar" id="editarNome">
+             
+             <p> <input type="text" class="campo"></p>
+              <input href="" onClick="cancelarNome()" type="submit" class="botao1" value="Cancelar">
+              <input href="" type="submit" class="botao1" value="Atualizar">
+            </div>                  
+                </div>
+                <div class="row dadosPessoais">
+                  <div class="col l2 s12">Senha</div>
+                  <div class="col l9 s10 retorno">**********</div>
+                  <div class="col l1 s2">
+                    <img src="dev/img/editar.png" onClick="editarSenha()" width="20" class="editar">
+                  </div>
+                   <div class="col l12 s12 areaEditarSenha" id="editarSenha" >
+                    <div class="row editaSenha">
+                      <div class="col l4 s12 offset-l4">
+                          <p class="textoSenha">Senha atual</p>
+                           <p> <input type="password" class="campo senha"></p>
+                           <p class="textoSenha">Nova senha</p>
+                           <p> <input type="password" class="campo senha"></p>
+                            <p class="textoSenha">Repita a senha</p>
+                           <p> <input type="password" class="campo senha"></p>
+                            
+                      </div>
+                      <div class="col l4 s12">
+                        <div class=" espaco hide-on-med-and-down"></div>
+                        <input href="" onClick="cancelarSenha()" type="submit" class="botao1 top" value="Cancelar">
+                        <input href="" type="submit" class="botao1 top" value="Atualizar">
+                      </div>
+                    </div>
+             
+            </div>                  
+                </div>
+                <div class="row dadosPessoais">
+                  <div class="col l2 s12">E-mail</div>
+                  <div class="col l9 s10 retorno">
+                    annycarolinemartins@hotmail.com</div>
+                  <div class="col l1 s2" >
+                    <img src="dev/img/editar.png" onClick="editarEmail()" width="20" class="editar">
+                  </div>
+                  <div class="col l12 s12 areaEditar" id="editarEmail">
+             
+             <p> <input type="text" class="campo"></p>
+              <input href="" onClick="cancelarEmail()" type="submit" class="botao1" value="Cancelar">
+              <input href="" type="submit" class="botao1" value="Atualizar">
+            </div>                  
+                </div>
+                <div class="row dadosPessoais">
+                  <div class="col l2 s12">Tipo</div>
+                  <div class="col l8 s12 retorno">Publicador</div>
+                                    
+                </div>
+
+              </div>
+            </div>
+            
+            
+        </div>
+      </div>
+
+<script src="dadospessoais.js"></script>  
+</main>

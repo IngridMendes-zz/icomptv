@@ -1298,7 +1298,7 @@ main.meusvideos {
   main.meusvideos input[type=text]:focus:not([readonly]),
   main.meusvideos textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 0px solid white;
-    box-shadow: 0 1px 0 0 white; }
+    box-shadow: 0 1px 0 0 transparent; }
   main.meusvideos .infoVideo {
     margin-bottom: 3px;
     font-size: 14px;
@@ -1411,39 +1411,77 @@ main.meusvideos {
     main.meusvideos .icone.about {
       margin-left: 15px; }
 
-body.minhasplaylists {
+main.minhasplaylists {
   background: #CDCBCC;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  /*.excluir {
-		width: 20px;
-		height: 20px;
-		background-image:url(../img/excluir.png);	
-		background-size: contain;
-		background-repeat: no-repeat;	
-	}*/ }
-  body.minhasplaylists .categorias {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  main.minhasplaylists .ui-state-default {
+    border: 0px solid #d3d3d3;
+    background: #fff;
+    font-weight: normal;
+    color: #555555;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-top: 1px solid #cdcbcc;
+    padding-top: 8px;
+    cursor: move; }
+  main.minhasplaylists [type="checkbox"]:checked + label:before {
+    top: -4px;
+    left: -3px;
+    width: 12px;
+    height: 22px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #878786;
+    border-bottom: 2px solid #878786;
+    -webkit-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+        transform: rotate(40deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+        transform-origin: 100% 100%; }
+  main.minhasplaylists .sortable {
+    list-style-type: none;
+    margin: 0px;
+    overflow-y: scroll;
+    height: 382px; }
+  main.minhasplaylists .capa {
+    padding-right: 0px; }
+  main.minhasplaylists .arrastar {
+    margin-top: 20px; }
+  main.minhasplaylists .elemento {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-top: 1px solid #cdcbcc;
+    padding-top: 8px; }
+  main.minhasplaylists .elementos {
+    overflow-y: scroll;
+    height: 382px;
+    margin-bottom: 0px; }
+  main.minhasplaylists .categorias {
     background-color: #ffffff;
     text-align: center;
     padding-top: 35px;
     padding-right: 0px;
     padding-left: 0px; }
-    body.minhasplaylists .categorias .categoria {
+    main.minhasplaylists .categorias .categoria {
       background: #FFFFFF;
       margin-right: 1px;
       color: #000000;
       font-size: 20px;
       border-style: none;
       width: 145px; }
-      body.minhasplaylists .categorias .categoria.selecionado {
+      main.minhasplaylists .categorias .categoria.selecionado {
         border-bottom: 12px solid #E95316; }
-      body.minhasplaylists .categorias .categoria:hover {
+      main.minhasplaylists .categorias .categoria:hover {
         border-bottom: 12px solid #E95316; }
-  body.minhasplaylists .hr2 {
+  main.minhasplaylists .hr2 {
     border: 1px solid #cdcbcc;
     margin-top: 0px; }
-  body.minhasplaylists .hr {
+  main.minhasplaylists .hr {
     border: 1px solid #cdcbcc; }
-  body.minhasplaylists .conteudo {
+  main.minhasplaylists .conteudo {
     position: relative;
     background-color: #fff;
     margin: 8px 0 16px 0;
@@ -1454,28 +1492,37 @@ body.minhasplaylists {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px; }
-  body.minhasplaylists .item {
+  main.minhasplaylists .item {
     background-color: #065C7B;
     padding-top: 10px;
     padding-bottom: 15px; }
-  body.minhasplaylists .sobre {
+  main.minhasplaylists .sobre {
     margin-left: 40px;
     margin-right: 40px;
     /*border-bottom: thin #cdcbcc solid;
 		border-left: thin #cdcbcc solid;
 		border-right: thin #cdcbcc solid;
 		height: 447px;*/ }
-  body.minhasplaylists .lista {
+  main.minhasplaylists .acoesPlaylist {
+    margin-top: 12px;
+    margin-bottom: 12px; }
+  main.minhasplaylists .lupa {
+    cursor: pointer;
+    margin-left: -48px;
+    vertical-align: middle; }
+  main.minhasplaylists .lista {
     padding-top: 40px;
     padding-bottom: 25px; }
-  body.minhasplaylists .adicionar {
+  main.minhasplaylists .adicionar {
     margin-top: 0px;
     background: #e9e8e8;
     padding-right: 35px;
     padding-left: 35px;
     padding-bottom: 10px;
     padding-top: 10px; }
-  body.minhasplaylists .editar {
+  main.minhasplaylists .adicionarVideo {
+    margin-top: 8px; }
+  main.minhasplaylists .editar {
     text-align: justify;
     margin-top: 12px;
     background: #e9e8e8;
@@ -1483,75 +1530,80 @@ body.minhasplaylists {
     padding-left: 35px;
     padding-bottom: 10px;
     padding-top: 10px; }
-  body.minhasplaylists .ou {
+  main.minhasplaylists .ou {
     padding: 10px;
     color: #000;
     font-size: 14px; }
-  body.minhasplaylists .textarea {
+  main.minhasplaylists .textarea {
     width: 640px;
     background-color: #fff;
     border-color: #fff; }
-  body.minhasplaylists .parte {
+  main.minhasplaylists .parte {
     background-color: #fff;
     padding-right: 0px;
     padding-left: 0px;
     margin-bottom: 10px; }
-  body.minhasplaylists .categor {
+  main.minhasplaylists .categor {
     width: 170px;
     height: 27px; }
-  body.minhasplaylists .campo {
+  main.minhasplaylists .campo {
     background: #FFFFFF;
     border: 1px solid #cdcbcc;
-    width: 368px;
+    width: 80%;
     height: 27px;
     margin-right: 15px;
     margin-bottom: 0px;
     margin-left: 15px; }
-    body.minhasplaylists .campo.pesquisa {
-      width: 500px;
+    main.minhasplaylists .campo.pesquisa {
+      width: 50%;
       border: 1px solid #cdcbcc;
       margin-right: 5px; }
-    body.minhasplaylists .campo.nome-playlist {
+    main.minhasplaylists .campo.nome-playlist {
       margin-right: 5px;
-      width: 279px; }
-  body.minhasplaylists .url {
+      width: 65%; }
+  main.minhasplaylists .url {
     background: #FFFFFF;
     border-bottom: 0px solid #9e9e9e;
     width: 424px;
     height: 27px;
     margin-right: 15px; }
-  body.minhasplaylists .principal {
+  main.minhasplaylists .principal {
     font-size: 25px;
     font-weight: bold;
     padding-left: 74px;
     color: #fff;
     margin-bottom: 0px; }
-  body.minhasplaylists .status {
+  main.minhasplaylists .iconeExcluir {
+    vertical-align: bottom;
+    padding: 3px; }
+  main.minhasplaylists .status {
     padding: 20px; }
-    body.minhasplaylists .status.carregando {
+    main.minhasplaylists .status.carregando {
       color: #e95316; }
-    body.minhasplaylists .status.publicado {
+    main.minhasplaylists .status.publicado {
       color: #558b2f; }
-    body.minhasplaylists .status.inesperado {
+    main.minhasplaylists .status.inesperado {
       color: #9e9e9e; }
-    body.minhasplaylists .status.excluir {
+    main.minhasplaylists .status.excluir {
+      margin-left: 0px;
       padding: 3px;
       color: #9e9e9e; }
-      body.minhasplaylists .status.excluir:hover {
+      main.minhasplaylists .status.excluir:hover {
         color: #065c7b;
         cursor: pointer; }
-    body.minhasplaylists .status.versionamento {
+    main.minhasplaylists .status.versionamento {
       color: #ffd740; }
-  body.minhasplaylists .submeter {
+  main.minhasplaylists .submeter {
     padding-left: 45px; }
-  body.minhasplaylists .escolher {
+  main.minhasplaylists .escolher {
     border-top: 1px solid #cdcbcc;
     overflow-y: scroll;
+    margin-top: 10px;
     margin-bottom: 0px;
-    height: 90px;
+    height: 125px;
     padding-top: 8px;
     overflow-x: hidden; }
-  body.minhasplaylists [type="radio"]:not(:checked) + label, body.minhasplaylists [type="radio"]:checked + label {
+  main.minhasplaylists [type="radio"]:not(:checked) + label, main.minhasplaylists [type="radio"]:checked + label {
     position: relative;
     padding-left: 30px;
     cursor: pointer;
@@ -1565,7 +1617,13 @@ body.minhasplaylists {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
-  body.minhasplaylists .carregar {
+  main.minhasplaylists .informacao {
+    margin: 0px;
+    font-size: 11px; }
+  main.minhasplaylists .informacao2 {
+    margin: 0px;
+    font-size: 12px; }
+  main.minhasplaylists .carregar {
     background: #e95316;
     color: #FFFFFF;
     border: 3px solid #e95316;
@@ -1574,19 +1632,19 @@ body.minhasplaylists {
     width: 170px;
     height: 28px;
     font-size: 14px; }
-  body.minhasplaylists .infoVideo {
+  main.minhasplaylists .infoVideo {
     margin-bottom: 3px;
     font-size: 14px;
     margin-top: 12px;
     margin-left: 15px; }
-    body.minhasplaylists .infoVideo.desabilitado {
+    main.minhasplaylists .infoVideo.desabilitado {
       color: #878786; }
-  body.minhasplaylists .botaoAdd {
+  main.minhasplaylists .botaoAdd {
     color: #065c7b;
     float: right; }
-    body.minhasplaylists .botaoAdd:hover {
+    main.minhasplaylists .botaoAdd:hover {
       text-decoration: underline; }
-  body.minhasplaylists .botao3 {
+  main.minhasplaylists .botao3 {
     background: transparent;
     color: #065C7B;
     border: 2px solid #065C7B;
@@ -1597,76 +1655,119 @@ body.minhasplaylists {
     margin-left: 5px;
     font-size: 14px;
     float: right; }
-    body.minhasplaylists .botao3:hover {
+    main.minhasplaylists .botao3:hover {
       color: #fff;
       background: #065C7B;
       border: 3px solid #065C7B; }
-  body.minhasplaylists .botao2 {
+  main.minhasplaylists .botao2 {
     background: transparent;
     color: #065C7B;
     border: 2px solid #065C7B;
     border-radius: 10px;
     width: 90px;
     height: 30px;
-    margin-top: 0px;
-    font-size: 14px; }
-    body.minhasplaylists .botao2:hover {
+    margin-top: 8px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    margin-left: 10px; }
+    main.minhasplaylists .botao2:hover {
       color: #fff;
       background: #065C7B;
       border: 3px solid #065C7B; }
-    body.minhasplaylists .botao2.desabili {
+    main.minhasplaylists .botao2.desabili {
       margin-top: 35px;
       color: #878786;
       border: 2px solid #878786; }
-  body.minhasplaylists .botao1 {
+  main.minhasplaylists [type="radio"]:checked + label:after {
+    border-radius: 50%;
+    border: 2px solid #878786;
+    background-color: #878786;
+    z-index: 0;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+        transform: scale(1.02); }
+  main.minhasplaylists input[type=text]:focus:not([readonly]),
+  main.minhasplaylists textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 0px solid #cdcbcc;
+    box-shadow: 0 1px 0 0 #cdcbcc; }
+  main.minhasplaylists .botao {
+    background: transparent;
+    color: #878786;
+    border: 2px solid #878786;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: auto; }
+  main.minhasplaylists .botao1 {
     background: transparent;
     color: #FFFFFF;
     border: 3px solid #FFFFFF;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 10px;
-    width: 110px;
-    height: 35px; }
-    body.minhasplaylists .botao1:hover {
+    width: 90px;
+    height: 30px; }
+    main.minhasplaylists .botao1:hover {
       color: #065C7B;
       background: #cdcbcc;
       border: 3px solid #cdcbcc; }
-  body.minhasplaylists .areaExcluir {
+  main.minhasplaylists .areaExcluir {
+    z-index: 1;
     text-align: center;
     color: #fff;
     background-color: #065c7b;
-    width: 1086px;
-    height: 105px;
+    width: 93.8%;
+    height: 86px;
     position: absolute;
     opacity: 0.9;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
-  body.minhasplaylists .info {
-    padding: 30px; }
-  body.minhasplaylists .sending {
+  main.minhasplaylists .info {
+    padding: 21px; }
+  main.minhasplaylists .sending {
     background-color: #065c7b;
     padding: 24px; }
-  body.minhasplaylists .area {
-    color: #065c7b; }
-  body.minhasplaylists .grupo {
+  main.minhasplaylists .area {
+    color: #065c7b;
+    text-align: justify; }
+  main.minhasplaylists .numVideos {
+    width: 56px;
+    height: 64px;
+    background-color: #065c7b;
+    position: absolute;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    margin-left: 57px; }
+  main.minhasplaylists .grupo {
     border-bottom: thin #cdcbcc solid; }
-  body.minhasplaylists .resultado {
+  main.minhasplaylists .colVideos {
+    padding-left: 31px;
+    padding-right: 31px; }
+  main.minhasplaylists .resultado {
     text-align: center; }
-  body.minhasplaylists .videos {
+  main.minhasplaylists .resposta {
+    font-size: 14px;
+    color: #878786; }
+  main.minhasplaylists .videos {
     border-top: thin #cdcbcc solid;
     border-bottom: thin #cdcbcc solid;
     margin-bottom: 0px;
     margin-top: 0px;
     padding: 10px;
     text-align: center; }
-  body.minhasplaylists .icone {
+  main.minhasplaylists .icone {
     width: 44px;
     height: 44px;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat; }
-    body.minhasplaylists .icone.about {
+    main.minhasplaylists .icone.about {
       margin-left: 15px; }
 
-body.meuscanais {
+main.meuscanais {
   background: #CDCBCC;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   /*.excluir {
@@ -1676,32 +1777,80 @@ body.meuscanais {
 		background-size: contain;
 		background-repeat: no-repeat;	
 	}*/ }
-  body.meuscanais .parte {
+  main.meuscanais .parte {
     background-color: #fff;
     padding-right: 0px;
     padding-left: 0px;
     margin-bottom: 10px; }
-  body.meuscanais .categorias {
+  main.meuscanais .adicionarCanal {
+    margin-top: 8px; }
+  main.meuscanais .ui-state-default {
+    padding-top: 8px;
+    border: 0px solid #d3d3d3;
+    background: #fff;
+    font-weight: normal;
+    color: #555555;
+    border-top: 1px solid #cdcbcc;
+    cursor: move;
+    overflow-y: hidden;
+    overflow-x: hidden; }
+  main.meuscanais .sortable {
+    margin: 0px;
+    list-style-type: none;
+    margin: 0px;
+    overflow-y: scroll;
+    height: 382px; }
+  main.meuscanais .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    overflow: hidden;
+    position: absolute;
+    z-index: -1; }
+  main.meuscanais .select {
+    width: 100%;
+    margin: 0px; }
+  main.meuscanais .arrastar {
+    margin-top: 20px; }
+  main.meuscanais .icone-video {
+    padding-right: 0px; }
+  main.meuscanais .inexistente {
+    padding-left: 12px;
+    text-align: justify;
+    color: #878786; }
+  main.meuscanais .icone-canal {
+    height: 136px;
+    padding-top: 20px;
+    width: 163; }
+  main.meuscanais .icone-file {
+    height: 27px;
+    width: 163;
+    padding-top: 5px;
+    padding-left: 5px; }
+  main.meuscanais .detalhes {
+    padding: 0px; }
+  main.meuscanais .categorias {
     background-color: #ffffff;
     text-align: center;
     padding-top: 35px;
     padding-right: 0px;
     padding-left: 0px; }
-    body.meuscanais .categorias .categoria {
+    main.meuscanais .categorias .categoria {
       background: #FFFFFF;
       margin-right: 1px;
       color: #000000;
       font-size: 20px;
       border-style: none;
       width: 145px; }
-      body.meuscanais .categorias .categoria.selecionado {
+      main.meuscanais .categorias .categoria.selecionado {
         border-bottom: 12px solid #E95316; }
-      body.meuscanais .categorias .categoria:hover {
+      main.meuscanais .categorias .categoria:hover {
         border-bottom: 12px solid #E95316; }
-  body.meuscanais .hr2 {
+  main.meuscanais .hr2 {
     border: 1px solid #cdcbcc;
     margin-top: 0px; }
-  body.meuscanais .conteudo {
+  main.meuscanais .conteudo {
     position: relative;
     background-color: #fff;
     margin: 8px 0 16px 0;
@@ -1712,28 +1861,28 @@ body.meuscanais {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px; }
-  body.meuscanais .item {
+  main.meuscanais .item {
     background-color: #065C7B;
     padding-top: 10px;
     padding-bottom: 15px; }
-  body.meuscanais .sobre {
+  main.meuscanais .sobre {
     margin-left: 40px;
     margin-right: 40px;
     /*border-bottom: thin #cdcbcc solid;
 		border-left: thin #cdcbcc solid;
 		border-right: thin #cdcbcc solid;
 		height: 447px;*/ }
-  body.meuscanais .lista {
+  main.meuscanais .lista {
     padding-top: 40px;
     padding-bottom: 25px; }
-  body.meuscanais .adicionar {
+  main.meuscanais .adicionar {
     margin-top: 0px;
     background: #e9e8e8;
     padding-right: 35px;
     padding-left: 35px;
     padding-bottom: 10px;
     padding-top: 10px; }
-  body.meuscanais .editar {
+  main.meuscanais .editar {
     text-align: justify;
     margin-top: 12px;
     background: #e9e8e8;
@@ -1741,71 +1890,103 @@ body.meuscanais {
     padding-left: 35px;
     padding-bottom: 10px;
     padding-top: 10px; }
-  body.meuscanais .ou {
+  main.meuscanais .ou {
     padding: 10px;
     color: #000;
     font-size: 14px; }
-  body.meuscanais .textarea {
-    width: 640px;
+  main.meuscanais .textarea {
+    width: 90%;
     height: 100px;
     background-color: #fff;
     border-color: #fff; }
-  body.meuscanais .categor {
+  main.meuscanais .categor {
     width: 170px;
     height: 27px; }
-  body.meuscanais .escolher {
+  main.meuscanais .escolher {
     border-top: 1px solid #cdcbcc;
     overflow-y: scroll;
     margin-bottom: 0px;
     height: 180px;
     padding-top: 8px;
     overflow-x: hidden; }
-  body.meuscanais .campo {
+  main.meuscanais .nome {
+    margin-left: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px; }
+  main.meuscanais .more {
+    margin-left: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 11px; }
+  main.meuscanais .campo {
     background: #FFFFFF;
     border-bottom: 0px solid #9e9e9e;
-    width: 640px;
+    width: 90%;
     height: 27px;
     margin-right: 15px;
     margin-bottom: 0px; }
-    body.meuscanais .campo.pesquisa {
+    main.meuscanais .campo.pesquisa {
       width: 70%;
       border: 1px solid #cdcbcc;
       margin-right: 5px; }
-    body.meuscanais .campo.nome-playlist {
+    main.meuscanais .campo.nome-playlist {
       border: 1px solid #cdcbcc;
       margin-right: 5px;
       width: 279px; }
-  body.meuscanais .url {
+  main.meuscanais .url {
     background: #FFFFFF;
     border-bottom: 0px solid #9e9e9e;
     width: 424px;
     height: 27px;
     margin-right: 15px; }
-  body.meuscanais .principal {
+  main.meuscanais .principal {
     font-size: 25px;
     font-weight: bold;
     padding-left: 74px;
     color: #fff;
     margin-bottom: 0px; }
-  body.meuscanais .status {
+  main.meuscanais .status {
     padding: 20px; }
-    body.meuscanais .status.carregando {
+    main.meuscanais .status.carregando {
       color: #e95316; }
-    body.meuscanais .status.publicado {
+    main.meuscanais .status.publicado {
       color: #558b2f; }
-    body.meuscanais .status.inesperado {
+    main.meuscanais .status.inesperado {
       color: #9e9e9e; }
-    body.meuscanais .status.excluir {
+    main.meuscanais .status.excluir {
       padding: 3px;
       color: #9e9e9e; }
-      body.meuscanais .status.excluir:hover {
+      main.meuscanais .status.excluir:hover {
         color: #065c7b;
         cursor: pointer; }
-    body.meuscanais .status.versionamento {
+    main.meuscanais .status.versionamento {
       color: #ffd740; }
-  body.meuscanais .submeter {
+  main.meuscanais .nome-video {
+    padding-left: 12px; }
+  main.meuscanais .submeter {
     padding-left: 37px; }
-  body.meuscanais .carregar {
+  main.meuscanais .destaque {
+    margin-right: 6px;
+    cursor: pointer; }
+  main.meuscanais .estrela {
+    vertical-align: sub; }
+  main.meuscanais .importar {
+    cursor: pointer; }
+  main.meuscanais .label-drop {
+    font-size: 12px; }
+  main.meuscanais .item-drop {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 12px; }
+  main.meuscanais .video-destaque {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    color: #065c7b; }
+  main.meuscanais .carregar {
     background: #e95316;
     color: #FFFFFF;
     border: 3px solid #e95316;
@@ -1814,18 +1995,18 @@ body.meuscanais {
     width: 170px;
     height: 28px;
     font-size: 14px; }
-  body.meuscanais .infoVideo {
+  main.meuscanais .infoVideo {
     margin-bottom: 3px;
     font-size: 14px;
     margin-top: 12px; }
-    body.meuscanais .infoVideo.desabilitado {
+    main.meuscanais .infoVideo.desabilitado {
       color: #878786; }
-  body.meuscanais .botaoAdd {
+  main.meuscanais .botaoAdd {
     color: #065c7b;
     float: right; }
-    body.meuscanais .botaoAdd:hover {
+    main.meuscanais .botaoAdd:hover {
       text-decoration: underline; }
-  body.meuscanais .botao4 {
+  main.meuscanais .botao4 {
     background: transparent;
     color: #e95316;
     border: 2px solid #e95316;
@@ -1833,11 +2014,11 @@ body.meuscanais {
     height: 30px;
     margin-left: 5px;
     font-size: 14px; }
-    body.meuscanais .botao4:hover {
+    main.meuscanais .botao4:hover {
       color: #fff;
       background: #e95316;
       border: 3px solid #e95316; }
-  body.meuscanais .botao3 {
+  main.meuscanais .botao3 {
     background: transparent;
     color: #065C7B;
     border: 2px solid #065C7B;
@@ -1845,29 +2026,41 @@ body.meuscanais {
     height: 30px;
     margin-left: 5px;
     font-size: 14px; }
-    body.meuscanais .botao3:hover {
+    main.meuscanais .botao3:hover {
       color: #fff;
       background: #065C7B;
       border: 3px solid #065C7B; }
-    body.meuscanais .botao3.desabili {
+    main.meuscanais .botao3.desabili {
       margin-top: 35px;
       color: #878786;
       border: 2px solid #878786; }
-  body.meuscanais .botao2 {
+  main.meuscanais .esconder {
+    margin: 143px;
+    padding: 1px; }
+  main.meuscanais .dropdown-content {
+    min-width: 150px; }
+  main.meuscanais [type="checkbox"]:checked + label:before {
+    border-right: 2px solid #065c7b;
+    border-bottom: 2px solid #065c7b; }
+  main.meuscanais [type="checkbox"] + label:before {
+    border: 2px solid transparent; }
+  main.meuscanais .dropdown-content li {
+    min-height: 30px; }
+  main.meuscanais .botao2 {
     background: transparent;
     color: #065C7B;
     border: 2px solid #065C7B;
     border-radius: 10px;
     width: 90px;
     height: 30px;
-    margin-top: 300px;
+    margin-top: 5px;
     margin-left: 5px;
     font-size: 14px; }
-    body.meuscanais .botao2:hover {
+    main.meuscanais .botao2:hover {
       color: #fff;
       background: #065C7B;
       border: 3px solid #065C7B; }
-  body.meuscanais .botao1 {
+  main.meuscanais .botao1 {
     background: transparent;
     color: #FFFFFF;
     border: 3px solid #FFFFFF;
@@ -1875,11 +2068,11 @@ body.meuscanais {
     border-radius: 10px;
     width: 110px;
     height: 35px; }
-    body.meuscanais .botao1:hover {
+    main.meuscanais .botao1:hover {
       color: #065C7B;
       background: #cdcbcc;
       border: 3px solid #cdcbcc; }
-  body.meuscanais .areaExcluir {
+  main.meuscanais .areaExcluir {
     text-align: center;
     color: #fff;
     background-color: #065c7b;
@@ -1888,31 +2081,31 @@ body.meuscanais {
     position: absolute;
     opacity: 0.9;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
-  body.meuscanais .info {
+  main.meuscanais .info {
     padding: 30px; }
-  body.meuscanais .sending {
+  main.meuscanais .sending {
     background-color: #065c7b;
     padding: 24px; }
-  body.meuscanais .area {
+  main.meuscanais .area {
     color: #065c7b; }
-  body.meuscanais .grupo {
+  main.meuscanais .grupo {
     border-bottom: thin #cdcbcc solid; }
-  body.meuscanais .resultado {
+  main.meuscanais .resultado {
     text-align: center; }
-  body.meuscanais .videos {
+  main.meuscanais .videos {
     border-top: thin #cdcbcc solid;
     border-bottom: thin #cdcbcc solid;
     margin-bottom: 0px;
     margin-top: 0px;
     padding: 10px;
     text-align: center; }
-  body.meuscanais .icone {
+  main.meuscanais .icone {
     width: 44px;
     height: 44px;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat; }
-    body.meuscanais .icone.about {
+    main.meuscanais .icone.about {
       margin-left: 15px; }
 
 .main.main {
@@ -2361,6 +2554,587 @@ main.adm-users {
     padding-bottom: 3px;
     font-size: 12px; }
   main.adm-users .meu {
+    border-top: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }
+
+main.visaogeral {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  main.visaogeral .geral {
+    background-color: #fff; }
+  main.visaogeral .dados {
+    padding: 20px;
+    background-color: #fff; }
+  main.visaogeral .editar {
+    float: right;
+    cursor: pointer; }
+  main.visaogeral .editaSenha {
+    margin-bottom: 0px; }
+  main.visaogeral .areaEditarTudo {
+    padding: 18px;
+    background-color: #e9e8e8; }
+  main.visaogeral .texto {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.visaogeral .areaEditar {
+    padding-bottom: 12px;
+    text-align: center;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.visaogeral .areaEditarSenha {
+    padding-bottom: 12px;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.visaogeral .bloqueio {
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #cdcbcc;
+    background: #fff;
+    border: 1px solid #cdcbcc; }
+  main.visaogeral .botao2 {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    background: #065c7b;
+    border: 3px solid #065c7b; }
+  main.visaogeral .botao1 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px; }
+    main.visaogeral .botao1:hover {
+      color: #fff;
+      background: #065c7b;
+      border: 3px solid #065c7b; }
+    main.visaogeral .botao1.top {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 162px; }
+  main.visaogeral .textoSenha {
+    margin-bottom: -15px; }
+  main.visaogeral .campo {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 0px; }
+    main.visaogeral .campo.senha {
+      width: 220px; }
+  main.visaogeral .campo2 {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px; }
+    main.visaogeral .campo2.senha {
+      width: 220px; }
+  main.visaogeral .retorno {
+    color: #065C7B; }
+  main.visaogeral .editarTudo {
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+    height: 40px; }
+  main.visaogeral .dadosPessoais {
+    border-top: thin #cdcbcc solid;
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.visaogeral .publicacoes {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  main.visaogeral .rad {
+    color: #000;
+    font-size: 12px; }
+    main.visaogeral .rad.escolha {
+      padding-top: 10px; }
+  main.visaogeral .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    main.visaogeral .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 1px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 145px; }
+      main.visaogeral .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      main.visaogeral .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+  main.visaogeral .hr2 {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px; }
+  main.visaogeral .conteudo {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  main.visaogeral .item {
+    background-color: #065C7B;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  main.visaogeral .top {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #065C7B;
+    padding-left: 15px; }
+  main.visaogeral .sub {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 13px; }
+  main.visaogeral .extra {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #878786; }
+  main.visaogeral .sobre {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: thin #cdcbcc solid;
+    border-left: thin #cdcbcc solid;
+    border-right: thin #cdcbcc solid;
+    background-color: #e9e8e8; }
+  main.visaogeral .not {
+    padding-left: 30px;
+    padding-right: 30px; }
+  main.visaogeral .notificacao {
+    border-top: thin #cdcbcc solid;
+    padding-top: 15px; }
+  main.visaogeral .lista {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff; }
+  main.visaogeral .nome {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 100px;
+    color: #065C7B;
+    margin-bottom: 0px; }
+  main.visaogeral .principal {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 74px;
+    color: #fff;
+    margin-bottom: 0px; }
+  main.visaogeral .hr {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.visaogeral .detalhes {
+    color: #000; }
+    main.visaogeral .detalhes.email {
+      padding-left: 100px;
+      margin-top: 5px;
+      background-color: #fff; }
+    main.visaogeral .detalhes.numeros {
+      float: right;
+      padding-top: 12px;
+      padding-right: 40px;
+      padding-left: 40px; }
+  main.visaogeral .area {
+    color: #000;
+    padding-left: 20px; }
+  main.visaogeral .opcao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    main.visaogeral .opcao.ativa {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+    main.visaogeral .opcao:hover {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+  main.visaogeral .icone {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    main.visaogeral .icone.user {
+      margin-left: 40px; }
+    main.visaogeral .icone.about {
+      margin-left: 15px; }
+  main.visaogeral .col {
+    padding-right: 0px;
+    padding-left: 0px; }
+  main.visaogeral .anual {
+    border: thin #cdcbcc solid; }
+  main.visaogeral .areaGrafico {
+    border: thin #cdcbcc solid;
+    height: 262px; }
+  main.visaogeral canvas {
+    width: 100%; }
+  main.visaogeral .grafico {
+    margin: 0px auto;
+    width: 215px; }
+  main.visaogeral .areas {
+    background-color: #e9e8e8; }
+  main.visaogeral .num {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #065C7B;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px; }
+  main.visaogeral .dado {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: #065C7B;
+    font-size: 20px;
+    padding-bottom: 0px; }
+  main.visaogeral .info {
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: #e95316;
+    text-align: center; }
+  main.visaogeral .grupo {
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-size: 12px; }
+  main.visaogeral .meu {
+    border-top: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }
+
+main.dadospessoais {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  main.dadospessoais .geral {
+    background-color: #fff; }
+  main.dadospessoais .dados {
+    padding: 20px;
+    background-color: #fff; }
+  main.dadospessoais .editar {
+    float: right;
+    cursor: pointer; }
+  main.dadospessoais .editaSenha {
+    margin-bottom: 0px; }
+  main.dadospessoais .areaEditarTudo {
+    padding: 18px;
+    background-color: #e9e8e8; }
+  main.dadospessoais .texto {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.dadospessoais .areaEditar {
+    padding-bottom: 12px;
+    text-align: center;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.dadospessoais .areaEditarSenha {
+    padding-bottom: 12px;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.dadospessoais .bloqueio {
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #cdcbcc;
+    background: #fff;
+    border: 1px solid #cdcbcc; }
+  main.dadospessoais .botao2 {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    background: #065c7b;
+    border: 3px solid #065c7b; }
+  main.dadospessoais .botao1 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px; }
+    main.dadospessoais .botao1:hover {
+      color: #fff;
+      background: #065c7b;
+      border: 3px solid #065c7b; }
+    main.dadospessoais .botao1.top {
+      padding-left: 0px;
+      padding-right: 0px; }
+  main.dadospessoais .textoSenha {
+    margin-bottom: -15px;
+    margin-left: 15px; }
+  main.dadospessoais .campo {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 62%;
+    height: 27px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 0px; }
+    main.dadospessoais .campo.senha {
+      width: 85%; }
+  main.dadospessoais .campo2 {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 95%;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px; }
+    main.dadospessoais .campo2.senha {
+      width: 45%; }
+  main.dadospessoais .retorno {
+    color: #065C7B;
+    word-break: break-all; }
+  main.dadospessoais .editarTudo {
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+    height: 40px; }
+  main.dadospessoais .espaco2 {
+    margin-top: 300px; }
+  main.dadospessoais .espaco {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 2px; }
+  main.dadospessoais .editarCampos {
+    background-color: #e9e8e8;
+    border-top: 1px solid #cdcbcc; }
+  main.dadospessoais .dadosPessoais {
+    border-top: thin #cdcbcc solid;
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.dadospessoais .publicacoes {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  main.dadospessoais .rad {
+    color: #000;
+    font-size: 12px; }
+    main.dadospessoais .rad.escolha {
+      padding-top: 10px; }
+  main.dadospessoais .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    main.dadospessoais .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 1px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 145px; }
+      main.dadospessoais .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      main.dadospessoais .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+  main.dadospessoais .hr2 {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px; }
+  main.dadospessoais .conteudo {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  main.dadospessoais .item {
+    background-color: #065C7B;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  main.dadospessoais .top {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #065C7B;
+    padding-left: 15px; }
+  main.dadospessoais .sub {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 13px; }
+  main.dadospessoais .extra {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #878786; }
+  main.dadospessoais .sobre {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: thin #cdcbcc solid;
+    border-left: thin #cdcbcc solid;
+    border-right: thin #cdcbcc solid;
+    background-color: #e9e8e8; }
+  main.dadospessoais .not {
+    padding-left: 30px;
+    padding-right: 30px; }
+  main.dadospessoais .notificacao {
+    border-top: thin #cdcbcc solid;
+    padding-top: 15px; }
+  main.dadospessoais .lista {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff; }
+  main.dadospessoais .nome {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 100px;
+    color: #065C7B;
+    margin-bottom: 0px; }
+  main.dadospessoais .principal {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 74px;
+    color: #fff;
+    margin-bottom: 0px; }
+  main.dadospessoais .hr {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.dadospessoais .detalhes {
+    color: #000; }
+    main.dadospessoais .detalhes.email {
+      padding-left: 100px;
+      margin-top: 5px;
+      background-color: #fff; }
+    main.dadospessoais .detalhes.numeros {
+      float: right;
+      padding-top: 12px;
+      padding-right: 40px;
+      padding-left: 40px; }
+  main.dadospessoais .area {
+    color: #000;
+    padding-left: 20px; }
+  main.dadospessoais .opcao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    main.dadospessoais .opcao.ativa {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+    main.dadospessoais .opcao:hover {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+  main.dadospessoais .icone {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    main.dadospessoais .icone.user {
+      margin-left: 40px; }
+    main.dadospessoais .icone.about {
+      margin-left: 15px; }
+  main.dadospessoais .col {
+    padding-right: 0px;
+    padding-left: 0px; }
+  main.dadospessoais .anual {
+    border: thin #cdcbcc solid; }
+  main.dadospessoais .areaGrafico {
+    border: thin #cdcbcc solid;
+    height: 262px; }
+  main.dadospessoais canvas {
+    width: 100%; }
+  main.dadospessoais .grafico {
+    margin: 0px auto;
+    width: 215px; }
+  main.dadospessoais .areas {
+    background-color: #e9e8e8; }
+  main.dadospessoais .num {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #065C7B;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px; }
+  main.dadospessoais .dado {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: #065C7B;
+    font-size: 20px;
+    padding-bottom: 0px; }
+  main.dadospessoais .info {
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: #e95316;
+    text-align: center; }
+  main.dadospessoais .grupo {
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-size: 12px; }
+  main.dadospessoais .meu {
     border-top: 0px solid #ddd;
     border-right: 0px solid #ddd;
     border-left: 0px solid #ddd;

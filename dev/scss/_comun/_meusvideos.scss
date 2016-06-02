@@ -312,7 +312,7 @@ main.meusvideos{
     textarea.materialize-textarea:focus:not([readonly]) {
         //color: white;
         border-bottom: 0px solid white;
-        box-shadow: 0 1px 0 0 white;
+        box-shadow: 0 1px 0 0 transparent;
     }
 
 
