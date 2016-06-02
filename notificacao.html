@@ -1,196 +1,21 @@
-<html>
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width" />
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	  <!-- Compiled and minified CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>Notificação</title>
+<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-	<!-- Compiled and minified JavaScript -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript">		
-	</script>
-  <script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
-
-  <!-- jQuery library (served from Google) -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <style type="text/css">
-    body [type="radio"].with-gap:checked + label:before, body [type="radio"].with-gap:not(:checked) + label:before {
-    border-radius: 50%;
-    border: 2px solid #065c7b;
-}
-
-body [type="radio"].with-gap:checked + label:after {
-    border-radius: 50%;
-    border: 2px solid #065c7b;
-    background-color: #065c7b;
-    z-index: 0;
-    -webkit-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    transform: scale(0.5);
-}
-  </style>
-	<script language="javascript">
-    function editarasenha() {
-       document.getElementById("editarasenha").style.display = "block";
-    }
-    function editarTudo() {
-      document.getElementById("editarTudo").style.display = "block";
-      var elems = document.getElementsByClassName('dadosPessoais');
-      for(var i = 0; i < elems.length; i++) {
-        elems[i].style.display = 'none';
-       //console.log("Elemento: " + i);
-      }
-    }
-
-    function getNotify() {
-      document.getElementById("notify").style.display = "block";
-    }
-		function getBusca() {
-      document.getElementById("busca").style.display = "block";
-      document.getElementById("login").style.display = "none";
-      search.classList.add("ativo");
-      account.classList.remove("ativo");
-    }
-    function getLogin() {
-      document.getElementById("login").style.display = "block";
-      document.getElementById("busca").style.display = "none";
-      search.classList.remove("ativo");
-      account.classList.add("ativo");
-    }
-		function getFiltros() {
-			document.getElementById("options").style.display= "block";
-			document.getElementById("delimitador").style.display= "block";
-			document.getElementById("delimitador2").style.display= "block";
-		}
-
-    function editarNome(){
-       document.getElementById("editarNome").style.display="block";
-    }
-
-    function editarEmail(){
-       document.getElementById("editarEmail").style.display="block";
-    }
-
-    function editarSenha(){
-       document.getElementById("editarSenha").style.display="block";
-    }
-
-    function cancelarNome(){
-       document.getElementById("editarNome").style.display="none";
-    }
-
-    function cancelarEmail(){
-       document.getElementById("editarEmail").style.display="none";
-    }
-
-    function cancelarSenha(){
-       document.getElementById("editarSenha").style.display="none";
-    }
-
-    function getDuracao(){
-      document.getElementById("duracoes").style.display="block";
-    }
-
-    function getCanais(){
-      window.location.href = "http://localhost/icomptv/canais.html";
-    }
-
-    function getPlaylists(){
-      window.location.href = "http://localhost/icomptv/playlists.html";
-    }
-
-    function meusvideos(){
-      window.location.href = "meusvideos.html";
-    }
-
-    function inscrever(){
-      Materialize.toast('I am a toast!', 4000);
-    }
-	</script>
-      
-</head>
-<body class="perfil">
-	<nav class="cabecalho">
-      <div class="nav-wrapper">
-          <a href="http://icomp.tv/" class="brand-logo">
-            <img src="dev/img/logo.png" alt="logo" class="logo"> 
-          </a>
-          <ul class="right hide-on-med-and-down menu">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="#!">Minha conta</a></li>
-            <li><a href="#!" class="icon icon-busca" onClick="getBusca()" id="search"></a></li>
-            <li><a href="#!"class="icon icon-account" onClick="getLogin()" id="account"></a></li>
-            <li><a href="#!" class="icon icon-notify" onClick="getNotify()" ></a></li>
-          </ul>
-      </div>
-    </nav>
-    
-  	<div class="busca" id="busca">
-  		<form >
-
-
-  			<div class="texto">
-  				<input type="text" class="campo">
-  				<input href="result.html" type="submit" class="botao" value="Pesquisar">
-          <input type="checkbox" class="filled-in" id="todos"/> <label for="todos" class="filtros">Todos</label>
-          <input type="checkbox" class="filled-in" id="vid"/> <label for="vid" class="filtros">Vídeos</label>
-          <input type="checkbox" class="filled-in" id="canal"/> <label for="canal" class="filtros">Canais</label>
-          <input type="checkbox" class="filled-in" id="playlist"/> <label for="playlist" class="filtros">Playlists</label>
-      
-  				<p href="#!" class="filtros" onClick="getFiltros()"> Outros Filtros <i class="material-icons md-90 icon" id="seta">keyboard_arrow_down</i></p>
-  			</div>
-  			<hr class="delimitador" id="delimitador">
-  			<div class="options" id="options">
-  				<ul>
-  					<li>
-  						<a href="#!" class="filtros" onClick="getDuracao()">Data de Upload <i class="material-icons icon">arrow_drop_down</i></a>
-  						<a href="#!" class="filtros">Duração <i class="material-icons icon">arrow_drop_down</i></a>
-  						<a href="#!" class="filtros">Classificação <i class="material-icons icon">arrow_drop_down</i></a>
-
-  					</li>
-  					<div class="details" id="duracoes">
-  						<li>
-  							<a href="#!" class="topico"><i class="material-icons check">check</i>Hoje</a>						
-  						</li>
-  						<li>
-  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há uma semana</a>
-  						</li>
-  						<li>
-  							<a href="#!" class="topico"><i class="material-icons check">check</i>Há um mês</a>
-  						</li>
-  					</div>
-  				</ul>
-  			</div>
-  			<hr class="delimitador" id="delimitador2">
-  		</form>
-    </div>
-
-    <div class="row login" id="login">
-    	<div class="formulario col l7 s12">
-    		<ul> 
-    			<li><a class="label">Email</a></li>
-    			<li><input type="email" class="campo"></li>
-    			<li><a class="label">Senha</a><a href="" class="label2">Esqueceu a senha?</a></li>
-    			<li>
-    				<input type="password" class="campo">
-    				<input type="submit" class="entrar" value="Entrar">
-    			</li>
-    		</ul>
-    	</div>
-      <div class="cadastro col l5 s12">
-        <p class="label">Mas se você ainda não tem cadastro.</p>
-        <input type="submit" class="cadastre" value="CADASTRE-SE">
-      </div>
-    </div>
+<main class="notificacao">
     
       <div class="row">
         <div class="categorias col s12">
           <input type="submit" class="categoria selecionado" value="Perfil">
           <input type="submit" class="categoria" onClick="meusvideos()" value="Meus Vídeos">
-          <input type="submit" class="categoria" value="Meus Canais">
-          <input type="submit" class="categoria" value="Minhas Playlists">
+          <input type="submit" class="categoria" onClick="meuscanaiss()" value="Meus Canais">
+          <input type="submit" class="categoria" onClick="minhasplaylists()" value="Minhas Playlists">
 
           <hr class="hr2">
         </div>
@@ -203,7 +28,7 @@ body [type="radio"].with-gap:checked + label:after {
               <a class="nome">Nome do Usuário</a>
               <a class="detalhes numeros">10 vídeos postados | 5 canais | 200 visualizações</a>
             </div>
-            <div class="col l12 s12" style="background-color: #fff">
+            <div class="col l12 s12 white">
               <hr class="hr">
             <p class="detalhes email">email@icomp.ufam.edu.br</p>
             </div>
@@ -220,44 +45,35 @@ body [type="radio"].with-gap:checked + label:after {
                    <li class="opcao ativa"><a href="notificacao.html" class="area">Notificação</a></li>
                 </ul>
               </div>
-              <div class="dados col l9">
-                <div class="row" style="margin-bottom: 0px; margin-left: 30px;">
+              <div class="dados col l9 s12">
+                <div class="row sessao">
                   
-                  <div class="col l12" style="padding-right: 30px;">
-                    <p style="margin: 0px;">Notificações</p>
+                  <div class="col l12 s12 margem" >
+                    <p class="titulo">Notificações</p>
                     <hr>
-                  </div>
-                  
-                  <div class=" row " id="editarTudo"style="background-color: #e9e8e8; border-top: 1px solid #cdcbcc; display:none;">
-                  
-            <div class="col l4 areaEditarTudo" style="display:block; padding-top: 300px;">
-              <input href="" onClick="cancelarNome()" type="submit" class="botao1" value="Cancelar">
-              <input href="" type="submit" class="botao1" value="Atualizar">
-            </div> 
-            </div>                 
+                  </div>                
                 </div>
-                <div style="padding-top: 0px; margin-left: 30px; margin-right: 30px;
-    margin-bottom: 0px; padding-bottom: 12px;">
-                  <div class="col l12" style="font-size: 13px; margin-bottom: 20px;">Configure as notificações que você receberá dos canais que você se inscreveu e dos grupos que você participa</div>
+                <div class="wow sessao justify margem manual">
+                  Configure as notificações que você receberá dos canais que você se inscreveu e dos grupos que você participa
                                    
                 </div>
                
                 
                <p class="grupo">
-                  <input class="with-gap" name="group1" type="radio" id="nao"  checked/>
+                  <input class="with-gap rad2" name="group1" type="radio" id="nao"  checked/>
                   <label class="rad" for="nao" style="font-size: 14px;">Não receber notificações</label>
                 </p>
                 <p class="grupo">
-                  <input class="with-gap" name="group1" type="radio" id="todos"  checked/>
+                  <input class="with-gap rad2" name="group1" type="radio" id="todos"  checked/>
                   <label class="rad" for="todos" style="font-size: 14px;">De todos os canais</label>
                 </p>
                 <p class="grupo">
-                  <input class="with-gap" name="group1" type="radio" id="exceto"  checked/>
+                  <input class="with-gap rad2" name="group1" type="radio" id="exceto"  checked/>
                   <label class="rad" for="exceto" style="font-size: 14px;">De todos, exceto</label>
                   <input type="text" placeholder="Nome do canal" style="margin-left: 10px; width: 30%; border: 1px solid #cdcbcc; height: 25px;">
                   <input onClick="editarasenha()" type="submit" class="bloqueio" value="Bloquear">
                 </p>
-                <div style="background-color: #e9e8e8; padding-top: 5px; padding-bottom: 5px; padding-left: 15px; margin-left: 30px; margin-right: 30px;">
+                <div class="canal-bloqueado">
                   <p style="margin: 0px;">Nome do Canal <a href="" style="color: #065c7b; font-size: 12px; ">Desbloquear</a></p>
                 </div>
 
@@ -266,16 +82,6 @@ body [type="radio"].with-gap:checked + label:after {
             
             
         </div>
-      </div>
-
-   <footer class="page-footer" >
-          
-          <div class="footer-copyright">
-            <div class="container">
-            © 2016 Copyright Instituto de Computação - Universidade Federal do Amazonas. Todos os direitos reservados.
-            </div>
-          </div>
-        </footer>
-   
-</body>
-</html>
+      </div> 
+<script src="notificacao.js"></script>  
+</main>

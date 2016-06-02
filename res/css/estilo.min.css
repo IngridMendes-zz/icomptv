@@ -3141,3 +3141,888 @@ main.dadospessoais {
     margin: 8px 0 16px 0;
     margin: 0.5rem 0 1rem 0;
     box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }
+
+main.notificacao {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  main.notificacao .geral {
+    background-color: #fff; }
+  main.notificacao .rad2[type="radio"].with-gap:checked + label:before, main.notificacao [type="radio"].with-gap:not(:checked) + label:before {
+    border-radius: 50%;
+    border: 2px solid #065c7b; }
+  main.notificacao .rad2[type="radio"].with-gap:checked + label:after {
+    border-radius: 50%;
+    border: 2px solid #065c7b;
+    background-color: #065c7b;
+    z-index: 0;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5); }
+  main.notificacao .sessao {
+    margin-bottom: 0px;
+    margin-left: 30px; }
+  main.notificacao .manual {
+    padding-top: 0px;
+    padding-bottom: 12px;
+    font-size: 13px;
+    margin-bottom: 20px; }
+  main.notificacao .canal-bloqueado {
+    background-color: #e9e8e8;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  main.notificacao .dados {
+    padding: 20px;
+    background-color: #fff; }
+  main.notificacao .editar {
+    float: right;
+    cursor: pointer; }
+  main.notificacao .editaSenha {
+    margin-bottom: 0px; }
+  main.notificacao .areaEditarTudo {
+    padding: 18px;
+    background-color: #e9e8e8; }
+  main.notificacao .texto {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.notificacao .areaEditar {
+    padding-bottom: 12px;
+    text-align: center;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.notificacao .areaEditarSenha {
+    padding-bottom: 12px;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.notificacao .bloqueio {
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #cdcbcc;
+    background: #fff;
+    border: 1px solid #cdcbcc; }
+  main.notificacao .botao2 {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    background: #065c7b;
+    border: 3px solid #065c7b; }
+  main.notificacao .botao1 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px; }
+    main.notificacao .botao1:hover {
+      color: #fff;
+      background: #065c7b;
+      border: 3px solid #065c7b; }
+    main.notificacao .botao1.top {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 162px; }
+  main.notificacao .textoSenha {
+    margin-bottom: -15px; }
+  main.notificacao .campo {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 0px; }
+    main.notificacao .campo.senha {
+      width: 220px; }
+  main.notificacao .campo2 {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px; }
+    main.notificacao .campo2.senha {
+      width: 220px; }
+  main.notificacao .retorno {
+    color: #065C7B; }
+  main.notificacao .editarTudo {
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+    height: 40px; }
+  main.notificacao .dadosPessoais {
+    border-top: thin #cdcbcc solid;
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.notificacao .publicacoes {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  main.notificacao .rad {
+    color: #000;
+    font-size: 12px; }
+    main.notificacao .rad.escolha {
+      padding-top: 10px; }
+  main.notificacao .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    main.notificacao .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 1px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 145px; }
+      main.notificacao .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      main.notificacao .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+  main.notificacao .margem {
+    padding-right: 30px; }
+  main.notificacao .titulo {
+    margin: 0px; }
+  main.notificacao .hr2 {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px; }
+  main.notificacao .conteudo {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  main.notificacao .item {
+    background-color: #065C7B;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  main.notificacao .top {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #065C7B;
+    padding-left: 15px; }
+  main.notificacao .sub {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 13px; }
+  main.notificacao .extra {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #878786; }
+  main.notificacao .sobre {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: thin #cdcbcc solid;
+    border-left: thin #cdcbcc solid;
+    border-right: thin #cdcbcc solid;
+    background-color: #e9e8e8; }
+  main.notificacao .not {
+    padding-left: 30px;
+    padding-right: 30px; }
+  main.notificacao .notificacao {
+    border-top: thin #cdcbcc solid;
+    padding-top: 15px; }
+  main.notificacao .lista {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff; }
+  main.notificacao .nome {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 100px;
+    color: #065C7B;
+    margin-bottom: 0px; }
+  main.notificacao .principal {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 74px;
+    color: #fff;
+    margin-bottom: 0px; }
+  main.notificacao .hr {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.notificacao .detalhes {
+    color: #000; }
+    main.notificacao .detalhes.email {
+      padding-left: 100px;
+      margin-top: 5px;
+      background-color: #fff; }
+    main.notificacao .detalhes.numeros {
+      float: right;
+      padding-top: 12px;
+      padding-right: 40px;
+      padding-left: 40px; }
+  main.notificacao .area {
+    color: #000;
+    padding-left: 20px; }
+  main.notificacao .opcao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    main.notificacao .opcao.ativa {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+    main.notificacao .opcao:hover {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+  main.notificacao .icone {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    main.notificacao .icone.user {
+      margin-left: 40px; }
+    main.notificacao .icone.about {
+      margin-left: 15px; }
+  main.notificacao .col {
+    padding-right: 0px;
+    padding-left: 0px; }
+  main.notificacao .anual {
+    border: thin #cdcbcc solid; }
+  main.notificacao .areaGrafico {
+    border: thin #cdcbcc solid;
+    height: 262px; }
+  main.notificacao canvas {
+    width: 100%; }
+  main.notificacao .grafico {
+    margin: 0px auto;
+    width: 215px; }
+  main.notificacao .areas {
+    background-color: #e9e8e8; }
+  main.notificacao .num {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #065C7B;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px; }
+  main.notificacao .dado {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: #065C7B;
+    font-size: 20px;
+    padding-bottom: 0px; }
+  main.notificacao .info {
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: #e95316;
+    text-align: center; }
+  main.notificacao .grupo {
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-size: 12px; }
+  main.notificacao .meu {
+    border-top: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }
+
+main.estatisticas {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  main.estatisticas .geral {
+    background-color: #fff; }
+  main.estatisticas .dados {
+    padding: 20px;
+    background-color: #fff; }
+  main.estatisticas .editar {
+    float: right;
+    cursor: pointer; }
+  main.estatisticas .editaSenha {
+    margin-bottom: 0px; }
+  main.estatisticas .areaEditarTudo {
+    padding: 18px;
+    background-color: #e9e8e8; }
+  main.estatisticas .texto {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.estatisticas .areaEditar {
+    padding-bottom: 12px;
+    text-align: center;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.estatisticas .areaEditarSenha {
+    padding-bottom: 12px;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.estatisticas .bloqueio {
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #cdcbcc;
+    background: #fff;
+    border: 1px solid #cdcbcc; }
+  main.estatisticas .botao2 {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    background: #065c7b;
+    border: 3px solid #065c7b; }
+  main.estatisticas .botao1 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px; }
+    main.estatisticas .botao1:hover {
+      color: #fff;
+      background: #065c7b;
+      border: 3px solid #065c7b; }
+    main.estatisticas .botao1.top {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 162px; }
+  main.estatisticas .textoSenha {
+    margin-bottom: -15px; }
+  main.estatisticas .campo {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 0px; }
+    main.estatisticas .campo.senha {
+      width: 220px; }
+  main.estatisticas .campo2 {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px; }
+    main.estatisticas .campo2.senha {
+      width: 220px; }
+  main.estatisticas .retorno {
+    color: #065C7B; }
+  main.estatisticas .editarTudo {
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+    height: 40px; }
+  main.estatisticas .dadosPessoais {
+    border-top: thin #cdcbcc solid;
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.estatisticas .publicacoes {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  main.estatisticas .rad {
+    color: #000;
+    font-size: 12px; }
+    main.estatisticas .rad.escolha {
+      padding-top: 10px; }
+  main.estatisticas .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    main.estatisticas .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 1px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 145px; }
+      main.estatisticas .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      main.estatisticas .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+  main.estatisticas .hr2 {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px; }
+  main.estatisticas .conteudo {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  main.estatisticas .item {
+    background-color: #065C7B;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  main.estatisticas .top {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #065C7B;
+    padding-left: 15px; }
+  main.estatisticas .sub {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 13px; }
+  main.estatisticas .extra {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #878786; }
+  main.estatisticas .sobre {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: thin #cdcbcc solid;
+    border-left: thin #cdcbcc solid;
+    border-right: thin #cdcbcc solid;
+    background-color: #e9e8e8; }
+  main.estatisticas .not {
+    padding-left: 30px;
+    padding-right: 30px; }
+  main.estatisticas .notificacao {
+    border-top: thin #cdcbcc solid;
+    padding-top: 15px; }
+  main.estatisticas .lista {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff; }
+  main.estatisticas .nome {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 100px;
+    color: #065C7B;
+    margin-bottom: 0px; }
+  main.estatisticas .principal {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 74px;
+    color: #fff;
+    margin-bottom: 0px; }
+  main.estatisticas .hr {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.estatisticas .detalhes {
+    color: #000; }
+    main.estatisticas .detalhes.email {
+      padding-left: 100px;
+      margin-top: 5px;
+      background-color: #fff; }
+    main.estatisticas .detalhes.numeros {
+      float: right;
+      padding-top: 12px;
+      padding-right: 40px;
+      padding-left: 40px; }
+  main.estatisticas .area {
+    color: #000;
+    padding-left: 20px; }
+  main.estatisticas .opcao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    main.estatisticas .opcao.ativa {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+    main.estatisticas .opcao:hover {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+  main.estatisticas .icone {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    main.estatisticas .icone.user {
+      margin-left: 40px; }
+    main.estatisticas .icone.about {
+      margin-left: 15px; }
+  main.estatisticas .col {
+    padding-right: 0px;
+    padding-left: 0px; }
+  main.estatisticas .anual {
+    border: thin #cdcbcc solid; }
+  main.estatisticas .areaGrafico {
+    border: thin #cdcbcc solid;
+    height: 262px; }
+  main.estatisticas canvas {
+    width: 100%; }
+  main.estatisticas .grafico {
+    margin: 0px auto;
+    width: 215px; }
+  main.estatisticas .areas {
+    background-color: #e9e8e8; }
+  main.estatisticas .num {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #065C7B;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px; }
+  main.estatisticas .dado {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: #065C7B;
+    font-size: 20px;
+    padding-bottom: 0px; }
+  main.estatisticas .info {
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: #e95316;
+    text-align: center; }
+  main.estatisticas .grupo {
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-size: 12px; }
+  main.estatisticas .meu {
+    border-top: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }
+
+main.notify {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  main.notify .geral {
+    background-color: #fff; }
+  main.notify .dados {
+    padding: 20px;
+    background-color: #fff; }
+  main.notify .editar {
+    float: right;
+    cursor: pointer; }
+  main.notify .editaSenha {
+    margin-bottom: 0px; }
+  main.notify .areaEditarTudo {
+    padding: 18px;
+    background-color: #e9e8e8; }
+  main.notify .texto {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.notify .areaEditar {
+    padding-bottom: 12px;
+    text-align: center;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.notify .areaEditarSenha {
+    padding-bottom: 12px;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.notify .bloqueio {
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #cdcbcc;
+    background: #fff;
+    border: 1px solid #cdcbcc; }
+  main.notify .botao2 {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    background: #065c7b;
+    border: 3px solid #065c7b; }
+  main.notify .botao1 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px; }
+    main.notify .botao1:hover {
+      color: #fff;
+      background: #065c7b;
+      border: 3px solid #065c7b; }
+    main.notify .botao1.top {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 162px; }
+  main.notify .textoSenha {
+    margin-bottom: -15px; }
+  main.notify .campo {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 0px; }
+    main.notify .campo.senha {
+      width: 220px; }
+  main.notify .campo2 {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px; }
+    main.notify .campo2.senha {
+      width: 220px; }
+  main.notify .retorno {
+    color: #065C7B; }
+  main.notify .editarTudo {
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+    height: 40px; }
+  main.notify .dadosPessoais {
+    border-top: thin #cdcbcc solid;
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.notify .publicacoes {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  main.notify .rad {
+    color: #000;
+    font-size: 12px; }
+    main.notify .rad.escolha {
+      padding-top: 10px; }
+  main.notify .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    main.notify .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 1px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 145px; }
+      main.notify .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      main.notify .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+  main.notify .hr2 {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px; }
+  main.notify .conteudo {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  main.notify .item {
+    background-color: #065C7B;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  main.notify .top {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #065C7B;
+    padding-left: 15px; }
+  main.notify .sub {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 13px; }
+  main.notify .extra {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #878786; }
+  main.notify .sobre {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: thin #cdcbcc solid;
+    border-left: thin #cdcbcc solid;
+    border-right: thin #cdcbcc solid;
+    background-color: #e9e8e8; }
+  main.notify .not {
+    padding-left: 30px;
+    padding-right: 30px; }
+  main.notify .notificacao {
+    border-top: thin #cdcbcc solid;
+    padding-top: 15px; }
+  main.notify .lista {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff; }
+  main.notify .nome {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 100px;
+    color: #065C7B;
+    margin-bottom: 0px; }
+  main.notify .principal {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 74px;
+    color: #fff;
+    margin-bottom: 0px; }
+  main.notify .hr {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.notify .detalhes {
+    color: #000; }
+    main.notify .detalhes.email {
+      padding-left: 100px;
+      margin-top: 5px;
+      background-color: #fff; }
+    main.notify .detalhes.numeros {
+      float: right;
+      padding-top: 12px;
+      padding-right: 40px;
+      padding-left: 40px; }
+  main.notify .area {
+    color: #000;
+    padding-left: 20px; }
+  main.notify .opcao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    main.notify .opcao.ativa {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+    main.notify .opcao:hover {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+  main.notify .icone {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    main.notify .icone.user {
+      margin-left: 40px; }
+    main.notify .icone.about {
+      margin-left: 15px; }
+  main.notify .col {
+    padding-right: 0px;
+    padding-left: 0px; }
+  main.notify .anual {
+    border: thin #cdcbcc solid; }
+  main.notify .areaGrafico {
+    border: thin #cdcbcc solid;
+    height: 262px; }
+  main.notify canvas {
+    width: 100%; }
+  main.notify .grafico {
+    margin: 0px auto;
+    width: 215px; }
+  main.notify .areas {
+    background-color: #e9e8e8; }
+  main.notify .num {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #065C7B;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px; }
+  main.notify .dado {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: #065C7B;
+    font-size: 20px;
+    padding-bottom: 0px; }
+  main.notify .info {
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: #e95316;
+    text-align: center; }
+  main.notify .grupo {
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-size: 12px; }
+  main.notify .meu {
+    border-top: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }
