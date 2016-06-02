@@ -2257,6 +2257,15 @@ main.adm-users {
     height: 100%;
     padding: 20px;
     background-color: #fff; }
+  main.adm-users .areaExcluir {
+    text-align: center;
+    color: #fff;
+    background-color: #065c7b;
+    width: 93.2%;
+    height: 100px;
+    position: absolute;
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
   main.adm-users .editar {
     float: right;
     cursor: pointer;
@@ -2299,6 +2308,18 @@ main.adm-users {
     color: #fff;
     background: #065c7b;
     border: 3px solid #065c7b; }
+  main.adm-users .botao4 {
+    background: transparent;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px; }
+    main.adm-users .botao4:hover {
+      color: #065C7B;
+      background: #cdcbcc;
+      border: 3px solid #cdcbcc; }
   main.adm-users .botao1 {
     background: transparent;
     color: #065C7B;
@@ -4067,6 +4088,350 @@ main.notify {
     padding-bottom: 3px;
     font-size: 12px; }
   main.notify .meu {
+    border-top: 0px solid #ddd;
+    border-right: 0px solid #ddd;
+    border-left: 0px solid #ddd;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    box-shadow: 0 0px 0px 0 transparent, 0 0px 0px 0 transparent; }
+
+main.adm-videos {
+  background: #CDCBCC;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  main.adm-videos .geral {
+    background-color: #fff; }
+  main.adm-videos .alinhar {
+    padding-top: 20px; }
+  main.adm-videos .espaco {
+    margin: 130px;
+    padding: 11px; }
+  main.adm-videos .usuario {
+    cursor: pointer; }
+    main.adm-videos .usuario:hover {
+      border-bottom: 1px solid #065c7b; }
+  main.adm-videos .areaExcluir {
+    background-color: #065c7b;
+    height: 90px;
+    position: absolute;
+    opacity: 0.9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; }
+  main.adm-videos .botao4 {
+    background: transparent;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px; }
+    main.adm-videos .botao4:hover {
+      color: #065C7B;
+      background: #cdcbcc;
+      border: 3px solid #cdcbcc; }
+  main.adm-videos .clicavel {
+    cursor: pointer; }
+  main.adm-videos .dados {
+    height: 100%;
+    padding: 20px;
+    background-color: #fff; }
+  main.adm-videos .editar {
+    float: right;
+    cursor: pointer;
+    margin-left: 10px; }
+  main.adm-videos .editaSenha {
+    margin-bottom: 0px; }
+  main.adm-videos .areaEditarTudo {
+    padding: 18px;
+    background-color: #e9e8e8;
+    display: block; }
+  main.adm-videos .texto {
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.adm-videos .areaEditar {
+    padding-bottom: 12px;
+    text-align: center;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.adm-videos .areaEditarSenha {
+    padding-bottom: 12px;
+    margin-top: 12px;
+    background-color: #e9e8e8;
+    color: #065C7B; }
+  main.adm-videos .bloqueio {
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #cdcbcc;
+    background: #fff;
+    border: 1px solid #cdcbcc; }
+  main.adm-videos .botao2 {
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    color: #fff;
+    background: #065c7b;
+    border: 3px solid #065c7b; }
+  main.adm-videos .botao1 {
+    background: transparent;
+    color: #065C7B;
+    border: 2px solid #065C7B;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    margin-left: 10px; }
+    main.adm-videos .botao1:hover {
+      color: #fff;
+      background: #065c7b;
+      border: 3px solid #065c7b; }
+    main.adm-videos .botao1.top {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-top: 162px; }
+  main.adm-videos .textoSenha {
+    margin-bottom: -15px; }
+  main.adm-videos .campo {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 460px;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 0px; }
+    main.adm-videos .campo.senha {
+      width: 220px; }
+  main.adm-videos .campo2 {
+    background: #FFFFFF;
+    border-bottom: 0px solid #9e9e9e;
+    width: 86%;
+    height: 27px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px; }
+    main.adm-videos .campo2.senha {
+      width: 42%; }
+  main.adm-videos .ativado {
+    color: #065C7B; }
+  main.adm-videos .editarTudo {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-top: 12px;
+    height: 40px; }
+  main.adm-videos .pesquisa {
+    width: 65%;
+    height: 30px;
+    border: 1px solid #065c7b;
+    margin-right: 10px;
+    margin-bottom: 0px; }
+  main.adm-videos .dadosPessoais {
+    border-bottom: thin #cdcbcc solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.adm-videos .desativado {
+    color: #878786; }
+  main.adm-videos .dadosPessoais2 {
+    border-bottom: 2px #065c7b solid;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 12px;
+    padding-top: 12px; }
+  main.adm-videos .publicacoes {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 20px; }
+  main.adm-videos .rad {
+    color: #000;
+    font-size: 12px; }
+    main.adm-videos .rad.escolha {
+      padding-top: 10px; }
+  main.adm-videos input[type=text]:focus:not([readonly]),
+  main.adm-videos input[type=password]:focus:not([readonly]),
+  main.adm-videos textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 0px solid white;
+    box-shadow: 0 1px 0 0 transparent; }
+  main.adm-videos .categor {
+    width: 42%;
+    height: 31px; }
+  main.adm-videos .novousuario {
+    background-color: #e9e8e8;
+    padding-right: 20px; }
+  main.adm-videos .categorias {
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px; }
+    main.adm-videos .categorias .categoria {
+      background: #FFFFFF;
+      margin-right: 1px;
+      color: #000000;
+      font-size: 20px;
+      border-style: none;
+      width: 145px; }
+      main.adm-videos .categorias .categoria.selecionado {
+        border-bottom: 12px solid #E95316; }
+      main.adm-videos .categorias .categoria:hover {
+        border-bottom: 12px solid #E95316; }
+  main.adm-videos .hr2 {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px; }
+  main.adm-videos .conteudo {
+    position: relative;
+    background-color: #fff;
+    margin: 8px 0 16px 0;
+    margin: 0.5rem 0 1rem 0;
+    -webkit-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  main.adm-videos .remover {
+    margin: 10; }
+  main.adm-videos .item {
+    background-color: #065C7B;
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  main.adm-videos .top {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #065C7B;
+    padding-left: 15px; }
+  main.adm-videos .sub {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 13px; }
+  main.adm-videos .extra {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #878786; }
+  main.adm-videos .sobre {
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: thin #cdcbcc solid;
+    border-left: thin #cdcbcc solid;
+    border-right: thin #cdcbcc solid;
+    background-color: #e9e8e8; }
+  main.adm-videos .not {
+    padding-left: 30px;
+    padding-right: 30px; }
+  main.adm-videos .notificacao {
+    border-top: thin #cdcbcc solid;
+    padding-top: 15px; }
+  main.adm-videos .lista {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #fff; }
+  main.adm-videos .nome {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 100px;
+    color: #065C7B;
+    margin-bottom: 0px; }
+  main.adm-videos .principal {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 74px;
+    color: #fff;
+    margin-bottom: 0px; }
+  main.adm-videos .hr {
+    border: 1px solid #cdcbcc;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  main.adm-videos .detalhes {
+    color: #000; }
+    main.adm-videos .detalhes.email {
+      padding-left: 100px;
+      margin-top: 5px;
+      background-color: #fff; }
+    main.adm-videos .detalhes.numeros {
+      float: right;
+      padding-top: 12px;
+      padding-right: 40px;
+      padding-left: 40px; }
+  main.adm-videos .area {
+    color: #000;
+    padding-left: 20px; }
+  main.adm-videos .opcao {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    main.adm-videos .opcao.ativa {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+    main.adm-videos .opcao:hover {
+      border-left: 8px solid #065C7B;
+      font-weight: bold; }
+  main.adm-videos .icone {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat; }
+    main.adm-videos .icone.user {
+      margin-left: 40px; }
+    main.adm-videos .icone.about {
+      margin-left: 15px; }
+  main.adm-videos .col {
+    padding-right: 0px;
+    padding-left: 0px; }
+  main.adm-videos .anual {
+    border: thin #cdcbcc solid; }
+  main.adm-videos .areaGrafico {
+    border: thin #cdcbcc solid;
+    height: 262px; }
+  main.adm-videos canvas {
+    width: 100%; }
+  main.adm-videos .grafico {
+    margin: 0px auto;
+    width: 215px; }
+  main.adm-videos .areas {
+    background-color: #e9e8e8;
+    height: 100%; }
+  main.adm-videos .num {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #065C7B;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0px; }
+  main.adm-videos .dado {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    color: #065C7B;
+    font-size: 20px;
+    padding-bottom: 0px; }
+  main.adm-videos .info {
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    color: #e95316;
+    text-align: center; }
+  main.adm-videos .grupo {
+    padding-top: 0px;
+    padding-left: 35px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-size: 12px; }
+  main.adm-videos .meu {
     border-top: 0px solid #ddd;
     border-right: 0px solid #ddd;
     border-left: 0px solid #ddd;

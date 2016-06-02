@@ -1,0 +1,122 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width" />
+<title>Categorias</title>
+<link rel="stylesheet" type="text/css" href="res/css/estilo.min.css">
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    
+<main class="adm-users">
+      <div class="row">
+        <div class="categorias col s12">
+          <hr class="hr2">
+        </div>
+      </div>
+      <div class="conteudo">
+        <div class="row lista">
+            <div class="col l12 s12">
+              <img src="dev/img/perfil.png" class="icone user"> 
+              <a class="nome">Administrador</a>
+              <a class="detalhes numeros">200 usuários | 150 canais</a>
+            </div>
+            <div class="col l12 s12 white">
+              <hr class="hr">
+            <p class="detalhes email">icomptv@vod.com</p>
+            </div>
+            <div class="sobre row">
+              <div class="col l12 s12 item">
+                <img src="dev/img/account.png" class="icone about">
+                <a class="principal">Sobre</a>
+              </div>
+              <div class="areas col l3 s12">
+                <ul>
+                  <li class="opcao"><a href="" class="area">Visão Geral</a></li>
+                  <li class="opcao"><a href="" class="area">Estatísticas</a></li>
+                  <li class="opcao "><a href="#!" class="area">Usuários</a></li>
+                   <li class="opcao"><a href="" class="area">Vídeos</a></li>
+                   <li class="opcao"><a href="" class="area">Playlists</a></li>
+                   <li class="opcao"><a href="" class="area">Canais</a></li>
+                   <li class="opcao ativa"><a href="" class="area">Categorias</a></li>
+                   <li class="opcao"><a href="" class="area">Conta</a></li>
+                </ul>
+              </div>
+              <div class="dados col l9 s12">
+                <div class="row">
+                  <div class="col l9">
+                    <input type="text" class="pesquisa right">
+                  </div>
+                  <div class="col l3">
+                    <img src="dev/img/search-selected.png" width="40px" class="left">
+                  </div>
+                </div>
+                <div class="row dadosPessoais2 hide-on-med-and-down">
+                  <div class="col l3 ativado"><b>Categoria</b></div>
+                  <div class="col l8 ativado "><b>Descrição</b></div>
+                                 
+                </div>
+                <div class="row editarTudo">
+                  <div class=" row white">
+                  <div class="col l12 s12" id="adicionaruser">
+                    <a class="ativado editar" onClick="AdicionarNovo()">Adicionar Categoria</a>
+                    <img src="dev/img/add.png" width="25px" class="right">
+                  </div>
+                  </div>
+                  <div class="row novousuario" id="addnew">
+                  
+                  <div class="col l8 s12 areaEditarTudo">
+                    <p class="texto">Nome da Categoria</p>
+                    <p class="texto"> <input type="text" class="campo2"></p>
+                    <p class="texto">Descrição</p>
+                    <p class="texto"> <input type="text" class="campo2"></p>
+                    
+            </div>
+            <div class="col l4 s12 areaEditarTudo">
+              <p class="espaco hide-on-med-and-down"></p>
+              <input href="" type="submit" class="botao1 right" value="Adicionar">
+              <input href="" type="submit" class="botao1 right" onClick="cancelar()" value="Cancelar">
+              
+            </div> 
+            </div>  
+
+                  <div class="row novousuario" id="editarTudo">
+                  
+                  <div class="col l8 areaEditarTudo">
+                    <p class="texto">Nome da Categoria</p>
+                    <p class="texto"> <input type="text" class="campo2"></p>
+                    <p class="texto">Descrição</p>
+                    <p class="texto"> <input type="text" class="campo2"></p>
+                   
+                    </p>              
+            </div>
+            <div class="col l4 areaEditarTudo">
+              <p class="espaco hide-on-med-and-down"></p>
+              <input href="" type="submit" class="botao1 right" value="Atualizar">
+              <input href="" type="submit" class="botao1 right" onClick="cancelar()" value="Cancelar">
+              
+            </div> 
+            </div>                 
+                </div>
+                <div class="row dadosPessoais ativado" id="usuarioativado">
+                  <div class="col l3 s12 desativado" onClick="editarTudo()" id="nomeativado">Lorem ipsum</div>
+                  <div class="col l8 s12 justify desativado">Praesent in mauris eu tortor porttitor accumsan. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis velit mauris vel metus.</div>
+                  
+                  <div class="col l1 s6"><img src="dev/img/trash.png" id="myImg2" onmouseover="ativaImg(this)" onmouseout="normalImg(this)" class="right tooltipped clicavel" data-position="right" data-delay="50" data-tooltip="Excluir" width="15"></div>  
+
+                  <div class="col l8 s12 white-text center areaExcluir" >
+              <p class="remover">Tem certeza que deseja remover a categoria?</p>
+              <input href="" type="submit" class="botao4" value="Cancelar">
+              <input href="" type="submit" class="botao4" value="Remover">
+            </div>               
+                </div>
+                
+
+              </div>
+            </div>
+            
+            
+        </div>
+      </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js" language="javascript"></script>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+<script src="adm-users.js"></script>  
+</main>

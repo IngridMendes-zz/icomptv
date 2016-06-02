@@ -1,4 +1,4 @@
-main.adm-users{
+main.adm-videos{
 	background:#CDCBCC;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 
@@ -6,6 +6,10 @@ main.adm-users{
 		//overflow-y: scroll;
 		//height: 352px;
 		background-color: #fff;
+	}
+
+	.alinhar{
+		    padding-top: 20px;
 	}
 
 	.espaco{
@@ -20,6 +24,31 @@ main.adm-users{
 		}
 	}
 
+	.areaExcluir {
+		//display: none;
+
+		background-color: #065c7b;
+    height: 90px;
+    position: absolute;
+    opacity: 0.9;
+	}
+
+	.botao4{
+			background: transparent;
+			color: #FFFFFF;
+			border: 3px solid #FFFFFF;
+			font-size: 18px;
+			border-radius: 10px;
+			width:100px;
+    		height:30px;
+
+    		&:hover{
+				color: #065C7B;
+				background: #cdcbcc;
+				border: 3px solid #cdcbcc;
+			}
+		}
+
 	.clicavel{
 		cursor: pointer;
 	}
@@ -30,17 +59,6 @@ main.adm-users{
     	height: 100%;
     	padding: 20px;
     	background-color: #fff;
-	}
-
-	.areaExcluir {
-		//display: none;
-		text-align: center;
-		color: #fff;
-		background-color: #065c7b;
-    width: 93.2%;
-    height: 100px;
-    position: absolute;
-    opacity: 0.9;
 	}
 
 	.editar{
@@ -108,22 +126,6 @@ main.adm-users{
 				border: 3px solid #065c7b;
 
 	}
-
-	.botao4{
-			background: transparent;
-			color: #FFFFFF;
-			border: 3px solid #FFFFFF;
-			font-size: 18px;
-			border-radius: 10px;
-			width:100px;
-    		height:30px;
-
-    		&:hover{
-				color: #065C7B;
-				background: #cdcbcc;
-				border: 3px solid #cdcbcc;
-			}
-		}
 
 	.botao1{
 		background: transparent;
@@ -304,6 +306,10 @@ main.adm-users{
     	margin-top: 30px;
 		margin-left: 30px;
 		margin-right: 30px;
+	}
+
+	.remover{
+		margin: 10;
 	}
 
 	.item{
