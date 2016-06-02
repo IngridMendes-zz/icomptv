@@ -8,8 +8,25 @@ main.notify{
 		background-color: #fff;
 	}
 
-	
+	.informacoes{
+		margin-top: 20px; 
+	}
 
+	.nome-video{
+		margin: 0px; color: #065c7b; font-weight: bold; font-size: 14px;padding-left: 20px;
+	}
+
+	.todas{
+		margin-bottom: 5px;
+	}
+
+	.botc{
+		padding-right: 20px; 
+	}
+
+	.inicio{
+		margin: 0px; padding-left: 20px;
+	}
 	.dados{
 		//overflow-y: scroll;
     	//height: 352px;
@@ -20,6 +37,10 @@ main.notify{
 	.editar{
 		float: right;
 		cursor: pointer;
+	}
+
+	.outros{
+		margin: 0px; color: #878786; font-size: 14px;padding-left: 20px;
 	}
 
 	.editaSenha{
@@ -178,6 +199,19 @@ main.notify{
 		&.escolha {
 			padding-top: 10px;
 		}
+	}
+
+	.elemento{
+		border-bottom: 1px solid #cdcbcc; padding-bottom: 20px; margin-bottom: 0px;
+	}
+
+	.icone-canal{
+		padding-left: 20px; padding-top: 20px;
+		cursor: pointer;
+	}
+
+	.thumb{
+		margin-top: 20px;
 	}
 	
 	.categorias{

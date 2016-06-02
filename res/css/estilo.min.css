@@ -3150,6 +3150,10 @@ main.notificacao {
   main.notificacao .rad2[type="radio"].with-gap:checked + label:before, main.notificacao [type="radio"].with-gap:not(:checked) + label:before {
     border-radius: 50%;
     border: 2px solid #065c7b; }
+  main.notificacao .separator {
+    margin-right: 30px; }
+  main.notificacao .label {
+    font-size: 14px; }
   main.notificacao .rad2[type="radio"].with-gap:checked + label:after {
     border-radius: 50%;
     border: 2px solid #065c7b;
@@ -3157,7 +3161,8 @@ main.notificacao {
     z-index: 0;
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
-    transform: scale(0.5); }
+    transform: scale(0.5);
+    font-size: 14px; }
   main.notificacao .sessao {
     margin-bottom: 0px;
     margin-left: 30px; }
@@ -3276,7 +3281,7 @@ main.notificacao {
     margin-left: 20px; }
   main.notificacao .rad {
     color: #000;
-    font-size: 12px; }
+    font-size: 14px; }
     main.notificacao .rad.escolha {
       padding-top: 10px; }
   main.notificacao .categorias {
@@ -3298,8 +3303,20 @@ main.notificacao {
         border-bottom: 12px solid #E95316; }
   main.notificacao .margem {
     padding-right: 30px; }
+  main.notificacao input[type=text]:focus:not([readonly]),
+  main.notificacao textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 0px solid #cdcbcc;
+    box-shadow: 0 1px 0 0 #cdcbcc; }
+  main.notificacao .input-canal {
+    margin-left: 10px;
+    width: 30%;
+    border: 1px solid #cdcbcc;
+    height: 25px; }
   main.notificacao .titulo {
     margin: 0px; }
+  main.notificacao .desbloquear {
+    color: #065c7b;
+    font-size: 12px; }
   main.notificacao .hr2 {
     border: 1px solid #cdcbcc;
     margin-top: 0px; }
@@ -3747,12 +3764,32 @@ main.notify {
   font-family: "Trebuchet MS", Helvetica, sans-serif; }
   main.notify .geral {
     background-color: #fff; }
+  main.notify .informacoes {
+    margin-top: 20px; }
+  main.notify .nome-video {
+    margin: 0px;
+    color: #065c7b;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 20px; }
+  main.notify .todas {
+    margin-bottom: 5px; }
+  main.notify .botc {
+    padding-right: 20px; }
+  main.notify .inicio {
+    margin: 0px;
+    padding-left: 20px; }
   main.notify .dados {
     padding: 20px;
     background-color: #fff; }
   main.notify .editar {
     float: right;
     cursor: pointer; }
+  main.notify .outros {
+    margin: 0px;
+    color: #878786;
+    font-size: 14px;
+    padding-left: 20px; }
   main.notify .editaSenha {
     margin-bottom: 0px; }
   main.notify .areaEditarTudo {
@@ -3853,6 +3890,16 @@ main.notify {
     font-size: 12px; }
     main.notify .rad.escolha {
       padding-top: 10px; }
+  main.notify .elemento {
+    border-bottom: 1px solid #cdcbcc;
+    padding-bottom: 20px;
+    margin-bottom: 0px; }
+  main.notify .icone-canal {
+    padding-left: 20px;
+    padding-top: 20px;
+    cursor: pointer; }
+  main.notify .thumb {
+    margin-top: 20px; }
   main.notify .categorias {
     background-color: #ffffff;
     text-align: center;

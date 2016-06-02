@@ -50,10 +50,10 @@
                   
                   <div class="col l12 s12 margem" >
                     <p class="titulo">Notificações</p>
-                    <hr>
+                    <hr class="separator">
                   </div>                
                 </div>
-                <div class="wow sessao justify margem manual">
+                <div class="row sessao justify margem manual">
                   Configure as notificações que você receberá dos canais que você se inscreveu e dos grupos que você participa
                                    
                 </div>
@@ -61,20 +61,20 @@
                 
                <p class="grupo">
                   <input class="with-gap rad2" name="group1" type="radio" id="nao"  checked/>
-                  <label class="rad" for="nao" style="font-size: 14px;">Não receber notificações</label>
+                  <label class="rad" for="nao">Não receber notificações</label>
                 </p>
                 <p class="grupo">
                   <input class="with-gap rad2" name="group1" type="radio" id="todos"  checked/>
-                  <label class="rad" for="todos" style="font-size: 14px;">De todos os canais</label>
+                  <label class="rad" for="todos">De todos os canais</label>
                 </p>
                 <p class="grupo">
                   <input class="with-gap rad2" name="group1" type="radio" id="exceto"  checked/>
-                  <label class="rad" for="exceto" style="font-size: 14px;">De todos, exceto</label>
-                  <input type="text" placeholder="Nome do canal" style="margin-left: 10px; width: 30%; border: 1px solid #cdcbcc; height: 25px;">
+                  <label class="rad" for="exceto">De todos, exceto</label>
+                  <input type="text" placeholder="Nome do canal" class="input-canal">
                   <input onClick="editarasenha()" type="submit" class="bloqueio" value="Bloquear">
                 </p>
                 <div class="canal-bloqueado">
-                  <p style="margin: 0px;">Nome do Canal <a href="" style="color: #065c7b; font-size: 12px; ">Desbloquear</a></p>
+                  <p class="titulo">Nome do Canal <a href="" class="desbloquear ">Desbloquear</a></p>
                 </div>
 
               </div>

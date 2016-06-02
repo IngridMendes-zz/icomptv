@@ -13,6 +13,14 @@ main.notificacao{
     border: 2px solid #065c7b;
 }
 
+.separator{
+	    margin-right: 30px;
+}
+
+.label{
+	font-size: 14px;
+}
+
 .rad2[type="radio"].with-gap:checked + label:after {
     border-radius: 50%;
     border: 2px solid #065c7b;
@@ -21,6 +29,7 @@ main.notificacao{
     -webkit-transform: scale(0.5);
     -ms-transform: scale(0.5);
     transform: scale(0.5);
+    font-size: 14px;
 }
 
 .sessao{
@@ -199,7 +208,7 @@ main.notificacao{
 
 	.rad{
 		color: #000;
-		font-size: 12px;
+		font-size: 14px;
 		&.escolha {
 			padding-top: 10px;
 		}
@@ -234,8 +243,23 @@ main.notificacao{
 		padding-right: 30px;
 	}
 
+		input[type=text]:focus:not([readonly]),
+    textarea.materialize-textarea:focus:not([readonly]) {
+        //color: white;
+        border-bottom: 0px solid #cdcbcc;
+        box-shadow: 0 1px 0 0 #cdcbcc;
+    }
+
+	.input-canal{
+		margin-left: 10px; width: 30%; border: 1px solid #cdcbcc; height: 25px;
+	}
+
 	.titulo{
 		margin: 0px;
+	}
+
+	.desbloquear{
+		color: #065c7b; font-size: 12px;
 	}
 
 	.hr2{
